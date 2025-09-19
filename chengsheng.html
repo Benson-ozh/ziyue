@@ -52,7 +52,7 @@
         }
         .infobox {
             float: right;
-            width: 25%;
+            width: 20%;
             margin: 0 0 1.2rem 2rem;
             background: #f8f9fa;
             border: 1px solid var(--border);
@@ -66,7 +66,7 @@
             border-radius: 8px;
             margin-bottom: 1em;
             background: #e4e7eb;
-            aspect-ratio: 4/3;
+            aspect-ratio: 3/5;
             object-fit: cover;
         }
         .content {
@@ -142,175 +142,301 @@
     </style>
 </head>
 
-
 <body>
-    <div id="modal-overlay" style="
-      position: fixed;
-      z-index: 9999;
-      left: 0; top: 0; width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.6);
-      display: flex; align-items: center; justify-content: center;">
-      <div style="background: #ebebeb; padding: 50px 60px; border-radius: 20px; text-align: center; max-width: 80vw;">
-        <h1>歡迎！</h1>
-        <p>全文v2.0.0即將發佈！敬請期待</p><br>
-        <h3 style="color: red; position: relative; top: -20px;">凡閱者必須保密，泄露者當誅九族！</h3>
-        <button onclick="closeModal()" style="margin-top: 0px; padding: 8px 32px; font-size: 18px; background-color: rgba(255, 0, 0, 0.8);"><b>收到</b></button>
-      </div>
+<header class="topbar"><h1>《陳生》</h1></header>
+<div class="content">
+    <nav style="position: relative; left: 0.5%;">
+        <a href="index.html">子曰</a>
+        <span class="sep">/</span>
+        <span>文章</span>
+        <span class="sep">/</span>
+        <span>陳生</span>
+    </nav>
+
+    <!-- <aside class="infobox" style="z-index: 3; position: relative;">
+        <img src="kiwi.jpg" alt="kiwi"></img>
+    </aside> -->
+
+    <a><h3 style="position: relative; font-size: 25px; left: 10px; color: blue;" onclick="hideall()" id="hide">全部隱藏</h3></a>
+
+    <!-- 原文 -->
+    <div  style="line-height: 30px; position: relative; top: 10px;">
+        <h2 style="font-size: 25px;">一、原文<a><span id="hideyw" style="position: relative; left: 2%; color: blue;" onclick="hideyuanwen()">隱藏</span></a></h2>
+        <div id="yuanwen">
+        <h3 style="font-weight: normal; line-height: 25px;">1. 
+           陳生有微恙¹，幸神智清明²。然每修業³于堂，常發奇言異行。一日忽問曰：「簡子⁴，吾有惑焉！今香港無民主，亦無自由，當合⁵西方諸國，以制中國……」後諸生皆以此言戲⁶之。<p></p>
+        </h3>
+
+        <h3 style="font-weight: normal; line-height: 25px;">2. 
+           張子授文⁷，解曰：「作者謂：『方悟身長之緩而成太速⁸。』此中深意……」陳生遽起曰：「張子，吾有惑焉！師之謂體大心小，猶速疾與加速一正一負米每秒方與米每二次秒方豈非相悖再者今香港無民主⁹……」梁生怒而擊案：「此等瑣問，豈不可待課後乎！」<p></p>
+        </h3>
+
+        <h3 style="font-weight: normal; line-height: 25px;">3. 
+           昔日，陳生修體育課時，遭人足蹴而飛。乃大慟¹⁰曰：「嗚呼——痛哉！何人襲吾——」泣不絕聲。其後三旬¹¹不復入庠序¹²。<p></p>
+        </h3>
+
+        <h3 style="font-weight: normal; line-height: 25px;">4. 
+           陳子習文時，素箋¹³為風所揚。驟然騰躍，淩空三攫¹⁴，終復得之。徐歸座，淡然曰：「無礙。」神色如常。<p></p>
+        </h3>
+
+        <h3 style="font-weight: normal; line-height: 25px;">5. 
+           陳子修業無恒軌¹⁵。聽講時，常默¹⁶奪同窗筆札¹⁷觀之，逢堂測¹⁸必竊視鄰案¹⁹。鄧子抽查習作之日，竟空手而對，徐曰：「未攜。」²⁰神色自若。<p></p>
+        </h3>
+        </div>
     </div>
-</body>
+
+    <!-- 語譯 -->
+    <div style="position: relative; top: 30px; line-height: 30px;">
+        <h2 style="font-size: 25px;">二、譯文<a><span id="hideyy" style="position: relative; left: 2%; color: blue;" onclick="hideyiwen()">隱藏</span></a></h2>
+        <div id="yiwen">
+        <h3 style="font-weight: normal; line-height: 25px;">1. 
+            陳煥祈（陳生），是一個健康有缺陷的同學，幸而智力健全，只是上課時往往會說怪話，做怪事。有一次，他忽然說：「簡老師，我有問題！如今的香港沒有民主，又沒有自由，我們應該聯合西方國家去制裁中國……」後來，這些話就被拿來取笑陳生。<p></p>
+        </h3>
+
+        <h3 style="font-weight: normal; line-height: 25px;">2. 
+            有一次，張老師為我們教授中文，他講解道：「作者說：『我長得太慢而且太大。』這其中有著很深的含義……」陳生打斷：「張老師，我有問題！這個文章說作者長得太慢且太大，這就相當於速度和加速度一個是正一個是負米每秒和米每平方秒這不是很矛盾嗎第二件事就是如今的香港沒有民主……」一位姓梁的同學氣憤地拍桌，說：「這種問題下課再問行不行！」<p></p>
+        </h3>
+
+        <h3 style="font-weight: normal; line-height: 25px;">3. 
+            陳生以前有一次上體育課時，被人踢了一腳，踢飛了起來。他大聲哭號：「啊──好痛啊！誰踢我啊……」後來一直哭。之後，他整整三周沒有上學。<p></p>
+        </h3>
+
+        <h3 style="font-weight: normal; line-height: 25px;">4. 
+            有一次，陳生上中文課，他的其中一張筆記被風扇吹走。他於是猛地起身，追趕著他的那張筆記，在空中連著抓了三下，抓住了那張筆記紙。然後他裝作若無其事地回位，軟綿綿地說：「沒事。」神色如常。<p></p>
+        </h3>      
+        
+        <h3 style="font-weight: normal; line-height: 25px;">5. 
+            陳生的學習習慣很不好。上課時，經常一言不發地搶去別人的筆記來看，一有老師讓當眾做題，就偷看同桌的答案抄上去。一天，鄧老師抽查同學的練習題，他沒做，卻也不認錯，只輕飄飄地說「沒帶。」神色自若。<p></p>
+        </h3>    
+        </div>
+    </div>
+
+    <!-- 注釋 -->
+    <div style="position: relative; top: 50px; line-height: 30px;" class="zhushi">
+        <h2 style="font-size: 25px;">三、注釋<a><span id="hidezs" style="position: relative; left: 2%; color: blue;" onclick="hidezhushi()">隱藏</span></a></h2>
+        <div id="zhushi">
+        <h3 style="font-weight: normal; line-height: 25px;">1.  <span class="zhushi1-9">微恙：輕微的疾病。 </span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">2.  <span class="zhushi1-9">清明：清醒而明達。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">3.  <span class="zhushi1-9">修業：學習課業。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">4.  <span class="zhushi1-9">簡子：簡老師，指簡永東。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">5.  <span class="zhushi1-9">合：聯合。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">6.  <span class="zhushi1-9">戲：開玩笑，嘲弄。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">7.  <span class="zhushi1-9">文：中文。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">8.  <span class="zhushi1-9">方悟身長之緩而成太速：語出自韓麗珠《舊時藍田》：「我長得太慢而且太大」。 </span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">9.  <span class="zhushi1-9">猶速疾與加速一正一負米每秒方與米每二次秒方豈非相悖再者今香港無民主：該句意義不詳。無法考究，也不敢考究。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">10. 大慟：大為悲傷哭泣。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">11. 三旬：此處指三週。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">12. 庠序：古代稱學校為「庠」或「序」。（庠音:coeng4 場）</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">13. 素箋：沒有染色的白色書寫紙，指陳生的筆記。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">14. 攫：快速地抓取。（音:fok3 霍）</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">15. 無恒軌：沒有固定、良好的常規或習慣，此指學習習慣欠佳。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">16. 默：一言不發地。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">17. 筆札：書寫用的文具，借代筆記。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">18. 堂測：老師讓同學當眾做題。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">19. 鄰案：旁邊同學的桌子，借代鄰桌的答案。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">20. 未攜：詳情請見<a href="dengzi.html"><span style="color: blue;">鄧子</span></a>第11段</h3>
+        </div>
+    </div>
+
+    <!-- 人物介紹 -->
+    <div style="position: relative; top: 70px; line-height: 30px;">
+        <h2 style="font-size: 25px;">四、人物介紹<a><span id="hiderw" style="position: relative; left: 2%; color: blue;" onclick="hiderenwu()">隱藏</span></a></h2>
+        <div id="renwu">
+        <h3 style="font-weight: normal; line-height: 25px;">陳煥祈（陳生）（２００９—），有精神缺陷，但智力健全。</h3>
+        </div>
+    </div>
+
+    <!-- 文章背景 -->
+    <div style="position: relative; top: 90px; line-height: 30px;">
+    <h2 style="font-size: 25px;">五、文章背景<a><span id="hidebj" style="position: relative; left: 2%; color: blue;" onclick="hidebeijing()">隱藏</span></a></h2>
+    <h3 style="font-weight: normal; line-height: 25px; left: -0.003%;" id="beijing">《陳生》為語錄體，記載了四五六乙陳煥祈同學在浸信會呂明才中學的經歷與行動，突顯其作為特殊教育需要學生的特質（不論優劣）。</h3>
+    </div>
+
+    <!-- 賞析 -->
+    <div style="position: relative; top: 110px; line-height: 30px;">
+        <h2 style="font-size: 25px;">六、賞析重點<a><span id="hidess" style="position: relative; left: 2%; color: blue;" onclick="hideshangshi()">隱藏</span></a></h2>
+        <div id="shangshi">
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>一、敘事藝術與文學手法<br></b></u>
+            <u>反差與荒誕的審美效果：<br></u>
+            陳生的言行與常規課堂情境形成巨大反差：在中文課追問物理概念與地緣政治（第2條），因體育課小碰撞而「三旬不復入庠序」（第3條）。這種錯位產生了強烈的荒誕感與黑色幽默。<br>
+            其行為本身也充滿矛盾：既能「淩空三攫」矯健奪箋（第4條），又常顯出病弱之態；一面執著於抽象思辨，一面又「修業無恒軌」（第5條）。這種複雜性打破了對人物的單一認知。<br>
+        </h3>
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>明確的教育訓誡意義<br></b></u>
+            本文的價值在於其清晰的警示作用。陳生作為一個集合了多種問題的「反面教材」，其形象清晰地標示出了在學業與群體生活中應極力避免的行為範疇：<br>
+            <em><span style="position: relative; left: 16px;">
+                於個人修養，當戒除言行失當、嬌氣懶惰。<br>
+                於學業追求，當戒除投機取巧、缺乏誠信。<br>
+                於群體相處，當戒除以自我為中心、擾亂秩序、無視他人感受。<br>
+            </span></em>
+        </h3>
+        </div>
+    </div>
+
+    <!-- 總結 -->
+    <div style="position: relative; top: 130px; line-height: 40px;">
+        <h2 style="font-size: 30px;"><u>總結<span id="hidezj" style="position: relative; left: 2%; color: blue; font-size: 25px;" onclick="hidezongjie()"><u>隱藏</u></span></u></h2><p></p>
+        <h3 style="font-weight: normal; line-height: 25px;" id="zongjie">此文並非意在進行社會批判或反諷，而是採用古典語錄體的形式，為現實教育場景中的一類問題學生立傳。它通過高度凝練的筆法，客觀呈現其種種負面言行，旨在讓讀者（尤其是學生群體）引以為戒，明辨是非，知所行止。陳生之形象，猶如一面負面的鏡子，映照出在集體生活中應有的規矩、責任與誠信之可貴。</h3><p></p>
+    </div>
+
+    <div id="copyright" style="position: relative; top: 150px; text-align: center;">
+        <h6 style="position: relative; left: 10px; font-size: 10px; font-family: Arial, Helvetica, sans-serif;"><u>Design and Edit by Ou Ze Hao & Leung Tin Hang</u></h6><p></p>
+        <h6 style="position: relative; left: 10px; font-size: 10px; top: -10px; font-family: Arial, Helvetica, sans-serif;"><u>v2.0.0 20/9/2025</u></h6><p></p>
+        <h6 style="position: relative; left: 10px; font-size: 10px; top: -20px; font-family: Arial, Helvetica, sans-serif;">© 2025 Ou Ze Hao Leung Tin Hang</h6>
+        <!-- <h6 style="position: relative; left: 10px; font-size: 10px; top: -30px;">考試加油</h6><p></p> -->
+    </div>
 </div>
-    <script>
-
-        var yuanwen_shown=true;
-        var yiwen_shown=true;
-        var zhushi_shown=true;
-        var renwu_shown=true;
-        var beijing_shown=true;
-        var shangshi_shown=true;
-        var zongjie_shown=true;
-        var all_shown=true;
-
-        function hideyuanwen(){
-            if(yuanwen_shown){
-                document.getElementById("yuanwen").style.display='none';
-                document.getElementById("hideyw").textContent='展開';
-                yuanwen_shown=false;
-            }
-            else{
-                document.getElementById("yuanwen").style.display='';
-                document.getElementById("hideyw").textContent='隱藏';
-                yuanwen_shown=true;
-            }
-            all();
-        }
-
-        function hideyiwen(){
-            if(yiwen_shown){
-                document.getElementById("yiwen").style.display='none';
-                document.getElementById("hideyy").textContent='展開';
-                yiwen_shown=false;
-            }
-            else{
-                document.getElementById("yiwen").style.display='';
-                document.getElementById("hideyy").textContent='隱藏';
-                yiwen_shown=true;
-            }
-            all();
-        }
-
-        function hidezhushi(){
-            if(zhushi_shown){
-                document.getElementById("zhushi").style.display='none';
-                document.getElementById("hidezs").textContent='展開';
-                zhushi_shown=false;
-            }
-            else{
-                document.getElementById("zhushi").style.display='';
-                document.getElementById("hidezs").textContent='隱藏';
-                zhushi_shown=true;
-            }
-            all();
-        }
-
-        function hiderenwu(){
-            if(renwu_shown){
-                document.getElementById("renwu").style.display='none';
-                document.getElementById("hiderw").textContent='展開';
-                renwu_shown=false;
-            }
-            else{
-                document.getElementById("renwu").style.display='';
-                document.getElementById("hiderw").textContent='隱藏';
-                renwu_shown=true;
-            }
-            all();
-        }
-
-        function hidebeijing(){
-            if(beijing_shown){
-                document.getElementById("beijing").style.display='none';
-                document.getElementById("hidebj").textContent='展開';
-                beijing_shown=false;
-            }
-            else{
-                document.getElementById("beijing").style.display='';
-                document.getElementById("hidebj").textContent='隱藏';
-                beijing_shown=true;
-            }
-            all();
-        }
-
-        function hideshangshi(){
-            if(shangshi_shown){
-                document.getElementById("shangshi").style.display='none';
-                document.getElementById("hidess").textContent='展開';
-                shangshi_shown=false;
-            }
-            else{
-                document.getElementById("shangshi").style.display='';
-                document.getElementById("hidess").textContent='隱藏';
-                shangshi_shown=true;
-            }
-            all();
-        }
-
-        function hidezongjie(){
-            if(zongjie_shown){
-                document.getElementById("zongjie").style.display='none';
-                document.getElementById("hidezj").textContent='展開';
-                zongjie_shown=false;
-            }
-            else{
-                document.getElementById("zongjie").style.display='';
-                document.getElementById("hidezj").textContent='隱藏';
-                zongjie_shown=true;
-            }
-            all();
-        }
-
-        function hideall(){
-            
-            if(all_shown){
-                document.getElementById("hide").textContent="全部展開";
-                all_shown=false;
-                if (yuanwen_shown){hideyuanwen();}
-                if (yiwen_shown){hideyiwen();}
-                if (zhushi_shown){hidezhushi();}
-                if (renwu_shown){hiderenwu();}
-                if (beijing_shown){hidebeijing();}
-                if (shangshi_shown){hideshangshi();}
-                if (zongjie_shown){hidezongjie();}
-            }
-            else{
-                document.getElementById("hide").textContent="全部隱藏";
-                all_shown=true;
-                if (!yuanwen_shown){hideyuanwen();}
-                if (!yiwen_shown){hideyiwen();}
-                if (!zhushi_shown){hidezhushi();}
-                if (!renwu_shown){hiderenwu();}
-                if (!beijing_shown){hidebeijing();}
-                if (!shangshi_shown){hideshangshi();}
-                if (!zongjie_shown){hidezongjie();}
-            }
-        }
-
-        function closeModal() {
-            document.getElementById('modal-overlay').style.display = 'none';
-        }
-
-        function all(){
-            if(!yuanwen_shown && !yiwen_shown && !zhushi_shown && !renwu_shown && !beijing_shown && !shangshi_shown && !zongjie_shown){
-                document.getElementById("hide").textContent="全部展開";
-                all_shown=false;
-            }
-            else if(yuanwen_shown && yiwen_shown && zhushi_shown && renwu_shown && beijing_shown && shangshi_shown && zongjie_shown){
-                document.getElementById("hide").textContent="全部隱藏";
-                all_shown=true;
-            }
-        }
-
-    </script>
-
 </body>
+
+<script>
+    var yuanwen_shown=true;
+    var yiwen_shown=true;
+    var zhushi_shown=true;
+    var renwu_shown=true;
+    var beijing_shown=true;
+    var shangshi_shown=true;
+    var zongjie_shown=true;
+    var all_shown=true;
+
+    function hideyuanwen(){
+        if(yuanwen_shown){
+            document.getElementById("yuanwen").style.display='none';
+            document.getElementById("hideyw").textContent='展開';
+            yuanwen_shown=false;
+        }
+        else{
+            document.getElementById("yuanwen").style.display='';
+            document.getElementById("hideyw").textContent='隱藏';
+            yuanwen_shown=true;
+        }
+        all();
+    }
+
+    function hideyiwen(){
+        if(yiwen_shown){
+            document.getElementById("yiwen").style.display='none';
+            document.getElementById("hideyy").textContent='展開';
+            yiwen_shown=false;
+        }
+        else{
+            document.getElementById("yiwen").style.display='';
+            document.getElementById("hideyy").textContent='隱藏';
+            yiwen_shown=true;
+        }
+        all();
+    }
+
+    function hidezhushi(){
+        if(zhushi_shown){
+            document.getElementById("zhushi").style.display='none';
+            document.getElementById("hidezs").textContent='展開';
+            zhushi_shown=false;
+        }
+        else{
+            document.getElementById("zhushi").style.display='';
+            document.getElementById("hidezs").textContent='隱藏';
+            zhushi_shown=true;
+        }
+        all();
+    }
+
+    function hiderenwu(){
+        if(renwu_shown){
+            document.getElementById("renwu").style.display='none';
+            document.getElementById("hiderw").textContent='展開';
+            renwu_shown=false;
+        }
+        else{
+            document.getElementById("renwu").style.display='';
+            document.getElementById("hiderw").textContent='隱藏';
+            renwu_shown=true;
+        }
+        all();
+    }
+
+    function hidebeijing(){
+        if(beijing_shown){
+            document.getElementById("beijing").style.display='none';
+            document.getElementById("hidebj").textContent='展開';
+            beijing_shown=false;
+        }
+        else{
+            document.getElementById("beijing").style.display='';
+            document.getElementById("hidebj").textContent='隱藏';
+            beijing_shown=true;
+        }
+        all();
+    }
+
+    function hideshangshi(){
+        if(shangshi_shown){
+            document.getElementById("shangshi").style.display='none';
+            document.getElementById("hidess").textContent='展開';
+            shangshi_shown=false;
+        }
+        else{
+            document.getElementById("shangshi").style.display='';
+            document.getElementById("hidess").textContent='隱藏';
+            shangshi_shown=true;
+        }
+        all();
+    }
+
+    function hidezongjie(){
+        if(zongjie_shown){
+            document.getElementById("zongjie").style.display='none';
+            document.getElementById("hidezj").textContent='展開';
+            zongjie_shown=false;
+        }
+        else{
+            document.getElementById("zongjie").style.display='';
+            document.getElementById("hidezj").textContent='隱藏';
+            zongjie_shown=true;
+        }
+        all();
+    }
+
+    function hideall(){
+        
+        if(all_shown){
+            document.getElementById("hide").textContent="全部展開";
+            all_shown=false;
+            if (yuanwen_shown){hideyuanwen();}
+            if (yiwen_shown){hideyiwen();}
+            if (zhushi_shown){hidezhushi();}
+            if (renwu_shown){hiderenwu();}
+            if (beijing_shown){hidebeijing();}
+            if (shangshi_shown){hideshangshi();}
+            if (zongjie_shown){hidezongjie();}
+        }
+        else{
+            document.getElementById("hide").textContent="全部隱藏";
+            all_shown=true;
+            if (!yuanwen_shown){hideyuanwen();}
+            if (!yiwen_shown){hideyiwen();}
+            if (!zhushi_shown){hidezhushi();}
+            if (!renwu_shown){hiderenwu();}
+            if (!beijing_shown){hidebeijing();}
+            if (!shangshi_shown){hideshangshi();}
+            if (!zongjie_shown){hidezongjie();}
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('modal-overlay').style.display = 'none';
+    }
+
+    function all(){
+        if(!yuanwen_shown && !yiwen_shown && !zhushi_shown && !renwu_shown && !beijing_shown && !shangshi_shown && !zongjie_shown){
+            document.getElementById("hide").textContent="全部展開";
+            all_shown=false;
+        }
+        else if(yuanwen_shown && yiwen_shown && zhushi_shown && renwu_shown && beijing_shown && shangshi_shown && zongjie_shown){
+            document.getElementById("hide").textContent="全部隱藏";
+            all_shown=true;
+        }
+    }
+</script>
 
 </html>
