@@ -52,7 +52,7 @@
         }
         .infobox {
             float: right;
-            width: 25%;
+            width: 15%;
             margin: 0 0 1.2rem 2rem;
             background: #f8f9fa;
             border: 1px solid var(--border);
@@ -66,7 +66,7 @@
             border-radius: 8px;
             margin-bottom: 1em;
             background: #e4e7eb;
-            aspect-ratio: 4/3;
+            aspect-ratio: 2/3;
             object-fit: cover;
         }
         .content {
@@ -142,175 +142,272 @@
     </style>
 </head>
 
-
 <body>
-    <div id="modal-overlay" style="
-      position: fixed;
-      z-index: 9999;
-      left: 0; top: 0; width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.6);
-      display: flex; align-items: center; justify-content: center;">
-      <div style="background: #ebebeb; padding: 50px 60px; border-radius: 20px; text-align: center; max-width: 80vw;">
-        <h1>歡迎！</h1>
-        <p>全文v2.0.0即將發佈！敬請期待</p><br>
-        <h3 style="color: red; position: relative; top: -20px;">凡閱者必須保密，泄露者當誅九族！</h3>
-        <button onclick="closeModal()" style="margin-top: 0px; padding: 8px 32px; font-size: 18px; background-color: rgba(255, 0, 0, 0.8);"><b>收到</b></button>
-      </div>
+<header class="topbar"><h1>《江子》</h1></header>
+<div class="content">
+    <nav style="position: relative; left: 0.5%;">
+        <a href="index.html">子曰</a>
+        <span class="sep">/</span>
+        <span>文章</span>
+        <span class="sep">/</span>
+        <span>江子</span>
+    </nav>
+
+    <aside class="infobox" style="z-index: 3; position: relative;">
+        <img src="kongo.jpg" alt="kongo"></img>
+    </aside>
+
+    <a><h3 style="position: relative; font-size: 25px; left: 10px; color: blue;" onclick="hideall()" id="hide">全部隱藏</h3></a>
+
+    <!-- 原文 -->
+    <div  style="line-height: 30px; position: relative; top: 10px;">
+        <h2 style="font-size: 25px;">一、原文<a><span id="hideyw" style="position: relative; left: 2%; color: blue;" onclick="hideyuanwen()">隱藏</span></a></h2>
+        <div id="yuanwen">
+            <h3 style="font-weight: normal; line-height: 25px;">1. 
+                江子好用四字之語。嘗見諸生作業疏略，乃曰：「是謂『見微知著¹』也。」<p></p>
+            </h3>
+            <h3 style="font-weight: normal; line-height: 25px;">2. 
+                江子講難解疑時，嘗謂弟子曰：「攻堅克難，惟習以達巧——是謂『熟能生巧』也。」<p></p>
+            </h3>
+            <h3 style="font-weight: normal; line-height: 25px;">3. 
+                江子評文憑試舊題。問曰：「是題非盡人能耶？」眾對曰：「然。」江子哂²曰：「昔者五成中鵠³，而吾輩不及半——是謂『跑輸大市⁴』也。」後每有錯答者，眾生輒⁵相語曰：「噫！吾輩殆⁶將『跑輸大市』矣！」<p></p>
+            </h3>
+        </div>
     </div>
-</body>
+
+    <!-- 語譯 -->
+    <div style="position: relative; top: 30px; line-height: 30px;">
+        <h2 style="font-size: 25px;">二、譯文<a><span id="hideyy" style="position: relative; left: 2%; color: blue;" onclick="hideyiwen()">隱藏</span></a></h2>
+        <div id="yiwen">
+            <h3 style="font-weight: normal; line-height: 25px;">1. 
+                江子說話，喜歡用四字詞語。一天，他看見各個同學的作業都做得粗疏簡略，於是說：「這就是『見微知著』了。」<p></p>
+            </h3>
+            <h3 style="font-weight: normal; line-height: 25px;">2. 
+                江子講解難題時，曾經對學生說：「要擊破困難，惟有多加練習，才能達到快而準的靈巧境界——這就是『熟能生巧』了。」<p></p>
+            </h3>
+            <h3 style="font-weight: normal; line-height: 25px;">3. 
+                江子在講評文憑試的舊題目。他問：「這些題，大家不是都會做嗎？」大家回答：「是。」江子笑着說：「以往的考生中，有五成可以答對；而來自我們學校的考生，連一半也不能達到——這就是『跑輸大市』了。」後來每次有人答錯問題，各個同學都會向着對方說：「噢！我們恐怕也要『跑輸大市』了！」<p></p>
+            </h3>
+        </div>
+    </div>
+
+    <!-- 注釋 -->
+    <div style="position: relative; top: 50px; line-height: 30px;" class="zhushi">
+        <h2 style="font-size: 25px;">三、注釋<a><span id="hidezs" style="position: relative; left: 2%; color: blue;" onclick="hidezhushi()">隱藏</span></a></h2>
+        <div id="zhushi">
+        <h3 style="font-weight: normal; line-height: 25px;">1.  <span class="zhushi1-9">見微知著：從細微的徵兆或跡象中，就能預見或推斷事物發展的趨勢和本質。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">2.  <span class="zhushi1-9">哂：微笑，一指嘲笑。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">3.  <span class="zhushi1-9">中鵠：射中靶心，引申指回答正確。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">4.  <span class="zhushi1-9">跑輸大市：金融術語，指分析師預測某證券在未來6至12個月內股價表現將弱於基準指數10%以上的投資評級。此指浸信會呂明才中學的化學科考生表現弱於香港考生平均水平，即為落後於「大市」。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">5.  <span class="zhushi1-9">輒：就，便。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">6.  <span class="zhushi1-9">殆：恐怕。</span></h3>
+        </div>
+    </div>
+
+    <!-- 人物介紹 -->
+    <div style="position: relative; top: 70px; line-height: 30px;">
+        <h2 style="font-size: 25px;">四、人物介紹<a><span id="hiderw" style="position: relative; left: 2%; color: blue;" onclick="hiderenwu()">隱藏</span></a></h2>
+        <div id="renwu">
+        <h3 style="font-weight: normal; line-height: 25px;">江國洪（？—），浸信會呂明才中學化學科、聖經科教師。在校內備受尊敬。所說的笑話有點冷，不經意透露出的「金句」反而更有趣。</h3>
+        </div>
+    </div>
+
+    <!-- 文章背景 -->
+    <div style="position: relative; top: 90px; line-height: 30px;">
+    <h2 style="font-size: 25px;">五、文章背景<a><span id="hidebj" style="position: relative; left: 2%; color: blue;" onclick="hidebeijing()">隱藏</span></a></h2>
+    <h3 style="font-weight: normal; line-height: 25px; left: -0.003%;" id="beijing">《江子》為語錄體，包括語錄和對話，記載江國洪老師任教四五六乙丙丁戊化學班時的金句和特別的教學風格。</h3>
+    </div>
+
+    <!-- 賞析 -->
+    <div style="position: relative; top: 110px; line-height: 30px;">
+        <h2 style="font-size: 25px;">六、賞析重點<a><span id="hidess" style="position: relative; left: 2%; color: blue;" onclick="hideshangshi()">隱藏</span></a></h2>
+        <div id="shangshi">
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>一、文本形式與語言特色<br></b></u>
+            以簡練文言寫就，仿傳統語錄體（如《論語》），每則獨立成章。最大特色為大量化用與改造成語（如「見微知著」、「熟能生巧」）及金融術語（「跑輸大市」），將古典智慧與現代世俗概念並置，形成獨特的幽默與諷刺風格。<br>
+        </h3>
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>二、人物形象與敘事結構<br></b></u>
+            江子形象鮮明：一位善用格言警句、以數據量化學習成果的務實教師。其語言習慣（好四字語）與思維方式（用市場比喻教育）構成了其核心特徵。敘事結構為「言行+影響」模式：先記江子之言，再述其言論在學生中產生的流行與戲仿效果，展現其話語的滲透力。<br>
+        </h3>
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>三、主旨與現實關照<br></b></u>
+            揭示了當代教育中的績效主義與焦慮。江子將學業成績比作「跑輸大市」，反映了教育已被市場化、數據化的現實——學生被視為投資產品，學習成效需與大市（整體考生）比較KPI。此語在學生間的流傳，既是自嘲，也是對這種壓力的集體無意識認同。<br>
+        </h3>
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>四、藝術手法與象徵隱喻<br></b></u>
+            核心手法是「舊詞新用」與「語境轉換」：<br>
+            <em><span style="position: relative; left: 16px;">
+                「見微知著」：從哲學洞察降格為對作業粗疏的批評，大詞小用產生反差幽默。<br>
+                「跑輸大市」：將金融市場的競爭與焦慮隱喻至教育領域，極精準地刻畫了以排名和合格率為導向的功利教育生態，成為全文點睛之筆。<br>
+            </span></em>
+        </h3>
+        </div>
+    </div>
+
+    <!-- 總結 -->
+    <div style="position: relative; top: 130px; line-height: 40px;">
+        <h2 style="font-size: 30px;"><u>總結<span id="hidezj" style="position: relative; left: 2%; color: blue; font-size: 25px;" onclick="hidezongjie()"><u>隱藏</u></span></u></h2><p></p>
+        <h3 style="font-weight: normal; line-height: 25px;" id="zongjie">全文雖簡短，卻成功利用文白夾雜、舊詞新用的手法，完成了對一種教育現狀的精準捕捉與溫和諷刺。江子之言之所以能被學生迅速模仿傳播（「眾生輒相語曰」），正因其話語精準地道出了集體潛意識中的競爭恐懼與自嘲心態，從而讓這篇語錄超越了個人軼事，成為一個時代教育心態的微型鏡像。</h3><p></p>
+    </div>
+
+    <div id="copyright" style="position: relative; top: 150px; text-align: center;">
+        <h6 style="position: relative; left: 10px; font-size: 10px; font-family: Arial, Helvetica, sans-serif;"><u>Design and Edit by Ou Ze Hao & Leung Tin Hang</u></h6><p></p>
+        <h6 style="position: relative; left: 10px; font-size: 10px; top: -10px; font-family: Arial, Helvetica, sans-serif;"><u>v2.0.0 20/9/2025</u></h6><p></p>
+        <h6 style="position: relative; left: 10px; font-size: 10px; top: -20px; font-family: Arial, Helvetica, sans-serif;">© 2025 Ou Ze Hao Leung Tin Hang</h6>
+        <!-- <h6 style="position: relative; left: 10px; font-size: 10px; top: -30px;">考試加油</h6><p></p> -->
+    </div>
 </div>
-    <script>
-
-        var yuanwen_shown=true;
-        var yiwen_shown=true;
-        var zhushi_shown=true;
-        var renwu_shown=true;
-        var beijing_shown=true;
-        var shangshi_shown=true;
-        var zongjie_shown=true;
-        var all_shown=true;
-
-        function hideyuanwen(){
-            if(yuanwen_shown){
-                document.getElementById("yuanwen").style.display='none';
-                document.getElementById("hideyw").textContent='展開';
-                yuanwen_shown=false;
-            }
-            else{
-                document.getElementById("yuanwen").style.display='';
-                document.getElementById("hideyw").textContent='隱藏';
-                yuanwen_shown=true;
-            }
-            all();
-        }
-
-        function hideyiwen(){
-            if(yiwen_shown){
-                document.getElementById("yiwen").style.display='none';
-                document.getElementById("hideyy").textContent='展開';
-                yiwen_shown=false;
-            }
-            else{
-                document.getElementById("yiwen").style.display='';
-                document.getElementById("hideyy").textContent='隱藏';
-                yiwen_shown=true;
-            }
-            all();
-        }
-
-        function hidezhushi(){
-            if(zhushi_shown){
-                document.getElementById("zhushi").style.display='none';
-                document.getElementById("hidezs").textContent='展開';
-                zhushi_shown=false;
-            }
-            else{
-                document.getElementById("zhushi").style.display='';
-                document.getElementById("hidezs").textContent='隱藏';
-                zhushi_shown=true;
-            }
-            all();
-        }
-
-        function hiderenwu(){
-            if(renwu_shown){
-                document.getElementById("renwu").style.display='none';
-                document.getElementById("hiderw").textContent='展開';
-                renwu_shown=false;
-            }
-            else{
-                document.getElementById("renwu").style.display='';
-                document.getElementById("hiderw").textContent='隱藏';
-                renwu_shown=true;
-            }
-            all();
-        }
-
-        function hidebeijing(){
-            if(beijing_shown){
-                document.getElementById("beijing").style.display='none';
-                document.getElementById("hidebj").textContent='展開';
-                beijing_shown=false;
-            }
-            else{
-                document.getElementById("beijing").style.display='';
-                document.getElementById("hidebj").textContent='隱藏';
-                beijing_shown=true;
-            }
-            all();
-        }
-
-        function hideshangshi(){
-            if(shangshi_shown){
-                document.getElementById("shangshi").style.display='none';
-                document.getElementById("hidess").textContent='展開';
-                shangshi_shown=false;
-            }
-            else{
-                document.getElementById("shangshi").style.display='';
-                document.getElementById("hidess").textContent='隱藏';
-                shangshi_shown=true;
-            }
-            all();
-        }
-
-        function hidezongjie(){
-            if(zongjie_shown){
-                document.getElementById("zongjie").style.display='none';
-                document.getElementById("hidezj").textContent='展開';
-                zongjie_shown=false;
-            }
-            else{
-                document.getElementById("zongjie").style.display='';
-                document.getElementById("hidezj").textContent='隱藏';
-                zongjie_shown=true;
-            }
-            all();
-        }
-
-        function hideall(){
-            
-            if(all_shown){
-                document.getElementById("hide").textContent="全部展開";
-                all_shown=false;
-                if (yuanwen_shown){hideyuanwen();}
-                if (yiwen_shown){hideyiwen();}
-                if (zhushi_shown){hidezhushi();}
-                if (renwu_shown){hiderenwu();}
-                if (beijing_shown){hidebeijing();}
-                if (shangshi_shown){hideshangshi();}
-                if (zongjie_shown){hidezongjie();}
-            }
-            else{
-                document.getElementById("hide").textContent="全部隱藏";
-                all_shown=true;
-                if (!yuanwen_shown){hideyuanwen();}
-                if (!yiwen_shown){hideyiwen();}
-                if (!zhushi_shown){hidezhushi();}
-                if (!renwu_shown){hiderenwu();}
-                if (!beijing_shown){hidebeijing();}
-                if (!shangshi_shown){hideshangshi();}
-                if (!zongjie_shown){hidezongjie();}
-            }
-        }
-
-        function closeModal() {
-            document.getElementById('modal-overlay').style.display = 'none';
-        }
-
-        function all(){
-            if(!yuanwen_shown && !yiwen_shown && !zhushi_shown && !renwu_shown && !beijing_shown && !shangshi_shown && !zongjie_shown){
-                document.getElementById("hide").textContent="全部展開";
-                all_shown=false;
-            }
-            else if(yuanwen_shown && yiwen_shown && zhushi_shown && renwu_shown && beijing_shown && shangshi_shown && zongjie_shown){
-                document.getElementById("hide").textContent="全部隱藏";
-                all_shown=true;
-            }
-        }
-
-    </script>
-
 </body>
+
+<script>
+    var yuanwen_shown=true;
+    var yiwen_shown=true;
+    var zhushi_shown=true;
+    var renwu_shown=true;
+    var beijing_shown=true;
+    var shangshi_shown=true;
+    var zongjie_shown=true;
+    var all_shown=true;
+
+    function hideyuanwen(){
+        if(yuanwen_shown){
+            document.getElementById("yuanwen").style.display='none';
+            document.getElementById("hideyw").textContent='展開';
+            yuanwen_shown=false;
+        }
+        else{
+            document.getElementById("yuanwen").style.display='';
+            document.getElementById("hideyw").textContent='隱藏';
+            yuanwen_shown=true;
+        }
+        all();
+    }
+
+    function hideyiwen(){
+        if(yiwen_shown){
+            document.getElementById("yiwen").style.display='none';
+            document.getElementById("hideyy").textContent='展開';
+            yiwen_shown=false;
+        }
+        else{
+            document.getElementById("yiwen").style.display='';
+            document.getElementById("hideyy").textContent='隱藏';
+            yiwen_shown=true;
+        }
+        all();
+    }
+
+    function hidezhushi(){
+        if(zhushi_shown){
+            document.getElementById("zhushi").style.display='none';
+            document.getElementById("hidezs").textContent='展開';
+            zhushi_shown=false;
+        }
+        else{
+            document.getElementById("zhushi").style.display='';
+            document.getElementById("hidezs").textContent='隱藏';
+            zhushi_shown=true;
+        }
+        all();
+    }
+
+    function hiderenwu(){
+        if(renwu_shown){
+            document.getElementById("renwu").style.display='none';
+            document.getElementById("hiderw").textContent='展開';
+            renwu_shown=false;
+        }
+        else{
+            document.getElementById("renwu").style.display='';
+            document.getElementById("hiderw").textContent='隱藏';
+            renwu_shown=true;
+        }
+        all();
+    }
+
+    function hidebeijing(){
+        if(beijing_shown){
+            document.getElementById("beijing").style.display='none';
+            document.getElementById("hidebj").textContent='展開';
+            beijing_shown=false;
+        }
+        else{
+            document.getElementById("beijing").style.display='';
+            document.getElementById("hidebj").textContent='隱藏';
+            beijing_shown=true;
+        }
+        all();
+    }
+
+    function hideshangshi(){
+        if(shangshi_shown){
+            document.getElementById("shangshi").style.display='none';
+            document.getElementById("hidess").textContent='展開';
+            shangshi_shown=false;
+        }
+        else{
+            document.getElementById("shangshi").style.display='';
+            document.getElementById("hidess").textContent='隱藏';
+            shangshi_shown=true;
+        }
+        all();
+    }
+
+    function hidezongjie(){
+        if(zongjie_shown){
+            document.getElementById("zongjie").style.display='none';
+            document.getElementById("hidezj").textContent='展開';
+            zongjie_shown=false;
+        }
+        else{
+            document.getElementById("zongjie").style.display='';
+            document.getElementById("hidezj").textContent='隱藏';
+            zongjie_shown=true;
+        }
+        all();
+    }
+
+    function hideall(){
+        
+        if(all_shown){
+            document.getElementById("hide").textContent="全部展開";
+            all_shown=false;
+            if (yuanwen_shown){hideyuanwen();}
+            if (yiwen_shown){hideyiwen();}
+            if (zhushi_shown){hidezhushi();}
+            if (renwu_shown){hiderenwu();}
+            if (beijing_shown){hidebeijing();}
+            if (shangshi_shown){hideshangshi();}
+            if (zongjie_shown){hidezongjie();}
+        }
+        else{
+            document.getElementById("hide").textContent="全部隱藏";
+            all_shown=true;
+            if (!yuanwen_shown){hideyuanwen();}
+            if (!yiwen_shown){hideyiwen();}
+            if (!zhushi_shown){hidezhushi();}
+            if (!renwu_shown){hiderenwu();}
+            if (!beijing_shown){hidebeijing();}
+            if (!shangshi_shown){hideshangshi();}
+            if (!zongjie_shown){hidezongjie();}
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('modal-overlay').style.display = 'none';
+    }
+
+    function all(){
+        if(!yuanwen_shown && !yiwen_shown && !zhushi_shown && !renwu_shown && !beijing_shown && !shangshi_shown && !zongjie_shown){
+            document.getElementById("hide").textContent="全部展開";
+            all_shown=false;
+        }
+        else if(yuanwen_shown && yiwen_shown && zhushi_shown && renwu_shown && beijing_shown && shangshi_shown && zongjie_shown){
+            document.getElementById("hide").textContent="全部隱藏";
+            all_shown=true;
+        }
+    }
+</script>
 
 </html>
