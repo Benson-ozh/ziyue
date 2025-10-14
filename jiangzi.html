@@ -55,7 +55,7 @@
         }
         .infobox {
             float: right;
-            width: 15%;
+            width: 25%;
             margin: 0 0 1.2rem 2rem;
             background: #f8f9fa;
             border: 1px solid var(--border);
@@ -72,7 +72,7 @@
             border-radius: 8px;
             margin-bottom: 1em;
             background: #e4e7eb;
-            aspect-ratio: 2/3;
+            aspect-ratio: 4/3;
             object-fit: cover;
         }
         .content {
@@ -167,6 +167,7 @@
 
     <aside class="infobox" style="z-index: 3; position: relative;">
         <img src="kongo.jpg" alt="kongo"></img>
+        <!-- <u><h6 style="position: relative">Shot by </h6></u> -->
     </aside>
 
     <a><h3 style="position: relative; font-size: 25px; left: 10px; color: blue;" onclick="hideall()" id="hide">全部隱藏</h3></a>
@@ -265,7 +266,7 @@
 
     <div id="copyright" style="position: relative; top: 150px; text-align: center;">
         <h6 style="position: relative; left: 10px; font-size: 10px; font-family: Arial, Helvetica, sans-serif;"><u>Design and Edit by Ou Ze Hao & Leung Tin Hang</u></h6><p></p>
-        <h6 style="position: relative; left: 10px; font-size: 10px; top: -10px; font-family: Arial, Helvetica, sans-serif;"><u>v2.0.3 30/9/2025</u></h6><p></p>
+        <h6 style="position: relative; left: 10px; font-size: 10px; top: -10px; font-family: Arial, Helvetica, sans-serif;" id="version"><u>Loading...</u></h6><p></p>
         <h6 style="position: relative; left: 10px; font-size: 10px; top: -20px; font-family: Arial, Helvetica, sans-serif;">© 2025 Ou Ze Hao Leung Tin Hang</h6>
         <!-- <h6 style="position: relative; left: 10px; font-size: 10px; top: -30px;">考試加油</h6><p></p> -->
     </div>
@@ -420,6 +421,46 @@
             all_shown=true;
         }
     }
+
+    async function fetchVersion() {
+            try {
+                const response = await fetch('https://benson-ozh.github.io/ziyue/');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const htmlText = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlText, 'text/html');
+                
+                // Try different approaches to find the version
+                let versionElement = doc.getElementById('version');
+                
+                if (!versionElement) {
+                    // If not found directly, look for copyright div first
+                    const copyrightDiv = doc.getElementById('copyright');
+                    if (copyrightDiv) {
+                        versionElement = copyrightDiv.querySelector('#version');
+                    }
+                }
+                
+                if (versionElement) {
+                    document.getElementById('version').textContent = 
+                        versionElement.textContent || versionElement.innerHTML;
+                } else {
+                    document.getElementById('version').textContent = 
+                        'Version element not found';
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('version').textContent = 
+                    'Error: ' + error.message;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchVersion);
 </script>
 
 </html>
