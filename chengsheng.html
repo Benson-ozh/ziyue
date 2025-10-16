@@ -151,6 +151,11 @@
         @media (max-width: 1000px) {
             .infobox { float: none; width: 100%; margin: 0 0 1.2rem 0; }
         }
+        .warn_button{animation: warning_ani 0.5s infinite alternate;}
+        @keyframes warning_ani {
+            0% { background-color: #fd0000; color: rgb(0, 0, 0); }
+            100% { background-color: #ffc0c0; color: rgb(0, 0, 0); }
+        }
     </style>
 </head>
 
@@ -165,9 +170,26 @@
         <span>陳生</span>
     </nav>
 
-    <!-- <aside class="infobox" style="z-index: 3; position: relative;">
-        <img src="kiwi.jpg" alt="kiwi"></img>
-    </aside> -->
+    <aside class="infobox" style="z-index: 3; position: relative;">
+        <button onclick="open_close_photo()" style="background-color: rgb(255, 67, 67);" id="show_photo">顯示圖片（慎開）</button>
+        <img src="kiwi.jpg" alt="kiwi" style="display: none;" id="kiwi"></img>
+    </aside>
+
+    <!-- 警告  -->
+    <div id="warning" style="
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.6);
+      display: flex; align-items: center; justify-content: center; display: none;">
+      <div style="background: #ebebeb; padding: 50px 60px; border-radius: 20px; text-align: center; max-width: 80vw;">
+        <h1>警告！</h1>
+        <h3 style="color: red; position: relative; left:0px;">此圖可能會引起不適</h3><br>
+        <h3 style="color: red; position: relative; left:0px">請確定是否開啓！</h3>
+        <button onclick="give_up()" style="margin-top: 0px; padding: 8px 32px; font-size: 18px; background-color: rgba(0, 255, 0, 0.8); position: relative; right:10px"><b>算了</b></button>
+        <button onclick="show_kiwi()" style="margin-top: 0px; padding: 8px 32px; font-size: 18px; background-color: rgba(255, 0, 0, 0.8); position: relative; left:10px" class="warn_button"><b>確認</b></button>
+      </div>
+    </div>
 
     <a><h3 style="position: relative; font-size: 25px; left: 10px; color: blue;" onclick="hideall()" id="hide">全部隱藏</h3></a>
 
@@ -310,6 +332,7 @@
     var shangshi_shown=true;
     var zongjie_shown=true;
     var all_shown=true;
+    var kiwi_show=false
 
     function hideyuanwen(){
         if(yuanwen_shown){
@@ -433,6 +456,29 @@
             if (!shangshi_shown){hideshangshi();}
             if (!zongjie_shown){hidezongjie();}
         }
+    }
+
+    function open_close_photo(){
+        if(kiwi_show){
+            document.getElementById("kiwi").style.display = 'none';
+            document.getElementById("show_photo").textContent = "顯示圖片（慎開）";
+            kiwi_show=false
+        }
+        else{
+            document.getElementById("warning").style.display='flex';
+        }
+        
+    }
+
+    function show_kiwi(){
+        document.getElementById("kiwi").style.display = '';
+        document.getElementById('warning').style.display = 'none';
+        document.getElementById("show_photo").textContent = "隱藏圖片";
+        kiwi_show=true
+    }
+
+    function give_up(){
+        document.getElementById('warning').style.display = 'none';
     }
 
     function closeModal() {
