@@ -1,6 +1,7 @@
 <!-- 軼事 -->
 <!DOCTYPE html>
 <html>
+<link href="https://fonts.googleapis.com" rel="stylesheet">
 
 <head>
     <meta charset="utf-8">
@@ -8,7 +9,7 @@
     <title>《軼事》</title>
     <style>
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Noto Serif TC', serif;
             margin: 0;
             background: #f8f9fa;
             color: #222;
@@ -144,7 +145,7 @@
         nav.breadcrumb a:hover{ text-decoration:underline; }
         nav.breadcrumb span.sep{ color:#9ca3af; margin:0 .35rem; }
         p { margin-top: 0; margin-bottom: 1.1em; line-height: 1.75; }
-        h2 { font-size: 1.25rem; border-bottom: 1px solid #aaa; margin-top: 2rem; margin-bottom: .8rem; font-weight: 700; color: #111827; padding-bottom:.3rem; }
+        h2:not(.topic) { font-size: 1.25rem; border-bottom: 1px solid #aaa; margin-top: 2rem; margin-bottom: .8rem; font-weight: 700; color: #111827; padding-bottom:.3rem; }
         ul { margin-top: 0.4em; padding-left: 1.2em; line-height:1.7; }
         a{ color:var(--link); text-decoration:none; }
         a:hover{ text-decoration:underline; }
@@ -171,7 +172,7 @@
 <header class="topbar"><h1>《軼事》</h1></header>
 <div class="content">
     <nav style="position: relative; left: 0.5%;">
-        <a href="index.html">子曰</a>
+        <a href="index.html"><u>子曰</u></a>
         <span class="sep">/</span>
         <span>文章</span>
         <span class="sep">/</span>
@@ -184,8 +185,14 @@
     <div  style="line-height: 30px; position: relative; top: 10px;">
         <h2 style="font-size: 25px;">一、原文<a><span id="hideyw" style="position: relative; left: 2%; color: blue;" onclick="hideyuanwen()">隱藏</span></a></h2>
         <div id="yuanwen">
-        <h3 style="font-weight: normal; line-height: 25px;">有某者¹曰：吾欲擊汝肺。<p></p>
-        </h3>
+        <h3 style="font-weight: normal; line-height: 25px;">有某者¹曰：吾欲擊汝肺。<p></p></h3>
+
+        <h3><u>缺齒記</u></h2>
+        <h3 style="font-weight: normal; line-height: 25px;">區生者，齒疾而拔其前二齒，豁然²有缺。友輩戲之曰：「子飲羹，其無漏乎？」又曰：「子言，其無漏風³乎？」區生乃鼓頰⁴噓氣，颯颯⁵作聲。友曰：「噫！颶風⁶至矣！」或曰：「寒甚！寒甚！」</h3>
+        
+        <h3><u>搖首記</u></h2>
+        <h3 style="font-weight: normal; line-height: 25px;">曩⁷有鍾生者，行極鄙⁸，眾以為恥，欲去之而後快⁹。其人或顧盼¹⁰女生，左右張望，若風鈴¹¹之隨風，女生咸憚¹²焉。同舍¹³男生雖恥之，亦有效其狀者，搖首亟擺¹⁴，轉以為樂。</h3>
+
         </div>
     </div>
 
@@ -194,7 +201,13 @@
         <h2 style="font-size: 25px;">二、譯文<a><span id="hideyy" style="position: relative; left: 2%; color: blue;" onclick="hideyiwen()">隱藏</span></a></h2>
         <div id="yiwen">
         <h3 style="font-weight: normal; line-height: 25px;">某人說：頂你個肺<p></p>
-        </h3> 
+        
+        </h3><h3><u>缺齒記</u></h2>
+        <h3 style="font-weight: normal; line-height: 25px;">一位姓區的同學，因牙齒生長問題而拔去了兩顆在前的門牙，缺口因而清晰可見。他的朋友於是以此為樂，紛紛說：「你以後喝湯是否會漏出來？」「你說話是否會漏風？」而區同學見狀，就從口中吹氣，噓噓作響。他的朋友於是便說：「啊，颱風來啦！」「太冷啦！」</h3>
+        
+        <h3><u>搖首記</u></h2>
+        <h3 style="font-weight: normal; line-height: 25px;">以往有一個姓鍾的同學，行為極度鄙陋下流，大家都以他為班級之恥，欲除之而後快。他常常扭頭看向別的女生，四處張望，好比那見風而動的風鈴，令女生感到恐懼。而班上的男同學們對此，除了以他為恥外，有的也紛紛學着他的樣子，左右快速搖動頭部，以此為樂。</h3>
+
         </div>
     </div>
 
@@ -203,44 +216,57 @@
         <h2 style="font-size: 25px;">三、注釋<a><span id="hidezs" style="position: relative; left: 2%; color: blue;" onclick="hidezhushi()">隱藏</span></a></h2>
         <div id="zhushi">
         <h3 style="font-weight: normal; line-height: 25px;">1.  <span class="zhushi1-9">某位姓李的五乙班（2025-2026）同學</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">2.  <span class="zhushi1-9">豁然：空缺顯露之貌。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">3.  <span class="zhushi1-9">漏風：方言，謂齒缺而言語不清，若風自隙出。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">4.  <span class="zhushi1-9">鼓頰：鼓起腮頰。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">5.  <span class="zhushi1-9">颯颯：風聲，此狀吹氣之聲。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">6.  <span class="zhushi1-9">颶風：本謂海中大風，此戲指“颱風”，諧其吹氣之狀。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">7.  <span class="zhushi1-9">曩：從前。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">8.  <span class="zhushi1-9">行極鄙：行為極端鄙陋。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">9.  <span class="zhushi1-9">欲去之而後快：意謂恨不得使其離去，方稱快意。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">10. 顧盼：四處觀望。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">11. 風鈴：懸於簷下之鈴，風動則搖，喻其頭頸轉動不定。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">12. 咸憚：皆畏懼。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">13. 同舍：同班。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">14. 亟擺：急速搖動。</h3>
         </div>
     </div>
 
     <!-- 人物介紹 -->
-    <div style="position: relative; top: 70px; line-height: 30px;">
+    <!-- <div style="position: relative; top: 70px; line-height: 30px;">
         <h2 style="font-size: 25px;">四、人物介紹<a><span id="hiderw" style="position: relative; left: 2%; color: blue;" onclick="hiderenwu()">隱藏</span></a></h2>
         <div id="renwu">
         <h3 style="font-weight: normal; line-height: 25px;"></h3>
         </div>
-    </div>
+    </div> -->
 
     <!-- 文章背景 -->
-    <div style="position: relative; top: 90px; line-height: 30px;">
-    <h2 style="font-size: 25px;">五、文章背景<a><span id="hidebj" style="position: relative; left: 2%; color: blue;" onclick="hidebeijing()">隱藏</span></a></h2>
+    <!-- <div style="position: relative; top: 90px; line-height: 30px;">
+    <h2 style="font-size: 25px;">四、文章背景<a><span id="hidebj" style="position: relative; left: 2%; color: blue;" onclick="hidebeijing()">隱藏</span></a></h2>
     <h3 style="font-weight: normal; line-height: 25px; left: -0.003%;" id="beijing"></h3>
-    </div>
+    </div> -->
 
     <!-- 賞析 -->
-    <div style="position: relative; top: 110px; line-height: 30px;">
-        <h2 style="font-size: 25px;">六、賞析重點<a><span id="hidess" style="position: relative; left: 2%; color: blue;" onclick="hideshangshi()">隱藏</span></a></h2>
+    <!-- <div style="position: relative; top: 110px; line-height: 30px;">
+        <h2 style="font-size: 25px;">五、賞析重點<a><span id="hidess" style="position: relative; left: 2%; color: blue;" onclick="hideshangshi()">隱藏</span></a></h2>
         <div id="shangshi">
         <h3 style="font-weight: normal; line-height: 25px;">
             <em><span style="position: relative; left: 16px;">
             </span></em>
         </h3>
         </div>
-    </div>
+    </div> -->
 
     <!-- 總結 -->
-    <div style="position: relative; top: 130px; line-height: 40px;">
+    <!-- <div style="position: relative; top: 130px; line-height: 40px;">
         <h2 style="font-size: 30px;"><u>總結<span id="hidezj" style="position: relative; left: 2%; color: blue; font-size: 25px;" onclick="hidezongjie()"><u>隱藏</u></span></u></h2><p></p>
         <h3 style="font-weight: normal; line-height: 25px;" id="zongjie"></h3><p></p>
-    </div>
+    </div> -->
 
     <div id="copyright" style="position: relative; top: 150px; text-align: center;">
         <h6 style="position: relative; left: 10px; font-size: 10px; font-family: Arial, Helvetica, sans-serif;"><u>Design and Edit by Ou Ze Hao & Leung Tin Hang</u></h6><p></p>
         <h6 style="position: relative; left: 10px; font-size: 10px; top: -10px; font-family: Arial, Helvetica, sans-serif;" id="version"><u>Loading...</u></h6><p></p>
-        <h6 style="position: relative; left: 10px; font-size: 10px; top: -20px; font-family: Arial, Helvetica, sans-serif;">© 2025 Ou Ze Hao Leung Tin Hang</h6>
+        <h6 style="position: relative; left: 10px; font-size: 10px; top: -20px; font-family: Arial, Helvetica, sans-serif;">© 2025-2026 Ou Ze Hao Leung Tin Hang</h6>
         <!-- <h6 style="position: relative; left: 10px; font-size: 10px; top: -30px;">考試加油</h6><p></p> -->
     </div>
 </div>
