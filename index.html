@@ -5,8 +5,17 @@
 <link href="https://fonts.googleapis.com" rel="stylesheet">
 
 <style>
+    @font-face {
+        font-family: 'SupFix';
+        src: local('Times New Roman'),
+            local('Times'),
+            local('Arial Unicode MS'),
+            local('Segoe UI'),
+            local('Cambria');
+        unicode-range: U+00B9, U+00B2, U+00B3, U+2070, U+2074-2079;
+        }
     body {
-      font-family: 'Noto Serif TC', serif;
+      font-family: 'SupFix', 'Noto Serif TC', 'serif';
       margin: 0;
       background: #f8f9fa;
       color: #222;
@@ -117,7 +126,7 @@
     <title>《子曰》</title>
 
     <!-- 歡迎 -->
-    <div id="modal-overlay" style="
+    <!-- <div id="modal-overlay" style="
       position: fixed;
       z-index: 9999;
       left: 0; top: 0; width: 100vw; height: 100vh;
@@ -130,7 +139,7 @@
         <h3 style="color: red; position: relative; top: -20px;">招募新人中 有意請聯絡本人</h3>
         <button onclick="closeModal()" style="margin-top: 0px; padding: 8px 32px; font-size: 18px; background-color: rgba(255, 0, 0, 0.8);"><b>收到</b></button>
       </div>
-    </div>
+    </div> -->
     <header><div class="title">《子曰》</div></header>
     <div class="container">
       <nav>
@@ -140,13 +149,24 @@
           <ul>
             <li>文章</li>
           </ul>
+          <ul>
+            <li>人物</li>
+          </ul>
+          <ul>
+            <li>總結</li>
+          </ul>
+          <ul>
+            <li>聯絡方法：<br>
+              ig:<u><a href="https://www.instagram.com/bensonozh_1223?rpxt=MTZuZDl2Y29pYjFhag==">bensonozh_1223</a></u>
+            </li>
+          </ul>
       </nav>
       <main>
           <!-- 簡介 -->
           <section id="jianjie">
             <h2>簡介</h2>
-            <p>甲辰、乙巳年，吾等梁、歐、楊、區諸生，自四海而來，幸會於呂中之四五六乙班。其間傳奇軼事，不可勝數。鄧子嘉豪，詞鋒銳利，妙語連珠；江子國洪，肅穆嚴謹，亦莊亦諧；同窗煥祈，思辨飛揚，常有驚世之語。高中歲月絢爛如斯，豈可不撰文以志其趣？</p><br>
-            《子曰》是一部由《鄧子》、《江子》、《陳生》三篇構成的現代文言語錄體系列短文。該系列巧妙借用古典「語錄體」形式，卻記載當代教室中的荒誕軼事，形成強烈反差。<br>
+            <p>甲辰、乙巳、丙午、丁末（2024-2027）年，吾等梁、歐、楊、區諸生，自四海而來，幸會於呂中之四五六乙班。甲班之梁生，亦常與聚。其間傳奇軼事，不可勝數。鄧子嘉豪，詞鋒銳利，妙語連珠；江子國洪，肅穆嚴謹，亦莊亦諧；同窗煥祈，思辨飛揚，常有驚世之語。高中歲月絢爛如斯，豈可不撰文以志其趣？</p><br>
+            《子曰》是一部由《鄧子》、《江子》、《陳生》、《軼事》四篇構成的現代文言語錄體系列短文。該系列巧妙借用古典「語錄體」形式，卻記載當代教室中的荒誕軼事，形成強烈反差。<br>
           </section>
 
           <!-- 文章 -->
@@ -156,7 +176,20 @@
               <li><a href="dengzi.html">鄧子</a></li>
               <li><a href="jiangzi.html">江子</a></li>
               <li><a href="chensheng.html">陳生</a></li>
-              <li><a href="yishi.html">軼事（剛開始 需要更多資源）</a></li>
+              <li><a href="yishi.html">軼事（需要資源 有志之士請聯絡本人）</a></li>
+              <!-- <li><a href="zaji.html">雜記（需要資源 有志之士請聯絡本人）</a></li> -->
+            </ul>
+          </section>
+
+          <!-- 人物 -->
+          <section id="renwu">
+            <h2>人物</h2>
+            <ul>
+              <h3 style="font-weight: normal; line-height: 25px;">梁天行（２００９—），浸信會呂明才中學四五六乙班學生。為人輕浮張揚，而頗有小聰明。是首位自發整理，集輯鄧嘉豪老師言行的學生，這在校史上亦是罕有的過分行爲。</h3>
+              <h3 style="font-weight: normal; line-height: 25px;">歐澤豪（２００９—），浸信會呂明才中學學生，同為四五六乙班。為人開朗活潑，而時常做出令鄧嘉豪不滿的行為。</h3>
+              <h3 style="font-weight: normal; line-height: 25px;">區子煬（２００９—），浸信會呂明才中學四五六乙班學生。為人幽默風趣，視冷笑話為生命線。對鄧嘉豪頗有微詞。</h3>
+              <h3 style="font-weight: normal; line-height: 25px;">楊樂天（２００８—），浸信會呂明才中學四五六乙班生，性格率直但學習冒失。因怕鄧子而謹慎行事，仍不慎觸怒對方，亦是鄧子所指「三刻猶未竟者」（暗指效率欠佳）。</h3>
+              <h3 style="font-weight: normal; line-height: 25px;">梁濤（２００９—），浸信會呂明才中學四五六甲班學生。其性喜嬉鬧，而不失機敏。關心不同領域，不時能靈機一動，旁徵博引，妙趣橫生。</h3>
             </ul>
           </section>
           
@@ -164,7 +197,7 @@
           <section style="position: relative;line-height: 40px;" id="zongjie">
             <h2>總結</h2>
             <h3 style="font-weight: normal; line-height: 25px;">
-              《子曰》系列是一部現代教育的微型悲喜劇。<br>
+              《子曰》由四部分組成：《鄧子》、《江子》、《陳生》三篇人物列傳，加上《軼事》一篇校園散記。前三篇各聚焦一人，以人物為軸心展開；《軼事》則以事件為單元，不拘於一人一事，呈現校園生活的零碎片段。四者合觀，構成從「典型人物」到「日常碎影」的完整光譜。<br>
               <em style="position: relative; left: 16px;">
               《鄧子》展現了權力的悲劇：越是努力掌控，越是失控。<br>
               《江子》展現了語言的喜劇：用新舊雜糅的話語包裝冰冷的現實，卻暴露了自身的荒誕。<br>
@@ -178,12 +211,30 @@
     
 
     <div id="copyright" style="position: relative; text-align: center;">
-        <h6 style="position: relative; left: 10px; font-size: 10px; font-family: Arial, Helvetica, sans-serif;"><u>Design and Edit by Ou Ze Hao & Leung Tin Hang</u></h6><p></p>
-        <h6 style="position: relative; left: 10px; font-size: 10px; top: -10px; font-family: Arial, Helvetica, sans-serif;" id="version"><u>v2.1.0 23/3/2025</u></h6><p></p>
+    <h6 style="position: relative; left: 10px; font-size: 10px; font-family: Arial, Helvetica, sans-serif;">
+      <u ondblclick="document.getElementById('pwdbox').style.display='block'"
+        style="cursor:default;">
+        Design and Edit by Ou Ze Hao & Leung Tin Hang
+      </u>
+    </h6>
+
+    <div id="pwdbox" style="display:none; text-align:center; margin:10px 0;">
+      <input id="pwd" type="password" placeholder="密碼"
+            style="padding:6px 10px; font-size:14px;"
+            onkeydown="if(event.key==='Enter')checkPassword()">
+      <button onclick="checkPassword()"
+              style="padding:6px 16px; font-size:14px;">進入</button>
+      <div id="msg" style="color:red; font-size:12px; margin-top:4px;"></div>
+    </div>
+        <h6 style="position: relative; left: 10px; font-size: 10px; top: -10px; font-family: Arial, Helvetica, sans-serif;" id="version"><u>v2.1.1 10/10/2025</u></h6><p></p>
         <h6 style="position: relative; left: 10px; font-size: 10px; top: -20px; font-family: Arial, Helvetica, sans-serif;">© 2025-2026 Ou Ze Hao Leung Tin Hang</h6>
         <!-- <h6 style="position: relative; left: 10px; font-size: 10px; top: -30px;">考試加油</h6><p></p> -->
     </div>
+    
+    <script src="pw.js"></script>
 </head>
+
+
 
 <script>
   function closeModal() {
