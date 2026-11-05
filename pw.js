@@ -1,9 +1,8 @@
-// ====== 設定區 ======
-const SALT      = "ziyue";        // 換密碼時可一起換
-const REAL_HASH = "ffe7664cd43fdf495193d59424377369b8748e4353b9dcd5f70fe935d30a44af";           // 真密碼 → 真頁面
-const FAKE_HASH = "86d41748bfb7b14d14bb291797a7192a5e8d4b7ce240e783daf00f5078ab892b";           // 假密碼 → 誘餌頁
-const REAL_PAGE = "zaji.html";            // 真頁面
-const FAKE_PAGE = "yishi.html";            // 誘餌頁（要做得像正常頁面）
+const SALT = "zaji";
+const PW = "a5ac7d6739c6369ead93f0ef7c12a41a863615fdba4ff85ba28130556ccdcb70";
+const PW2 = "86d41748bfb7b14d14bb291797a7192a5e8d4b7ce240e783daf00f5078ab892b";
+const pw1 = "zaji.html";
+const pw3 = "yishi.html";
 // ===================
 
 async function sha256(str) {
@@ -18,10 +17,10 @@ async function checkPassword() {
   if (!v) return;
   const h = await sha256(SALT + v);
 
-  if (h === REAL_HASH) {
-    location.href = REAL_PAGE;
-  } else if (h === FAKE_HASH) {
-    location.href = FAKE_PAGE;
+  if (h === PW) {
+    location.href = pw1;
+  } else if (h === PW2) {
+    location.href = pw3;
   } else {
     document.getElementById('msg').textContent = "密碼錯誤";
     document.getElementById('pwd').value = "";
