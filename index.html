@@ -1,3 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>《子曰》</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- 歡迎 -->
+<div id="modal-overlay" style="
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center;">
+    
+    <div style="
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        padding: 50px 60px;
+        border-radius: 20px;
+        text-align: center;
+        max-width: 80vw;
+        border: 1px solid rgba(255, 255, 255, 1);
+        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.7);">
+        
+        <h1>歡迎！</h1><br>
+        <p>乙巳晚春以來，有梁、歐等生，輯其恩師、同窗之言行於此頁上，以為銘記，同學共進。<br>
+        v3.0.0版本已上綫，更新内容可於版本更新日志中查看</p>
+        
+        <h3 style="color: #dc2626; margin: 10px 0; font-weight: bold;">凡閱者必須保密，泄露者當誅九族！</h3>
+        <h3 style="color: #dc2626; margin: 10px 0 30px 0; font-weight: bold;">收集素材中 有意請<u><a style="color: #dc2626;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='#dc2626'" href="https://www.instagram.com/bensonozh_1223?rpxt=MTZuZDl2Y29pYjFhag==">聯絡本人</a></u></h3>
+        
+        <button onclick="closeModal()" class="toggle-all-btn" style="
+            padding: 10px 40px;
+            font-size: 18px;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.9) 0%, rgba(220, 38, 38, 0.7) 100%);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.4);">
+            <b>收到</b>
+        </button>
+    </div>
+</div>
+
+<header class="topbar"><div class="title">《子曰》</div></header>
+
+<div class="container">
+    <nav>
+        <ul><li><a href="#jianjie">簡介</a></li></ul>
+        <ul><li><a href="#wenzhang">文章</a></li></ul>
+        <ul><li><a href="#renwu">人物</a></li></ul>
+        <ul><li><a href="#shangshi">賞析</a></li></ul>
+        <ul><li><a href="#zongjie">總結</a></li></ul>
+        <ul>
+            <li>聯絡方法：<br>
+                ig:<u><a href="https://www.instagram.com/bensonozh_1223?rpxt=MTZuZDl2Y29pYjFhag==">bensonozh_1223</a></u>
+            </li>
+        </ul>
+        <div class="changelog-box">
+            <details>
+                <summary>版本更新日誌</summary>
+                <div class="log-list">
+                    <p><b>v3.0.0</b></p>
+                    <p><b>【內容更新】</b><br>
+                    • 更新《鄧子》賞析和總結內容<br>
+                    • 首頁新增《子曰》全系列整體賞析<br>
+                    • 更新《子曰》簡介和總結</p>
+                    
+                    <p><b>【網頁更新】</b><br>
+                    • 全站新 UI 上線<br>
+                    • 新增注釋懸停/點擊彈窗<br>
+                    • 新增閱讀進度條與返回頂部<br>
+                    • 新增平滑折疊與導航高亮<br>
+                    • 重構全站 CSS 與 JS 架構<br>
+                    • 統一所有頁面排版與字體</p>
+                </div>
+            </details>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="jianjie">
+            <h2>簡介</h2>
+            <p>甲辰、乙巳、丙午、丁末（2024-2027）年，吾等梁、歐、楊、區諸生，自四海而來，幸會於呂中之四五六乙班。甲班之梁生，亦常與聚。其間傳奇軼事，不可勝數。鄧子嘉豪，詞鋒銳利，妙語連珠；江子國洪，肅穆嚴謹，亦莊亦諧；同窗煥祈，思辨飛揚，常有驚世之語。高中歲月絢爛如斯，豈可不撰文以志其趣？</p>
+            <p>《子曰》以現代文言語錄體仿古典筆記為當代校園人物立傳，借《論語》《世說》式短章與「太史公曰」式評語，記鄧子、江子及諸生的課堂軼事與選舉風波，文白雜糅、注譯戲仿，諧謔中見觀察。全系列以誇張反差寫師生群像，既是一班青春志，也是課堂權威、績效焦慮與集體生活的微型鏡像。</p>
+        </section>
+
+        <section id="wenzhang">
+            <h2>文章</h2>
+            <ul>
+                <li><a href="dengzi.html">鄧子</a></li>
+                <li><a href="jiangzi.html">江子</a></li>
+                <li><a href="chensheng.html">陳生</a></li>
+                <li><a href="yishi.html">軼事（需要資源 有志之士請聯絡本人）</a></li>
+            </ul>
+        </section>
+
+        <section id="renwu">
+            <h2>人物</h2>
+            <ul>
+                <li>梁天行（２００９—），浸信會呂明才中學四五六乙班學生。為人輕浮張揚，而頗有小聰明。是首位自發整理，集輯鄧嘉豪老師言行的學生，這在校史上亦是罕有的過分行爲。</li>
+                <li>歐澤豪（２００９—），浸信會呂明才中學學生，同為四五六乙班。為人開朗活潑，而時常做出令鄧嘉豪不滿的行為。</li>
+                <li>區子煬（２００９—），浸信會呂明才中學四五六乙班學生。為人幽默風趣，視冷笑話為生命線。對鄧嘉豪頗有微詞。</li>
+                <li>楊樂天（２００８—），浸信會呂明才中學四五六乙班生，性格率直但學習冒失。因怕鄧子而謹慎行事，仍不慎觸怒對方，亦是鄧子所指「三刻猶未竟者」（暗指效率欠佳）。</li>
+                <li>梁濤（２００９—），浸信會呂明才中學四五六甲班學生。其性喜嬉鬧，而不失機敏。關心不同領域，不時能靈機一動，旁徵博引，妙趣橫生。</li>
+            </ul>
+        </section>
+
+        <section id="shangshi">
+            <h2>賞析</h2>
+            <p>《子曰》系列的賞析，可從整體上把握其「以古筆寫今事」的藝術經營。</p>
+            
+            <p><b><u>一、文體戲仿與語言張力。</u></b><br>
+            全系列借《論語》語錄體、《世說新語》軼事體與《史記》紀傳評贊為當代校園人物立傳，老師稱「子」、學生稱「生」、通傳紙稱「檄文」、十分鐘稱「十刻」，古語與「物理」「小數」「駐波」「文憑試」「跑輸大市」「學生會內閣」並置，形成一本正經的荒誕感。其幽默不靠插科打諢，而靠文體莊重感與校園日常的落差，以及「舊詞新用」的語境轉換：「見微知著」降格為批評作業粗疏，「跑輸大市」由金融評級移評考試成績，「雷霆」「虎狼」形容師怒，皆精準而可誦。</p>
+            
+            <p><b><u>二、人物群像與敘事倫理。</u></b><br>
+            鄧子、江子都不是扁平化的諷刺對象。鄧子嚴厲、拖堂、拍桌，但也講解、檢查自習、認真補課；他要求小數而自己用分數，斥學生「緘口」而自己說「吾當詳解於堂」，矛盾處反見立體。江子以四字語和金融比喻教學，冷幽默中透露對成績落後的焦慮；「跑輸大市」「汝盡通乎」被學生迅速模仿，展現教師話語的滲透力。梁生常作冷眼評點，是班級「史官」；陳生多次成為喜劇犧牲；歐、楊、區諸生各有聲口。每則末尾的「眾曰」「同窗曰」「梁生譏曰」形成班級輿論場，使敘事兼具現場感與口述史味道。</p>
+            
+            <p><b><u>三、主題意蘊：規訓、績效與青春記憶。</u></b><br>
+            表面寫嚴師頑生，深層觸及課堂權威與體恤、績效主義與競爭焦慮、特殊教育與集體秩序。《江子》的「跑輸大市」把教育市場化、數據化的現實精準捕捉；《鄧子》的限時與拍桌反映課堂效率與情緒管理；《陳生》以反差呈現特殊學生融入集體生活的困難；《軼事》的選舉記則由班級笑談上升至校園公共生活觀察。系列可貴處在於諷刺而不刻薄，誇張而見真情，把當年覺得可怕的「詛咒」「雷霆之怒」化為多年後可供傳閱的青春笑談。</p>
+            
+            <p><b><u>四、注譯體例與文獻趣味。</u></b><br>
+            原文、譯文、注釋、人物介紹、賞析重點的完整結構，戲仿古籍整理體例。注釋考證人名、粵音、校情，譯文把文言還原為校園白話，既降低閱讀門檻，也增添「文獻整理」的趣味，使課堂戲作具備微型「經典化」的儀式感。</p>
+            
+            <p><b><u>五、分寸與局限。</u></b><br>
+            仿古偶有生硬，部分文言詞與現代場景的縫合稍顯刻意；《陳生》以「反面教材」立傳，訓誡意圖明顯，書寫特殊教育需要學生時若戲謔過度，易流於標籤化，需保留理解與分寸；《選舉記》涉及真實校園事件與個人傳聞，作為班級紀念文本有現場史價值，公開傳閱時則宜注意隱私與名譽。</p>
+            
+            <p>總體而言，《子曰》系列以鮮明的人物、活潑的文白雜糅語言和自覺的文體意識，成功保存了一班師生的聲口與時代情緒。它既是校園筆記體的諧謔之作，也是一組頗有巧思的青春志與教育生態微型鏡像。</p>
+        </section>
+        
+        <section id="zongjie">
+            <h2>總結</h2>
+            <p>《子曰》系列以現代文言語錄體戲仿《論語》《世說新語》《史記》等古典文體，為當代校園人物立傳。《鄧子》《江子》《陳生》《軼事》四篇分寫嚴師妙語、四字金句、特殊學生的反差言行，以及由班級笑談延伸至學生會選舉的校園風波。全系列文白雜糅、注譯戲仿、舊詞新用，諧謔中見觀察，誇張中存真情；人物不扁平，師生輿論場生動，觸及課堂權威、績效焦慮、特殊教育與集體生活等主題。它既是一班的青春志，也是當代教育生態的微型鏡像。</p>
+        </section>
+    </main>
+</div>
+
+<div id="copyright" style="position: relative; text-align: center; padding-bottom: 20px;">
+    <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;">
+        <u ondblclick="document.getElementById('pwdbox').style.display='block'" style="cursor:default;">
+            Design and Edit by Ou Ze Hao & Leung Tin Hang
+        </u>
+    </h6>
+
+    <div id="pwdbox" style="display:none; text-align:center; margin:10px 0;">
+        <input id="pwd" type="password" placeholder="密碼" style="padding:6px 10px; font-size:14px;" onkeydown="if(event.key==='Enter')checkPassword()">
+        <button onclick="checkPassword()" class="section-btn" style="padding:6px 16px; font-size:14px;">進入</button>
+        <div id="msg" style="color:red; font-size:12px; margin-top:4px;"></div>
+    </div>
+    <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;" id="version"><u>v3.0.0 15/11/2026</u></h6>
+    <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;">© 2025-2026 Ou Ze Hao Leung Tin Hang</h6>
+</div>
+
+<button id="back-to-top" title="返回頂部">↑</button>
+
+<script src="pw.js"></script>
+
 <script>
-document.write(decodeURIComponent('%3C!--%20https%3A%2F%2Fbenson-ozh.github.io%2Fziyue%2F%20--%3E%0D%0A%3C!--%20main%20--%3E%0D%0A%3C!DOCTYPE%20html%3E%0D%0A%3Chtml%3E%0D%0A%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%22%20rel%3D%22stylesheet%22%3E%0D%0A%0D%0A%3Cstyle%3E%0D%0A%20%20%20%20%40font-face%20%7B%0D%0A%20%20%20%20%20%20%20%20font-family%3A%20\'SupFix\'%3B%0D%0A%20%20%20%20%20%20%20%20src%3A%20local(\'Times%20New%20Roman\')%2C%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20local(\'Times\')%2C%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20local(\'Arial%20Unicode%20MS\')%2C%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20local(\'Segoe%20UI\')%2C%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20local(\'Cambria\')%3B%0D%0A%20%20%20%20%20%20%20%20unicode-range%3A%20U%2B00B9%2C%20U%2B00B2%2C%20U%2B00B3%2C%20U%2B2070%2C%20U%2B2074-2079%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20body%20%7B%0D%0A%20%20%20%20%20%20font-family%3A%20\'SupFix\'%2C%20\'Noto%20Serif%20TC\'%2C%20\'serif\'%3B%0D%0A%20%20%20%20%20%20margin%3A%200%3B%0D%0A%20%20%20%20%20%20background%3A%20%23f8f9fa%3B%0D%0A%20%20%20%20%20%20color%3A%20%23222%3B%0D%0A%20%20%20%20%20%20background-image%3A%20%0D%0A%20%20%20%20%20%20%20%20url(\'https%3A%2F%2Ffanti.dugushici.com%2Fassets%2Frightbg.gif\')%3B%0D%0A%20%20%20%20%20%20background-repeat%3A%20repeat%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20header%20%7B%0D%0A%20%20%20%20%20%20display%3A%20flex%3B%0D%0A%20%20%20%20%20%20align-items%3A%20center%3B%0D%0A%20%20%20%20%20%20padding%3A%201rem%202vw%3B%0D%0A%20%20%20%20%20%20background%3A%20%23ffffff%3B%0D%0A%20%20%20%20%20%20border-bottom%3A%201px%20solid%20%23aaa%3B%0D%0A%20%20%20%20%20%20background-image%3A%20%0D%0A%20%20%20%20%20%20%20%20url(\'https%3A%2F%2Ffanti.dugushici.com%2Fassets%2Frightbg.gif\')%3B%0D%0A%20%20%20%20%20%20background-repeat%3A%20repeat%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20.title%20%7B%0D%0A%20%20%20%20%20%20font-size%3A%202rem%3B%0D%0A%20%20%20%20%20%20font-weight%3A%20bold%3B%0D%0A%20%20%20%20%20%20flex%3A%201%3B%0D%0A%20%20%20%20%20%20background-image%3A%20%0D%0A%20%20%20%20%20%20%20%20url(\'https%3A%2F%2Ffanti.dugushici.com%2Fassets%2Frightbg.gif\')%3B%0D%0A%20%20%20%20%20%20background-repeat%3A%20repeat%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20nav%20%7B%0D%0A%20%20%20%20%20%20background%3A%20%23f6f6f6%3B%0D%0A%20%20%20%20%20%20border-right%3A%201px%20solid%20%23aaa%3B%0D%0A%20%20%20%20%20%20min-width%3A%20200px%3B%0D%0A%20%20%20%20%20%20padding%3A%201rem%200.5rem%3B%0D%0A%20%20%20%20%20%20height%3A%20100%25%3B%0D%0A%20%20%20%20%20%20background-image%3A%20%0D%0A%20%20%20%20%20%20%20%20url(\'https%3A%2F%2Ffanti.dugushici.com%2Fassets%2Frightbg.gif\')%3B%0D%0A%20%20%20%20%20%20background-repeat%3A%20repeat%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20nav%20ul%20%7B%0D%0A%20%20%20%20%20%20list-style%3A%20none%3B%0D%0A%20%20%20%20%20%20padding%3A%200%3B%0D%0A%20%20%20%20%20%20margin%3A%200%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20nav%20li%20%7B%0D%0A%20%20%20%20%20%20margin%3A%201rem%200%3B%0D%0A%20%20%20%20%20%20position%3A%20relative%3B%0D%0A%20%20%20%20%20%20left%3A%2010px%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20nav%20a%7B%0D%0A%20%20%20%20%20%20text-decoration%3A%20none%3B%0D%0A%20%20%20%20%20%20color%3A%20%230747a6%3B%0D%0A%20%20%20%20%20%20font-weight%3A%20500%3B%0D%0A%20%20%20%20%20%20position%3A%20relative%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20main%20%7B%0D%0A%20%20%20%20%20%20flex%3A%201%3B%0D%0A%20%20%20%20%20%20padding%3A%202rem%205vw%202rem%202vw%3B%0D%0A%20%20%20%20%20%20background%3A%20%23fff%3B%0D%0A%20%20%20%20%20%20min-width%3A%200%3B%0D%0A%20%20%20%20%20%20background-image%3A%20%0D%0A%20%20%20%20%20%20%20%20url(\'https%3A%2F%2Ffanti.dugushici.com%2Fassets%2Frightbg.gif\')%3B%0D%0A%20%20%20%20%20%20background-repeat%3A%20repeat%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20.container%20%7B%0D%0A%20%20%20%20%20%20display%3A%20flex%3B%0D%0A%20%20%20%20%20%20min-height%3A%2078vh%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20section%20%7B%0D%0A%20%20%20%20%20%20margin-bottom%3A%202.5rem%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20section%20h2%20%7B%0D%0A%20%20%20%20%20%20border-bottom%3A%201px%20solid%20%23aaa%3B%0D%0A%20%20%20%20%20%20padding-bottom%3A%200.3em%3B%0D%0A%20%20%20%20%20%20margin-top%3A%200%3B%0D%0A%20%20%20%20%20%20margin-bottom%3A%201em%3B%0D%0A%20%20%20%20%20%20font-size%3A%201.4em%3B%0D%0A%20%20%20%20%20%20color%3A%20%23222%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%40media%20(max-width%3A%20800px)%20%7B%0D%0A%20%20%20%20%20%20.container%20%7B%0D%0A%20%20%20%20%20%20%20%20flex-direction%3A%20column%3B%0D%0A%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20nav%20%7B%0D%0A%20%20%20%20%20%20%20%20border-right%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20border-bottom%3A%201px%20solid%20%23aaa%3B%0D%0A%20%20%20%20%20%20%20%20min-width%3A%200%3B%0D%0A%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0D%0A%20%20%20%20%20%20%20%20padding%3A%200.5rem%200.5rem%3B%0D%0A%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20main%20%7B%0D%0A%20%20%20%20%20%20%20%20padding%3A%201.5rem%202vw%201rem%202vw%3B%0D%0A%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20button%7B%0D%0A%20%20%20%20%20%20padding%3A%2010px%2020px%3B%0D%0A%20%20%20%20%20%20font-size%3A%2016px%3B%0D%0A%20%20%20%20%20%20border-radius%3A%2010px%3B%0D%0A%20%20%20%20%20%20transition%3A%20all%200.2s%20ease-in-out%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20button%3Ahover%7B%0D%0A%20%20%20%20%20%20color%3A%20rgb(50%2C%2035%2C%2035)%3B%0D%0A%20%20%20%20%20%20box-shadow%3A%200%205px%2015px%20rgba(145%2C%2092%2C%20182%2C%20.4)%3B%0D%0A%20%20%20%20%20%20border-radius%3A%2012px%3B%0D%0A%20%20%20%20%20%20transform%3A%20scale(1.05)%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%3C%2Fstyle%3E%0D%0A%0D%0A%3Chead%3E%0D%0A%20%20%20%20%3Cmeta%20charset%3D%22utf-8%22%3E%0D%0A%20%20%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1%22%3E%0D%0A%20%20%20%20%3Ctitle%3E%E3%80%8A%E5%AD%90%E6%9B%B0%E3%80%8B%3C%2Ftitle%3E%0D%0A%0D%0A%20%20%20%20%3C!--%20%E6%AD%A1%E8%BF%8E%20--%3E%0D%0A%20%20%20%20%3C!--%20%3Cdiv%20id%3D%22modal-overlay%22%20style%3D%22%0D%0A%20%20%20%20%20%20position%3A%20fixed%3B%0D%0A%20%20%20%20%20%20z-index%3A%209999%3B%0D%0A%20%20%20%20%20%20left%3A%200%3B%20top%3A%200%3B%20width%3A%20100vw%3B%20height%3A%20100vh%3B%0D%0A%20%20%20%20%20%20background%3A%20rgba(0%2C0%2C0%2C0.6)%3B%0D%0A%20%20%20%20%20%20display%3A%20flex%3B%20align-items%3A%20center%3B%20justify-content%3A%20center%3B%22%3E%0D%0A%20%20%20%20%20%20%3Cdiv%20style%3D%22background%3A%20%23ebebeb%3B%20padding%3A%2050px%2060px%3B%20border-radius%3A%2020px%3B%20text-align%3A%20center%3B%20max-width%3A%2080vw%3B%22%3E%0D%0A%20%20%20%20%20%20%20%20%3Ch1%3E%E6%AD%A1%E8%BF%8E%EF%BC%81%3C%2Fh1%3E%0D%0A%20%20%20%20%20%20%20%20%3Cp%3E%E4%B9%99%E5%B7%B3%E6%99%9A%E6%98%A5%E4%BB%A5%E4%BE%86%EF%BC%8C%E6%9C%89%E6%A2%81%E3%80%81%E6%AD%90%E7%AD%89%E7%94%9F%EF%BC%8C%E8%BC%AF%E5%85%B6%E6%81%A9%E5%B8%AB%E3%80%81%E5%90%8C%E7%AA%97%E4%B9%8B%E8%A8%80%E8%A1%8C%E6%96%BC%E6%AD%A4%E9%A0%81%E4%B8%8A%EF%BC%8C%E4%BB%A5%E7%82%BA%E9%8A%98%E8%A8%98%EF%BC%8C%E5%90%8C%E5%AD%B8%E5%85%B1%E9%80%B2%E3%80%82%3C%2Fp%3E%3Cbr%3E%0D%0A%20%20%20%20%20%20%20%20%3Ch3%20style%3D%22color%3A%20red%3B%20position%3A%20relative%3B%20top%3A%20-20px%3B%22%3E%E5%87%A1%E9%96%B1%E8%80%85%E5%BF%85%E9%A0%88%E4%BF%9D%E5%AF%86%EF%BC%8C%E6%B3%84%E9%9C%B2%E8%80%85%E7%95%B6%E8%AA%85%E4%B9%9D%E6%97%8F%EF%BC%81%3C%2Fh3%3E%0D%0A%20%20%20%20%20%20%20%20%3Ch3%20style%3D%22color%3A%20red%3B%20position%3A%20relative%3B%20top%3A%20-20px%3B%22%3E%E6%8B%9B%E5%8B%9F%E6%96%B0%E4%BA%BA%E4%B8%AD%20%E6%9C%89%E6%84%8F%E8%AB%8B%E8%81%AF%E7%B5%A1%E6%9C%AC%E4%BA%BA%3C%2Fh3%3E%0D%0A%20%20%20%20%20%20%20%20%3Cbutton%20onclick%3D%22closeModal()%22%20style%3D%22margin-top%3A%200px%3B%20padding%3A%208px%2032px%3B%20font-size%3A%2018px%3B%20background-color%3A%20rgba(255%2C%200%2C%200%2C%200.8)%3B%22%3E%3Cb%3E%E6%94%B6%E5%88%B0%3C%2Fb%3E%3C%2Fbutton%3E%0D%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0D%0A%20%20%20%20%3C%2Fdiv%3E%20--%3E%0D%0A%20%20%20%20%3Cheader%3E%3Cdiv%20class%3D%22title%22%3E%E3%80%8A%E5%AD%90%E6%9B%B0%E3%80%8B%3C%2Fdiv%3E%3C%2Fheader%3E%0D%0A%20%20%20%20%3Cdiv%20class%3D%22container%22%3E%0D%0A%20%20%20%20%20%20%3Cnav%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3Cul%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%E7%B0%A1%E4%BB%8B%3C%2Fli%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3C%2Ful%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3Cul%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%E6%96%87%E7%AB%A0%3C%2Fli%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3C%2Ful%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3Cul%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%E4%BA%BA%E7%89%A9%3C%2Fli%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3C%2Ful%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3Cul%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%E7%B8%BD%E7%B5%90%3C%2Fli%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3C%2Ful%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3Cul%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%E8%81%AF%E7%B5%A1%E6%96%B9%E6%B3%95%EF%BC%9A%3Cbr%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20ig%3A%3Cu%3E%3Ca%20href%3D%22https%3A%2F%2Fwww.instagram.com%2Fbensonozh_1223%3Frpxt%3DMTZuZDl2Y29pYjFhag%3D%3D%22%3Ebensonozh_1223%3C%2Fa%3E%3C%2Fu%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fli%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3C%2Ful%3E%0D%0A%20%20%20%20%20%20%3C%2Fnav%3E%0D%0A%20%20%20%20%20%20%3Cmain%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20%E7%B0%A1%E4%BB%8B%20--%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3Csection%20id%3D%22jianjie%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3E%E7%B0%A1%E4%BB%8B%3C%2Fh2%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3E%E7%94%B2%E8%BE%B0%E3%80%81%E4%B9%99%E5%B7%B3%E3%80%81%E4%B8%99%E5%8D%88%E3%80%81%E4%B8%81%E6%9C%AB%EF%BC%882024-2027%EF%BC%89%E5%B9%B4%EF%BC%8C%E5%90%BE%E7%AD%89%E6%A2%81%E3%80%81%E6%AD%90%E3%80%81%E6%A5%8A%E3%80%81%E5%8D%80%E8%AB%B8%E7%94%9F%EF%BC%8C%E8%87%AA%E5%9B%9B%E6%B5%B7%E8%80%8C%E4%BE%86%EF%BC%8C%E5%B9%B8%E6%9C%83%E6%96%BC%E5%91%82%E4%B8%AD%E4%B9%8B%E5%9B%9B%E4%BA%94%E5%85%AD%E4%B9%99%E7%8F%AD%E3%80%82%E7%94%B2%E7%8F%AD%E4%B9%8B%E6%A2%81%E7%94%9F%EF%BC%8C%E4%BA%A6%E5%B8%B8%E8%88%87%E8%81%9A%E3%80%82%E5%85%B6%E9%96%93%E5%82%B3%E5%A5%87%E8%BB%BC%E4%BA%8B%EF%BC%8C%E4%B8%8D%E5%8F%AF%E5%8B%9D%E6%95%B8%E3%80%82%E9%84%A7%E5%AD%90%E5%98%89%E8%B1%AA%EF%BC%8C%E8%A9%9E%E9%8B%92%E9%8A%B3%E5%88%A9%EF%BC%8C%E5%A6%99%E8%AA%9E%E9%80%A3%E7%8F%A0%EF%BC%9B%E6%B1%9F%E5%AD%90%E5%9C%8B%E6%B4%AA%EF%BC%8C%E8%82%85%E7%A9%86%E5%9A%B4%E8%AC%B9%EF%BC%8C%E4%BA%A6%E8%8E%8A%E4%BA%A6%E8%AB%A7%EF%BC%9B%E5%90%8C%E7%AA%97%E7%85%A5%E7%A5%88%EF%BC%8C%E6%80%9D%E8%BE%A8%E9%A3%9B%E6%8F%9A%EF%BC%8C%E5%B8%B8%E6%9C%89%E9%A9%9A%E4%B8%96%E4%B9%8B%E8%AA%9E%E3%80%82%E9%AB%98%E4%B8%AD%E6%AD%B2%E6%9C%88%E7%B5%A2%E7%88%9B%E5%A6%82%E6%96%AF%EF%BC%8C%E8%B1%88%E5%8F%AF%E4%B8%8D%E6%92%B0%E6%96%87%E4%BB%A5%E5%BF%97%E5%85%B6%E8%B6%A3%EF%BC%9F%3C%2Fp%3E%3Cbr%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%E3%80%8A%E5%AD%90%E6%9B%B0%E3%80%8B%E6%98%AF%E4%B8%80%E9%83%A8%E7%94%B1%E3%80%8A%E9%84%A7%E5%AD%90%E3%80%8B%E3%80%81%E3%80%8A%E6%B1%9F%E5%AD%90%E3%80%8B%E3%80%81%E3%80%8A%E9%99%B3%E7%94%9F%E3%80%8B%E3%80%81%E3%80%8A%E8%BB%BC%E4%BA%8B%E3%80%8B%E5%9B%9B%E7%AF%87%E6%A7%8B%E6%88%90%E7%9A%84%E7%8F%BE%E4%BB%A3%E6%96%87%E8%A8%80%E8%AA%9E%E9%8C%84%E9%AB%94%E7%B3%BB%E5%88%97%E7%9F%AD%E6%96%87%E3%80%82%E8%A9%B2%E7%B3%BB%E5%88%97%E5%B7%A7%E5%A6%99%E5%80%9F%E7%94%A8%E5%8F%A4%E5%85%B8%E3%80%8C%E8%AA%9E%E9%8C%84%E9%AB%94%E3%80%8D%E5%BD%A2%E5%BC%8F%EF%BC%8C%E5%8D%BB%E8%A8%98%E8%BC%89%E7%95%B6%E4%BB%A3%E6%95%99%E5%AE%A4%E4%B8%AD%E7%9A%84%E8%8D%92%E8%AA%95%E8%BB%BC%E4%BA%8B%EF%BC%8C%E5%BD%A2%E6%88%90%E5%BC%B7%E7%83%88%E5%8F%8D%E5%B7%AE%E3%80%82%3Cbr%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fsection%3E%0D%0A%0D%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20%E6%96%87%E7%AB%A0%20--%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3Csection%20id%3D%22wenzhang%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3E%E6%96%87%E7%AB%A0%3C%2Fh2%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22dengzi.html%22%3E%E9%84%A7%E5%AD%90%3C%2Fa%3E%3C%2Fli%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22jiangzi.html%22%3E%E6%B1%9F%E5%AD%90%3C%2Fa%3E%3C%2Fli%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22chensheng.html%22%3E%E9%99%B3%E7%94%9F%3C%2Fa%3E%3C%2Fli%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22yishi.html%22%3E%E8%BB%BC%E4%BA%8B%EF%BC%88%E9%9C%80%E8%A6%81%E8%B3%87%E6%BA%90%20%E6%9C%89%E5%BF%97%E4%B9%8B%E5%A3%AB%E8%AB%8B%E8%81%AF%E7%B5%A1%E6%9C%AC%E4%BA%BA%EF%BC%89%3C%2Fa%3E%3C%2Fli%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C!--%20%3Cli%3E%3Ca%20href%3D%22zaji.html%22%3E%E9%9B%9C%E8%A8%98%EF%BC%88%E9%9C%80%E8%A6%81%E8%B3%87%E6%BA%90%20%E6%9C%89%E5%BF%97%E4%B9%8B%E5%A3%AB%E8%AB%8B%E8%81%AF%E7%B5%A1%E6%9C%AC%E4%BA%BA%EF%BC%89%3C%2Fa%3E%3C%2Fli%3E%20--%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Ful%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fsection%3E%0D%0A%0D%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20%E4%BA%BA%E7%89%A9%20--%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3Csection%20id%3D%22renwu%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3E%E4%BA%BA%E7%89%A9%3C%2Fh2%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch3%20style%3D%22font-weight%3A%20normal%3B%20line-height%3A%2025px%3B%22%3E%E6%A2%81%E5%A4%A9%E8%A1%8C%EF%BC%88%EF%BC%92%EF%BC%90%EF%BC%90%EF%BC%99%E2%80%94%EF%BC%89%EF%BC%8C%E6%B5%B8%E4%BF%A1%E6%9C%83%E5%91%82%E6%98%8E%E6%89%8D%E4%B8%AD%E5%AD%B8%E5%9B%9B%E4%BA%94%E5%85%AD%E4%B9%99%E7%8F%AD%E5%AD%B8%E7%94%9F%E3%80%82%E7%82%BA%E4%BA%BA%E8%BC%95%E6%B5%AE%E5%BC%B5%E6%8F%9A%EF%BC%8C%E8%80%8C%E9%A0%97%E6%9C%89%E5%B0%8F%E8%81%B0%E6%98%8E%E3%80%82%E6%98%AF%E9%A6%96%E4%BD%8D%E8%87%AA%E7%99%BC%E6%95%B4%E7%90%86%EF%BC%8C%E9%9B%86%E8%BC%AF%E9%84%A7%E5%98%89%E8%B1%AA%E8%80%81%E5%B8%AB%E8%A8%80%E8%A1%8C%E7%9A%84%E5%AD%B8%E7%94%9F%EF%BC%8C%E9%80%99%E5%9C%A8%E6%A0%A1%E5%8F%B2%E4%B8%8A%E4%BA%A6%E6%98%AF%E7%BD%95%E6%9C%89%E7%9A%84%E9%81%8E%E5%88%86%E8%A1%8C%E7%88%B2%E3%80%82%3C%2Fh3%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch3%20style%3D%22font-weight%3A%20normal%3B%20line-height%3A%2025px%3B%22%3E%E6%AD%90%E6%BE%A4%E8%B1%AA%EF%BC%88%EF%BC%92%EF%BC%90%EF%BC%90%EF%BC%99%E2%80%94%EF%BC%89%EF%BC%8C%E6%B5%B8%E4%BF%A1%E6%9C%83%E5%91%82%E6%98%8E%E6%89%8D%E4%B8%AD%E5%AD%B8%E5%AD%B8%E7%94%9F%EF%BC%8C%E5%90%8C%E7%82%BA%E5%9B%9B%E4%BA%94%E5%85%AD%E4%B9%99%E7%8F%AD%E3%80%82%E7%82%BA%E4%BA%BA%E9%96%8B%E6%9C%97%E6%B4%BB%E6%BD%91%EF%BC%8C%E8%80%8C%E6%99%82%E5%B8%B8%E5%81%9A%E5%87%BA%E4%BB%A4%E9%84%A7%E5%98%89%E8%B1%AA%E4%B8%8D%E6%BB%BF%E7%9A%84%E8%A1%8C%E7%82%BA%E3%80%82%3C%2Fh3%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch3%20style%3D%22font-weight%3A%20normal%3B%20line-height%3A%2025px%3B%22%3E%E5%8D%80%E5%AD%90%E7%85%AC%EF%BC%88%EF%BC%92%EF%BC%90%EF%BC%90%EF%BC%99%E2%80%94%EF%BC%89%EF%BC%8C%E6%B5%B8%E4%BF%A1%E6%9C%83%E5%91%82%E6%98%8E%E6%89%8D%E4%B8%AD%E5%AD%B8%E5%9B%9B%E4%BA%94%E5%85%AD%E4%B9%99%E7%8F%AD%E5%AD%B8%E7%94%9F%E3%80%82%E7%82%BA%E4%BA%BA%E5%B9%BD%E9%BB%98%E9%A2%A8%E8%B6%A3%EF%BC%8C%E8%A6%96%E5%86%B7%E7%AC%91%E8%A9%B1%E7%82%BA%E7%94%9F%E5%91%BD%E7%B7%9A%E3%80%82%E5%B0%8D%E9%84%A7%E5%98%89%E8%B1%AA%E9%A0%97%E6%9C%89%E5%BE%AE%E8%A9%9E%E3%80%82%3C%2Fh3%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch3%20style%3D%22font-weight%3A%20normal%3B%20line-height%3A%2025px%3B%22%3E%E6%A5%8A%E6%A8%82%E5%A4%A9%EF%BC%88%EF%BC%92%EF%BC%90%EF%BC%90%EF%BC%98%E2%80%94%EF%BC%89%EF%BC%8C%E6%B5%B8%E4%BF%A1%E6%9C%83%E5%91%82%E6%98%8E%E6%89%8D%E4%B8%AD%E5%AD%B8%E5%9B%9B%E4%BA%94%E5%85%AD%E4%B9%99%E7%8F%AD%E7%94%9F%EF%BC%8C%E6%80%A7%E6%A0%BC%E7%8E%87%E7%9B%B4%E4%BD%86%E5%AD%B8%E7%BF%92%E5%86%92%E5%A4%B1%E3%80%82%E5%9B%A0%E6%80%95%E9%84%A7%E5%AD%90%E8%80%8C%E8%AC%B9%E6%85%8E%E8%A1%8C%E4%BA%8B%EF%BC%8C%E4%BB%8D%E4%B8%8D%E6%85%8E%E8%A7%B8%E6%80%92%E5%B0%8D%E6%96%B9%EF%BC%8C%E4%BA%A6%E6%98%AF%E9%84%A7%E5%AD%90%E6%89%80%E6%8C%87%E3%80%8C%E4%B8%89%E5%88%BB%E7%8C%B6%E6%9C%AA%E7%AB%9F%E8%80%85%E3%80%8D%EF%BC%88%E6%9A%97%E6%8C%87%E6%95%88%E7%8E%87%E6%AC%A0%E4%BD%B3%EF%BC%89%E3%80%82%3C%2Fh3%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch3%20style%3D%22font-weight%3A%20normal%3B%20line-height%3A%2025px%3B%22%3E%E6%A2%81%E6%BF%A4%EF%BC%88%EF%BC%92%EF%BC%90%EF%BC%90%EF%BC%99%E2%80%94%EF%BC%89%EF%BC%8C%E6%B5%B8%E4%BF%A1%E6%9C%83%E5%91%82%E6%98%8E%E6%89%8D%E4%B8%AD%E5%AD%B8%E5%9B%9B%E4%BA%94%E5%85%AD%E7%94%B2%E7%8F%AD%E5%AD%B8%E7%94%9F%E3%80%82%E5%85%B6%E6%80%A7%E5%96%9C%E5%AC%89%E9%AC%A7%EF%BC%8C%E8%80%8C%E4%B8%8D%E5%A4%B1%E6%A9%9F%E6%95%8F%E3%80%82%E9%97%9C%E5%BF%83%E4%B8%8D%E5%90%8C%E9%A0%98%E5%9F%9F%EF%BC%8C%E4%B8%8D%E6%99%82%E8%83%BD%E9%9D%88%E6%A9%9F%E4%B8%80%E5%8B%95%EF%BC%8C%E6%97%81%E5%BE%B5%E5%8D%9A%E5%BC%95%EF%BC%8C%E5%A6%99%E8%B6%A3%E6%A9%AB%E7%94%9F%E3%80%82%3C%2Fh3%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Ful%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fsection%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20%E7%B8%BD%E7%B5%90%20--%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3Csection%20style%3D%22position%3A%20relative%3Bline-height%3A%2040px%3B%22%20id%3D%22zongjie%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3E%E7%B8%BD%E7%B5%90%3C%2Fh2%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ch3%20style%3D%22font-weight%3A%20normal%3B%20line-height%3A%2025px%3B%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E3%80%8A%E5%AD%90%E6%9B%B0%E3%80%8B%E7%94%B1%E5%9B%9B%E9%83%A8%E5%88%86%E7%B5%84%E6%88%90%EF%BC%9A%E3%80%8A%E9%84%A7%E5%AD%90%E3%80%8B%E3%80%81%E3%80%8A%E6%B1%9F%E5%AD%90%E3%80%8B%E3%80%81%E3%80%8A%E9%99%B3%E7%94%9F%E3%80%8B%E4%B8%89%E7%AF%87%E4%BA%BA%E7%89%A9%E5%88%97%E5%82%B3%EF%BC%8C%E5%8A%A0%E4%B8%8A%E3%80%8A%E8%BB%BC%E4%BA%8B%E3%80%8B%E4%B8%80%E7%AF%87%E6%A0%A1%E5%9C%92%E6%95%A3%E8%A8%98%E3%80%82%E5%89%8D%E4%B8%89%E7%AF%87%E5%90%84%E8%81%9A%E7%84%A6%E4%B8%80%E4%BA%BA%EF%BC%8C%E4%BB%A5%E4%BA%BA%E7%89%A9%E7%82%BA%E8%BB%B8%E5%BF%83%E5%B1%95%E9%96%8B%EF%BC%9B%E3%80%8A%E8%BB%BC%E4%BA%8B%E3%80%8B%E5%89%87%E4%BB%A5%E4%BA%8B%E4%BB%B6%E7%82%BA%E5%96%AE%E5%85%83%EF%BC%8C%E4%B8%8D%E6%8B%98%E6%96%BC%E4%B8%80%E4%BA%BA%E4%B8%80%E4%BA%8B%EF%BC%8C%E5%91%88%E7%8F%BE%E6%A0%A1%E5%9C%92%E7%94%9F%E6%B4%BB%E7%9A%84%E9%9B%B6%E7%A2%8E%E7%89%87%E6%AE%B5%E3%80%82%E5%9B%9B%E8%80%85%E5%90%88%E8%A7%80%EF%BC%8C%E6%A7%8B%E6%88%90%E5%BE%9E%E3%80%8C%E5%85%B8%E5%9E%8B%E4%BA%BA%E7%89%A9%E3%80%8D%E5%88%B0%E3%80%8C%E6%97%A5%E5%B8%B8%E7%A2%8E%E5%BD%B1%E3%80%8D%E7%9A%84%E5%AE%8C%E6%95%B4%E5%85%89%E8%AD%9C%E3%80%82%3Cbr%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cem%20style%3D%22position%3A%20relative%3B%20left%3A%2016px%3B%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E3%80%8A%E9%84%A7%E5%AD%90%E3%80%8B%E5%B1%95%E7%8F%BE%E4%BA%86%E6%AC%8A%E5%8A%9B%E7%9A%84%E6%82%B2%E5%8A%87%EF%BC%9A%E8%B6%8A%E6%98%AF%E5%8A%AA%E5%8A%9B%E6%8E%8C%E6%8E%A7%EF%BC%8C%E8%B6%8A%E6%98%AF%E5%A4%B1%E6%8E%A7%E3%80%82%3Cbr%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E3%80%8A%E6%B1%9F%E5%AD%90%E3%80%8B%E5%B1%95%E7%8F%BE%E4%BA%86%E8%AA%9E%E8%A8%80%E7%9A%84%E5%96%9C%E5%8A%87%EF%BC%9A%E7%94%A8%E6%96%B0%E8%88%8A%E9%9B%9C%E7%B3%85%E7%9A%84%E8%A9%B1%E8%AA%9E%E5%8C%85%E8%A3%9D%E5%86%B0%E5%86%B7%E7%9A%84%E7%8F%BE%E5%AF%A6%EF%BC%8C%E5%8D%BB%E6%9A%B4%E9%9C%B2%E4%BA%86%E8%87%AA%E8%BA%AB%E7%9A%84%E8%8D%92%E8%AA%95%E3%80%82%3Cbr%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E3%80%8A%E9%99%B3%E7%94%9F%E3%80%8B%E5%89%87%E5%B1%95%E7%8F%BE%E4%BA%86%E7%B3%BB%E7%B5%B1%E7%9A%84%E9%AC%A7%E5%8A%87%EF%BC%9A%E4%B8%80%E5%80%8B%E7%84%A1%E6%B3%95%E8%A2%AB%E7%B3%BB%E7%B5%B1%E8%AD%98%E5%88%A5%E5%92%8C%E8%99%95%E7%90%86%E7%9A%84%E7%95%B0%E5%B8%B8%E5%80%BC%EF%BC%8C%E4%BB%A5%E5%85%B6%E5%BE%B9%E5%BA%95%E7%9A%84%E3%80%8C%E4%B8%8D%E5%90%88%E6%99%82%E5%AE%9C%E3%80%8D%EF%BC%8C%E5%8F%8D%E8%A5%AF%E5%87%BA%E6%95%B4%E5%80%8B%E7%B3%BB%E7%B5%B1%E7%9A%84%E5%83%B5%E7%A1%AC%E8%88%87%E8%99%9B%E5%81%BD%E3%80%82%3Cbr%3E%3C%2Fem%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E7%B6%9C%E4%B8%8A%E6%89%80%E8%BF%B0%EF%BC%8C%E3%80%8A%E5%AD%90%E6%9B%B0%E3%80%8B%E7%B3%BB%E5%88%97%E9%80%9A%E9%81%8E%E9%80%99%E4%B8%89%E9%9D%A2%E9%8F%A1%E5%AD%90%EF%BC%8C%E8%AE%93%E6%88%91%E5%80%91%E6%B8%85%E6%99%B0%E5%9C%B0%E7%9C%8B%E5%88%B0%EF%BC%9A%E7%95%B6%E6%95%99%E8%82%B2%E4%B8%9F%E5%A4%B1%E4%BA%86%E5%B0%8D%E3%80%8C%E4%BA%BA%E3%80%8D%E6%9C%AC%E8%BA%AB%E7%9A%84%E9%97%9C%E6%87%B7%EF%BC%8C%E7%84%A1%E8%AB%96%E6%98%AF%E5%BC%B7%E6%AC%8A%E3%80%81%E5%B7%A7%E8%AA%9E%E9%82%84%E6%98%AF%E8%A6%8F%E8%A8%93%EF%BC%8C%E9%83%BD%E5%B0%87%E4%B8%8D%E5%8F%AF%E9%81%BF%E5%85%8D%E5%9C%B0%E8%B5%B0%E5%90%91%E5%85%B6%E5%8F%8D%E9%9D%A2%E3%80%82%E9%80%99%E7%B5%84%E8%AA%9E%E9%8C%84%E9%AB%94%E7%9F%AD%E6%96%87%EF%BC%8C%E4%BB%A5%E5%85%B6%E7%8A%80%E5%88%A9%E7%9A%84%E8%A7%80%E5%AF%9F%E5%92%8C%E5%86%B7%E5%B3%BB%E7%9A%84%E7%AD%86%E6%B3%95%EF%BC%8C%E6%88%90%E7%82%BA%E4%BA%86%E4%B8%80%E4%BB%BD%E9%97%9C%E6%96%BC%E7%95%B6%E4%BB%A3%E6%95%99%E8%82%B2%E7%9A%84%E7%8F%8D%E8%B2%B4%E7%97%85%E6%9B%86%E8%88%87%E8%A8%BA%E6%96%B7%E6%9B%B8%E3%80%82%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fh3%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fsection%3E%0D%0A%20%20%20%20%20%20%3C%2Fmain%3E%0D%0A%20%20%20%20%3C%2Fdiv%3E%0D%0A%0D%0A%20%20%20%20%0D%0A%0D%0A%20%20%20%20%3Cdiv%20id%3D%22copyright%22%20style%3D%22position%3A%20relative%3B%20text-align%3A%20center%3B%22%3E%0D%0A%20%20%20%20%3Ch6%20style%3D%22position%3A%20relative%3B%20left%3A%2010px%3B%20font-size%3A%2010px%3B%20font-family%3A%20Arial%2C%20Helvetica%2C%20sans-serif%3B%22%3E%0D%0A%20%20%20%20%20%20%3Cu%20ondblclick%3D%22document.getElementById(\'pwdbox\').style.display%3D\'block\'%22%0D%0A%20%20%20%20%20%20%20%20style%3D%22cursor%3Adefault%3B%22%3E%0D%0A%20%20%20%20%20%20%20%20Design%20and%20Edit%20by%20Ou%20Ze%20Hao%20%26%20Leung%20Tin%20Hang%0D%0A%20%20%20%20%20%20%3C%2Fu%3E%0D%0A%20%20%20%20%3C%2Fh6%3E%0D%0A%0D%0A%20%20%20%20%3Cdiv%20id%3D%22pwdbox%22%20style%3D%22display%3Anone%3B%20text-align%3Acenter%3B%20margin%3A10px%200%3B%22%3E%0D%0A%20%20%20%20%20%20%3Cinput%20id%3D%22pwd%22%20type%3D%22password%22%20placeholder%3D%22%E5%AF%86%E7%A2%BC%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20style%3D%22padding%3A6px%2010px%3B%20font-size%3A14px%3B%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20onkeydown%3D%22if(event.key%3D%3D%3D\'Enter\')checkPassword()%22%3E%0D%0A%20%20%20%20%20%20%3Cbutton%20onclick%3D%22checkPassword()%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20style%3D%22padding%3A6px%2016px%3B%20font-size%3A14px%3B%22%3E%E9%80%B2%E5%85%A5%3C%2Fbutton%3E%0D%0A%20%20%20%20%20%20%3Cdiv%20id%3D%22msg%22%20style%3D%22color%3Ared%3B%20font-size%3A12px%3B%20margin-top%3A4px%3B%22%3E%3C%2Fdiv%3E%0D%0A%20%20%20%20%3C%2Fdiv%3E%0D%0A%20%20%20%20%20%20%20%20%3Ch6%20style%3D%22position%3A%20relative%3B%20left%3A%2010px%3B%20font-size%3A%2010px%3B%20top%3A%20-10px%3B%20font-family%3A%20Arial%2C%20Helvetica%2C%20sans-serif%3B%22%20id%3D%22version%22%3E%3Cu%3Ev2.1.1%2010%2F10%2F2025%3C%2Fu%3E%3C%2Fh6%3E%3Cp%3E%3C%2Fp%3E%0D%0A%20%20%20%20%20%20%20%20%3Ch6%20style%3D%22position%3A%20relative%3B%20left%3A%2010px%3B%20font-size%3A%2010px%3B%20top%3A%20-20px%3B%20font-family%3A%20Arial%2C%20Helvetica%2C%20sans-serif%3B%22%3E%C2%A9%202025-2026%20Ou%20Ze%20Hao%20Leung%20Tin%20Hang%3C%2Fh6%3E%0D%0A%20%20%20%20%20%20%20%20%3C!--%20%3Ch6%20style%3D%22position%3A%20relative%3B%20left%3A%2010px%3B%20font-size%3A%2010px%3B%20top%3A%20-30px%3B%22%3E%E8%80%83%E8%A9%A6%E5%8A%A0%E6%B2%B9%3C%2Fh6%3E%3Cp%3E%3C%2Fp%3E%20--%3E%0D%0A%20%20%20%20%3C%2Fdiv%3E%0D%0A%20%20%20%20%0D%0A%20%20%20%20%3Cscript%20src%3D%22pw.js%22%3E%3C%2Fscript%3E%0D%0A%3C%2Fhead%3E%0D%0A%0D%0A%0D%0A%0D%0A%3Cscript%3E%0D%0A%20%20function%20closeModal()%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20document.getElementById(\'modal-overlay\').style.display%20%3D%20\'none\'%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%3C%2Fscript%3E%0D%0A%3C%2Fhtml%3E'));
+    function closeModal() {
+        document.getElementById('modal-overlay').style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('back-to-top')?.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        const sections = document.querySelectorAll('main section');
+        const navLinks = document.querySelectorAll('nav li a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            
+            sections.forEach(section => {
+                if (scrollTop >= section.offsetTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    });
 </script>
+</body>
+</html>
