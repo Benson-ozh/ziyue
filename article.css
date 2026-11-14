@@ -106,7 +106,7 @@ h5 { position: relative; left: 15px; }
 }
 
 .section-btn:active {
-    transform: scale(0.92);
+    transform: scale(0.95);
 }
 
 .toggle-all-btn {
@@ -140,7 +140,7 @@ h5 { position: relative; left: 15px; }
 }
 
 .toggle-all-btn:active {
-    transform: scale(0.92);
+    transform: scale(0.95);
 }
 
 html {
@@ -198,6 +198,7 @@ nav.article-nav a {
 nav.article-nav a:hover {
     color: #111827;
     text-decoration: none;
+    transform: scale(1.15);
 }
 
 nav.article-nav a:hover::after {
@@ -247,6 +248,10 @@ nav.article-nav a.active::after {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     user-select: none;
+}
+
+a.back-arrow:active {
+    transform: scale(0.95);
 }
 
 .back-arrow:hover {
@@ -362,6 +367,10 @@ nav.article-nav a.active::after {
         0 8px 24px rgba(0, 0, 0, 0.1), 
         inset 0 0 0 1px rgba(255, 255, 255, 0.7),
         inset 0 3px 6px rgba(255, 255, 255, 0.8);
+}
+
+#back-to-top:active {
+    transform: scale(0.95);
 }
 
 .content > div[id] {
