@@ -79,3 +79,6 @@ button:hover {
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
     transform: scale(1.05);
 }
+button:active{
+    transform: scale(0.95)
+}
