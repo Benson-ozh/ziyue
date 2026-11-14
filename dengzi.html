@@ -1,307 +1,90 @@
-<!-- 鄧子 -->
 <!DOCTYPE html>
 <html>
-<link href="https://fonts.googleapis.com" rel="stylesheet">
-
 <head>
     <meta charset="utf-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>《鄧子》</title>
-    <style>
-        @font-face {
-        font-family: 'SupFix';
-        src: local('Times New Roman'),
-            local('Times'),
-            local('Arial Unicode MS'),
-            local('Segoe UI'),
-            local('Cambria');
-        unicode-range: U+00B9, U+00B2, U+00B3, U+2070, U+2074-2079;
-        }
-        body {
-            font-family: 'SupFix', 'Noto Serif TC', 'serif';
-            margin: 0;
-            background: #f8f9fa;
-            color: #222;
-            background-image: 
-                url('https://fanti.dugushici.com/assets/rightbg.gif');
-            background-repeat: repeat;
-        }
-        h2 {
-            position: relative;
-            left: 10px;
-        }
-        h3 {
-            position: relative;
-            left: 15px;
-        }
-        u{
-        text-underline-offset: 3px;
-        width: 95%;
-        }
-        body {
-            margin: 0;
-            height: 100vh;
-            background-color: #f8f9fa;
-            background-repeat: repeat;
-        }
-        .zhushi{
-            font-size: 12px;
-        }
-        .zhushi1-9{
-            position: relative;
-            left: 0.5%;
-        }
-        button{
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 10px;
-            transition: all 0.2s ease-in-out;
-        }
-        button:hover{
-            color: rgb(50, 35, 35);
-            box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
-            border-radius: 12px;
-            transform: scale(1.05);
-        }
-        .infobox {
-            float: right;
-            width: 25%;
-            margin: 0 0 1.2rem 2rem;
-            background: #f8f9fa;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            font-size: 0.98em;
-            padding: 1rem;
-            z-index: 2;
-            background-image: 
-                url('https://fanti.dugushici.com/assets/rightbg.gif');
-            background-repeat: repeat;
-            }
-            .infobox img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1em;
-            background: #e4e7eb;
-            aspect-ratio: 4/3;
-            object-fit: cover;
-        }
-        .content {
-            margin: 0 auto;
-            padding: 2rem 1rem 3rem 1rem;
-            background: var(--card);
-            min-height: 100vh;
-            box-shadow: 0 0 14px 0 rgba(0,0,0,0.04);
-            z-index: 1;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            padding: 1rem 2vw;
-            background: #ffffff;
-            border-bottom: 1px solid #aaa;
-            background-image: 
-                url('https://fanti.dugushici.com/assets/rightbg.gif');
-            background-repeat: repeat;
-        }
-        header.topbar{
-            display:flex;
-            align-items:center;
-            gap:.75rem;
-            margin-bottom:1rem;
-            flex-wrap:wrap;
-        }
-        h1 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin: 0;
-            letter-spacing: 0.01em;
-            line-height:1.2;
-        }
-        section h2 {
-            border-bottom: 1px solid #aaa;
-            padding-bottom: 0.3em;
-            margin-top: 0;
-            margin-bottom: 1em;
-            font-size: 1.4em;
-            color: #222;
-        }
-        main {
-            flex: 1;
-            padding: 2rem 5vw 2rem 2vw;
-            background: #fff;
-            min-width: 0;
-        }
-        .chip{
-            display:inline-block;
-            font-size:.76rem;
-            color:#065f46;
-            background:#ecfdf5;
-            border:1px solid #d1fae5;
-            padding:.15rem .45rem;
-            border-radius:999px;
-            margin-left:.4rem;
-            vertical-align:middle;
-        }
-        nav.breadcrumb{
-            font-size:.92rem;
-            color:var(--muted);
-            margin:.25rem 0 1rem 0;
-        }
-        nav.breadcrumb a{ color:#374151; text-decoration:none; }
-        nav.breadcrumb a:hover{ text-decoration:underline; }
-        nav.breadcrumb span.sep{ color:#9ca3af; margin:0 .35rem; }
-        p { margin-top: 0; margin-bottom: 1.1em; line-height: 1.75; }
-        h2 { font-size: 1.25rem; border-bottom: 1px solid #aaa; margin-top: 2rem; margin-bottom: .8rem; font-weight: 700; color: #111827; padding-bottom:.3rem; }
-        ul { margin-top: 0.4em; padding-left: 1.2em; line-height:1.7; }
-        a{ color:var(--link); text-decoration:none; }
-        a:hover{ text-decoration:underline; }
-        @media (max-width: 1000px) {
-            .infobox { float: none; width: 100%; margin: 0 0 1.2rem 0; }
-        }
-    </style>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="article.css">
 </head>
 
-
 <body>
-<header class="topbar"><h1>《鄧子》</h1></header>
+<header class="topbar">
+    <div class="title-row">
+        <a href="index.html" class="back-arrow">&lt;</a>
+        <h1>《鄧子》</h1>
+    </div>
+    <nav class="article-nav">
+        <a href="#yuanwen">原文</a>
+        <a href="#yiwen">譯文</a>
+        <a href="#zhushi">注釋</a>
+        <a href="#renwu">人物</a>
+        <a href="#beijing">背景</a>
+        <a href="#shangshi">賞析</a>
+        <a href="#zongjie">總結</a>
+    </nav>
+    <div id="progress-bar"></div>
+</header>
+
 <div class="content">
-    <nav style="position: relative; left: 0.5%;">
-        <a href="index.html"><u>子曰</u></a>
+    <nav style="margin-bottom: 20px;">
+        子曰
         <span class="sep">/</span>
         <span>文章</span>
         <span class="sep">/</span>
         <span>鄧子</span>
     </nav>
     
-    <aside class="infobox" style="z-index: 3; position: relative;">
-        <img src="kh.jpg" alt="kh sir"></img>
-        <u><h6 style="position: relative">Shot by Caspar Chan</h6></u>
+    <aside class="infobox">
+    <img src="kh.jpg" alt="kh sir">
+    <h6><u>Shot by Caspar Chan</u></h6>
     </aside>
 
-    <a><h3 style="position: relative; font-size: 25px; left: 10px; color: blue;" onclick="hideall()" id="hide">全部隱藏</h3></a>
+    <button class="toggle-all-btn" id="hide" onclick="hideall()">全部隱藏</button>
 
-    <!-- 原文 -->
-    <div  style="line-height: 30px; position: relative; top: 10px;">
-        <h2 style="font-size: 25px;">一、原文<a><span id="hideyw" style="position: relative; left: 2%; color: blue;" onclick="hideyuanwen()">隱藏</span></a></h2>
-        <div id="yuanwen">
-            <h3 style="font-weight: normal; line-height: 25px;">1. 
-                歐生¹坐而論道²，鄧子不懌³，曰:「爾知吾徙⁴汝之故乎？欲杜⁵中流之擾⁶也。今觀汝行，竟成決堤之勢，殃及四座矣！」<p></p>
-            </h3>
-
-            <h3 style="font-weight: normal; line-height: 25px;">2.
-                陳生⁷課前告曰:「師，未習課業。」鄧子曰:「善，咒汝。」顧⁸謂諸生:「咒雖無形，終有應時。」後每課必連番詰問⁹陳生。同窗憶之，無不悚然曰:「噫！其可怖歟！鄧子之咒，可畏如斯！」<p></p>
-            </h3>
-
-            <h3 style="font-weight: normal; line-height: 25px;">3. 
-                鄧子書算式於版¹⁰，令諸生計之。三刻¹¹未竟¹²，怫¹³然曰:「吾授物理也，非授算術也！若三刻猶未竟者，是廢¹⁴眾人之時也！」<p></p>
-            </h3>
-
-            <h3 style="font-weight: normal; line-height: 25px;">4. 
-                鄧子授課，若有延，必延之。值晡時¹⁵末課，常逾五刻。梁生¹⁶曰:「鄧子不恤吾輩也。」<p></p>
-            </h3>
-
-            <h3 style="font-weight: normal; line-height: 25px;">5.
-                陳生¹⁷自矜¹⁸與師善，嘗誨人¹⁹解題。鄧子斥曰:「汝可緘口²⁰乎？所言皆謬²¹也！」生囁嚅²²:「欲述己見耳。」師正色曰:「吾當詳解於堂，焉用²³汝僭越！」後學談及此事，皆笑曰:「陳生之愚，一至於斯²⁴！」<p></p>
-            </h3>
-
-            <h3 style="font-weight: normal; line-height: 25px;">6.
-                鄧子好東瀛²⁵文教。講駐波時，見日譯「定常波」，乃贊曰:「善哉，東瀛譯名！」梁生私語同窗曰:「鄧子慕倭²⁶若此，豈類²⁷漢奸耶？」<p></p>
-            </h3>
-
-            <h3 style="font-weight: normal; line-height: 25px;">7.
-                歐生支頤²⁸欲眠，鄧子警之曰:「若倦，盍²⁹盥面³⁰？或立聽可也，毋作頹唐³¹狀！」區生³²歎曰:「不察學問而拘儀態，豈非捨本逐末耶？」<p></p>
-            </h3>
-
-            <h3 style="font-weight: normal; line-height: 25px;">8. 
-                楊生³³課業，訂正不修。鄧子以檄文³⁴召之。甫³⁵見即叱³⁶:「檄書雙歎³⁷，所以示雷霆³⁸也！爾之訂正，猶亂絲³⁹耳！」<p></p>
-            </h3>
-
-            <h3 style="font-weight: normal; line-height: 25px;">9.
-                諸生懈學，鄧子檢視自習，見多未竟者。怫然曰:「鄰庠⁴⁰數子未竟題，爾班惟數子為之。今予爾十刻竟題，晷漏⁴¹後移十刻乃散。」及講論時復詰⁴²曰:「若此諸題皆不能解，可舍⁴³物理矣！毋貽害⁴⁴同窗！」梁生譏曰:「鄧子無仁，虎狼之心昭然⁴⁵。」後複檢視，皆備⁴⁶。鄧子疑曰:「得無鄰班泄吾意乎？」梁生復譏:「師之不誠⁴⁷，狐疑至此！」<p></p>
-            </h3>
-
-            <h3 style="font-weight: normal; line-height: 25px;">10.
-                鄧子謂諸生曰:「解題必以小數，毋用分數。小數者，較分數為明⁴⁸也。」然鄧子自授業理事，未嘗避分數。楊生譏之曰:「立規以繩⁴⁹c人，而己弗循⁵⁰，豈非可笑乎？」<p></p>
-            </h3>
-            
-            <h3 style="font-weight: normal; line-height: 25px;">11.
-                諸生復懈⁵¹學。鄧子勃然作色，厲⁵²聲曰:「與汝十刻，未竟題者悉數畢⁵³之！」喚陳生⁵⁴示其課業。陳生囁嚅⁵⁵對曰:「未攜。」鄧子齒齧⁵⁶唇顫，目若熾炭⁵⁷:「可知何謂『火上澆油』乎？」滿座悚然，但聞其咬牙切齒喀喀作響，錚然⁵⁸有聲。後有梁生私語同窗:「鄧子之怒，若雷霆貫耳；然陳生以薪投燄⁵⁹，豈非自招焚身之禍！」<p></p>
-            </h3>
-
-            <h3 style="font-weight: normal; line-height: 25px;">12.
-                曩⁶⁰有數生昏睡。鄧子厲色戒曰:「需者可盥顙⁶¹！」再講，湯生猶然。鄧子行課間，徐近其案，遽拊⁶²案震之，聲若雷霆，勢類山崩。作虎嘯鷹揚之聲曰:「尚寐無覺！昔已如此，今復如是！」少頃，切齒曰:「若爾覺立而聽可醒，則起立；或盥顙。若後之物理課猶欲長寐，吾勸爾棄此課業！」已而色夷⁶³如常曰:「繼講。」後諸生聞之，皆曰:「鄧子之怒，果可畏也！」
-            </h3>
-        </div>
+    <h2>一、原文 <button class="section-btn" id="hideyw" onclick="hideyuanwen()">隱藏</button></h2>
+    <div id="yuanwen">
+        <h3 style="font-weight: normal; line-height: 25px;">1. 歐生¹坐而論道²，鄧子不懌³，曰:「爾知吾徙⁴汝之故乎？欲杜⁵中流之擾⁶也。今觀汝行，竟成決堤之勢，殃及四座矣！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">2. 陳生⁷課前告曰:「師，未習課業。」鄧子曰:「善，咒汝。」顧⁸謂諸生:「咒雖無形，終有應時。」後每課必連番詰問⁹陳生。同窗憶之，無不悚然曰:「噫！其可怖歟！鄧子之咒，可畏如斯！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">3. 鄧子書算式於版¹⁰，令諸生計之。三刻¹¹未竟¹²，怫¹³然曰:「吾授物理也，非授算術也！若三刻猶未竟者，是廢¹⁴眾人之時也！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">4. 鄧子授課，若有延，必延之。值晡時¹⁵末課，常逾五刻。梁生¹⁶曰:「鄧子不恤吾輩也。」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">5. 陳生¹⁷自矜¹⁸與師善，嘗誨人¹⁹解題。鄧子斥曰:「汝可緘口²⁰乎？所言皆謬²¹也！」生囁嚅²²:「欲述己見耳。」師正色曰:「吾當詳解於堂，焉用²³汝僭越！」後學談及此事，皆笑曰:「陳生之愚，一至於斯²⁴！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">6. 鄧子好東瀛²⁵文教。講駐波時，見日譯「定常波」，乃贊曰:「善哉，東瀛譯名！」梁生私語同窗曰:「鄧子慕倭²⁶若此，豈類²⁷漢奸耶？」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">7. 歐生支頤²⁸欲眠，鄧子警之曰:「若倦，盍²⁹盥面³⁰？或立聽可也，毋作頹唐³¹狀！」區生³²歎曰:「不察學問而拘儀態，豈非捨本逐末耶？」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">8. 楊生³³課業，訂正不修。鄧子以檄文³⁴召之。甫³⁵見即叱³⁶:「檄書雙歎³⁷，所以示雷霆³⁸也！爾之訂正，猶亂絲³⁹耳！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">9. 諸生懈學，鄧子檢視自習，見多未竟者。怫然曰:「鄰庠⁴⁰數子未竟題，爾班惟數子為之。今予爾十刻竟題，晷漏⁴¹後移十刻乃散。」及講論時復詰⁴²曰:「若此諸題皆不能解，可舍⁴³物理矣！毋貽害⁴⁴同窗！」梁生譏曰:「鄧子無仁，虎狼之心昭然⁴⁵。」後複檢視，皆備⁴⁶。鄧子疑曰:「得無鄰班泄吾意乎？」梁生復譏:「師之不誠⁴⁷，狐疑至此！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">10. 鄧子謂諸生曰:「解題必以小數，毋用分數。小數者，較分數為明⁴⁸也。」然鄧子自授業理事，未嘗避分數。楊生譏之曰:「立規以繩⁴⁹人，而己弗循⁵⁰，豈非可笑乎？」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">11. 諸生復懈⁵¹學。鄧子勃然作色，厲⁵²聲曰:「與汝十刻，未竟題者悉數畢⁵³之！」喚陳生⁵⁴示其課業。陳生囁嚅⁵⁵對曰:「未攜。」鄧子齒齧⁵⁶唇顫，目若熾炭⁵⁷:「可知何謂『火上澆油』乎？」滿座悚然，但聞其咬牙切齒喀喀作響，錚然⁵⁸有聲。後有梁生私語同窗:「鄧子之怒，若雷霆貫耳；然陳生以薪投燄⁵⁹，豈非自招焚身之禍！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">12. 曩⁶⁰有數生昏睡。鄧子厲色戒曰:「需者可盥顙⁶¹！」再講，湯生猶然。鄧子行課間，徐近其案，遽拊⁶²案震之，聲若雷霆，勢類山崩。作虎嘯鷹揚之聲曰:「尚寐無覺！昔已如此，今復如是！」少頃，切齒曰:「若爾覺立而聽可醒，則起立；或盥顙。若後之物理課猶欲長寐，吾勸爾棄此課業！」已而色夷⁶³如常曰:「繼講。」後諸生聞之，皆曰:「鄧子之怒，果可畏也！」</h3>
     </div>
 
-    <!-- 語譯 -->
-    <div style="position: relative; top: 30px; line-height: 30px;">
-        <h2 style="font-size: 25px;">二、譯文<a><span id="hideyy" style="position: relative; left: 2%; color: blue;" onclick="hideyiwen()">隱藏</span></a></h2>
-        <div id="yiwen">
-        <h3 style="font-weight: normal; line-height: 25px;">1. 
-            一位姓歐的同學坐在一旁和其他人討論問題。鄧老師（顯露出）很不滿（的樣子）說:「你知道為什麼我要將你調來這（個位置）嗎？就是為了避免你的騷擾（從中間）擴散（到兩邊）。可是你現在（這樣），騷擾已經擴散到了全班！」<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">2.
-            上課前，一位姓陳的同學說:「老師，我忘了做題。」鄧老師說:「好的，（我將會）詛咒你。」之後對著全班說:「雖然目前大家可能看不出來（這位同學的）變化，可是詛咒總有一刻會降臨到他的頭上。」後來的每一節課，他都是在課堂上被挑選回答問題最多的一位同學。五乙班的同學每次提起這件事都一定會說:「呀，真是太可怕了！」<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">3. 
-            鄧老師上課期間，將解題的算式寫（在）黑板（上），讓我們計算。三分鐘後，仍然有人沒（計算）完。（鄧老師）很氣憤地說:「我是教授物理的（老師），不是教數學的老師！如果（過了整整）三分鐘仍然有人沒做完的話，我認為你正在浪費大家的時間！」<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">4.
-            鄧老師每次上課，要是有拖堂的機會，就必定（拖堂）；若他得以任教放學之前的最後一節課，他往往拖延至少五分鐘。一位姓梁的同學說:「鄧老師是一個不懂體恤同學的老師。」<p></p>
-        </h3>
-        
-        <h3 style="font-weight: normal; line-height: 25px;">5. 
-            一位姓陳的同學為人自我中心而自認為和鄧老師是很好的朋友。一天，他指導別人做題。鄧老師說:「你是否可以不說話？你（所教導的）全是錯的！」他支支吾吾地說:「我只是想和他解釋我是怎麼做的。」鄧老師說:「我接下來的課堂會解釋，不需要你（來解釋）！」後來的同學提起這件事，都笑著說:「太愚蠢了，這位陳同學！」<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">6. 
-            鄧老師喜歡日本的文化。有一次，老師在課堂上講課時，發現駐波在日文中譯為定常波。他隨即讚歎道:「日本翻譯得真好啊！」一位姓梁的同學不以為然，偷偷地和同學說:「鄧老師真是像漢奸一樣喜歡日本而不喜歡我們中國啊！」<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">7. 
-            一位姓歐的同學上課時感到無聊、困倦，手托著頭。鄧老師說:「歐澤豪！如果你覺得困的話，你可以去洗手間洗臉，或是站立著上課也可以——不要手托著頭！」一位姓區的同學說:「上課不注重學生有沒有學到東西，卻關注學生用什麼姿勢上課，難道不是本末倒置嗎？」<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">8. 
-            一位姓楊的同學，作業的改正做得不好。鄧老師氣憤地用通傳紙傳召他。一見面，（鄧老師）就說:「你知道為什麼我在這張通傳紙上寫下了兩個感嘆號嗎？這是為了表達一種很激烈的情緒！你的作業改正改得一塌糊塗！」<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">9. 
-            曾經，班上有些人懈怠了下來。一次鄧老師檢查同學的自習，發現有許多人沒有做自習題。鄧老師很氣憤又失望，說道:「隔壁班有幾個人沒有做題，你們班只有幾個人做了題。我現在給你們十分鐘時間把題做好，一會兒遲十分鐘下課。」後來（他）在講題的時候責備道:「如果以上我講的這些題目，你一概不會的話，那我很坦白和你說，你不適合讀物理。還是快點放棄、退修吧！不要在這裡浪費大家的時間了！」一位姓梁的同學說:「鄧老師缺乏仁愛，具有虎狼之心，言語粗暴而不仁慈。」此事以後，有一次他決定再一次檢查同學們的自習，發現都做好了。鄧老師說:「根據我對你們的瞭解，是不是隔壁班告訴你們我今天會檢查自習？」那位姓梁的同學又說:「鄧老師為人不仁厚，猜忌而不相信人。」<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">10. 
-            鄧老師說:「做題時必須使用小數，不准使用分數。小數比分數更為直觀。」可是鄧老師自己講課和工作時，從來不避免使用分數。一位姓楊的同學說:「自己定立規矩而自己不遵守，不是很可笑嗎？」<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">11.
-            曾經，班上（有些人）又懈怠（了下來）。鄧老師非常憤怒，叫喚道:「給你們十分鐘時間，沒做的給我全做完！」（十分鐘後，他）叫一位姓陳的同學展示，（那同學）說:「沒帶。」（他）咬牙切齒地說:「知道什麼叫火上加油嗎？」牙齒打架的聲音清晰可聞。後來，一位姓梁的同學說:「鄧子的發怒，確實如雷霆般恐怖；但陳同學的行為，難道不是自取滅亡的嗎？」
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">12.
-            有一段時間，一些同學打瞌睡。鄧老師十分嚴厲地警告（同學）說:「有需要的（同學）可以去洗臉！」。可是，第二次上課時，一位姓湯的同學仍然（打瞌睡）。鄧老師一邊講課，一邊緩緩靠近她的課桌。然後，（鄧老師）用（他的）手掌重重地拍她的桌子使她驚醒，仿佛要比那（天上的）雷電更響亮，或是那大地震動更震撼。（鄧老師）以前所未有的如同虎狼或是雄鷹的聲音咆哮道:「不要再睡了！上次（物理）課又是這樣，這次還是這樣！」片刻，（鄧老師）咬牙切齒地說:「如果你認為，站起來上課有助於幫你（集中精神）的話，請你站起來。或是去洗臉。如果你認為，以後的物理課，你仍然是要這樣睡的話！那我建議你，不要再上這個物理課，也就是放棄它。」然後，（鄧老師）若無其事地說:「我們繼續。」此事後來被各個同學所知道，並紛紛說:「鄧老師一旦發怒，果真是十分可怕啊！」
-        </h3>
-        </div>
+    <h2>二、譯文 <button class="section-btn" id="hideyy" onclick="hideyiwen()">隱藏</button></h2>
+    <div id="yiwen">
+        <h3 style="font-weight: normal; line-height: 25px;">1. 一位姓歐的同學坐在一旁和其他人討論問題。鄧老師（顯露出）很不滿（的樣子）說:「你知道為什麼我要將你調來這（個位置）嗎？就是為了避免你的騷擾（從中間）擴散（到兩邊）。可是你現在（這樣），騷擾已經擴散到了全班！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">2. 上課前，一位姓陳的同學說:「老師，我忘了做題。」鄧老師說:「好的，（我將會）詛咒你。」之後對著全班說:「雖然目前大家可能看不出來（這位同學的）變化，可是詛咒總有一刻會降臨到他的頭上。」後來的每一節課，他都是在課堂上被挑選回答問題最多的一位同學。五乙班的同學每次提起這件事都一定會說:「呀，真是太可怕了！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">3. 鄧老師上課期間，將解題的算式寫（在）黑板（上），讓我們計算。三分鐘後，仍然有人沒（計算）完。（鄧老師）很氣憤地說:「我是教授物理的（老師），不是教數學的老師！如果（過了整整）三分鐘仍然有人沒做完的話，我認為你正在浪費大家的時間！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">4. 鄧老師每次上課，要是有拖堂的機會，就必定（拖堂）；若他得以任教放學之前的最後一節課，他往往拖延至少五分鐘。一位姓梁的同學說:「鄧老師是一個不懂體恤同學的老師。」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">5. 一位姓陳的同學為人自我中心而自認為和鄧老師是很好的朋友。一天，他指導別人做題。鄧老師說:「你是否可以不說話？你（所教導的）全是錯的！」他支支吾吾地說:「我只是想和他解釋我是怎麼做的。」鄧老師說:「我接下來的課堂會解釋，不需要你（來解釋）！」後來的同學提起這件事，都笑著說:「太愚蠢了，這位陳同學！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">6. 鄧老師喜歡日本的文化。有一次，老師在課堂上講課時，發現駐波在日文中譯為定常波。他隨即讚歎道:「日本翻譯得真好啊！」一位姓梁的同學不以為然，偷偷地和同學說:「鄧老師真是像漢奸一樣喜歡日本而不喜歡我們中國啊！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">7. 一位姓歐的同學上課時感到無聊、困倦，手托著頭。鄧老師說:「歐澤豪！如果你覺得困的話，你可以去洗手間洗臉，或是站立著上課也可以——不要手托著頭！」一位姓區的同學說:「上課不注重學生有沒有學到東西，卻關注學生用什麼姿勢上課，難道不是本末倒置嗎？」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">8. 一位姓楊的同學，作業的改正做得不好。鄧老師氣憤地用通傳紙傳召他。一見面，（鄧老師）就說:「你知道為什麼我在這張通傳紙上寫下了兩個感嘆號嗎？這是為了表達一種很激烈的情緒！你的作業改正改得一塌糊塗！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">9. 曾經，班上有些人懈怠了下來。一次鄧老師檢查同學的自習，發現有許多人沒有做自習題。鄧老師很氣憤又失望，說道:「隔壁班有幾個人沒有做題，你們班只有幾個人做了題。我現在給你們十分鐘時間把題做好，一會兒遲十分鐘下課。」後來（他）在講題的時候責備道:「如果以上我講的這些題目，你一概不會的話，那我很坦白和你說，你不適合讀物理。還是快點放棄、退修吧！不要在這裡浪費大家的時間了！」一位姓梁的同學說:「鄧老師缺乏仁愛，具有虎狼之心，言語粗暴而不仁慈。」此事以後，有一次他決定再一次檢查同學們的自習，發現都做好了。鄧老師說:「根據我對你們的瞭解，是不是隔壁班告訴你們我今天會檢查自習？」那位姓梁的同學又說:「鄧老師為人不仁厚，猜忌而不相信人。」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">10. 鄧老師說:「做題時必須使用小數，不准使用分數。小數比分數更為直觀。」可是鄧老師自己講課和工作時，從來不避免使用分數。一位姓楊的同學說:「自己定立規矩而自己不遵守，不是很可笑嗎？」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">11. 曾經，班上（有些人）又懈怠（了下來）。鄧老師非常憤怒，叫喚道:「給你們十分鐘時間，沒做的給我全做完！」（十分鐘後，他）叫一位姓陳的同學展示，（那同學）說:「沒帶。」（他）咬牙切齒地說:「知道什麼叫火上加油嗎？」牙齒打架的聲音清晰可聞。後來，一位姓梁的同學說:「鄧子的發怒，確實如雷霆般恐怖；但陳同學的行為，難道不是自取滅亡的嗎？」</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">12. 有一段時間，一些同學打瞌睡。鄧老師十分嚴厲地警告（同學）說:「有需要的（同學）可以去洗臉！」。可是，第二次上課時，一位姓湯的同學仍然（打瞌睡）。鄧老師一邊講課，一邊緩緩靠近她的課桌。然後，（鄧老師）用（他的）手掌重重地拍她的桌子使她驚醒，仿佛要比那（天上的）雷電更響亮，或是那大地震動更震撼。（鄧老師）以前所未有的如同虎狼或是雄鷹的聲音咆哮道:「不要再睡了！上次（物理）課又是這樣，這次還是這樣！」片刻，（鄧老師）咬牙切齒地說:「如果你認為，站起來上課有助於幫你（集中精神）的話，請你站起來。或是去洗臉。如果你認為，以後的物理課，你仍然是要這樣睡的話！那我建議你，不要再上這個物理課，也就是放棄它。」然後，（鄧老師）若無其事地說:「我們繼續。」此事後來被各個同學所知道，並紛紛說:「鄧老師一旦發怒，果真是十分可怕啊！」</h3>
     </div>
 
-    <!-- 注釋 -->
-    <div style="position: relative; top: 50px; line-height: 30px;" class="zhushi">
-        <h2 style="font-size: 25px;">三、注釋<a><span id="hidezs" style="position: relative; left: 2%; color: blue;" onclick="hidezhushi()">隱藏</span></a></h2>
-        <div id="zhushi">
-        <h3 style="font-weight: normal; line-height: 25px;">1.<span class="zhushi1-9">歐生:姓歐的同學，指歐澤豪。</span></h3>
-        <h3 style="font-weight: normal; line-height: 25px;">2.<span class="zhushi1-9">道:物理學的道理和學問，指課業問題。</span></h3>
-        <h3 style="font-weight: normal; line-height: 25px;">3.<span class="zhushi1-9">懌:高興。不懌，指不高興。</span></h3>
-        <h3 style="font-weight: normal; line-height: 25px;">4.<span class="zhushi1-9">徒:遷移，指調座位。</span></h3>
-        <h3 style="font-weight: normal; line-height: 25px;">5.<span class="zhushi1-9">杜:杜絕。</span></h3>
-        <h3 style="font-weight: normal; line-height: 25px;">6.<span class="zhushi1-9">擾:騷擾。</span></h3>
-        <h3 style="font-weight: normal; line-height: 25px;">7.<span class="zhushi1-9">陳生:姓陳的同學，指陳道謙。</span></h3>
-        <h3 style="font-weight: normal; line-height: 25px;">8.<span class="zhushi1-9">顧:回頭看。 </span></h3>
-        <h3 style="font-weight: normal; line-height: 25px;">9.<span class="zhushi1-9">詰問:追問，質問。（詰音:kit3 竭）</span></h3>
+    <h2>三、注釋 <button class="section-btn" id="hidezs" onclick="hidezhushi()">隱藏</button></h2>
+    <div id="zhushi" class="zhushi">
+        <h3 style="font-weight: normal; line-height: 25px;">1. <span class="zhushi1-9">歐生:姓歐的同學，指歐澤豪。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">2. <span class="zhushi1-9">道:物理學的道理和學問，指課業問題。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">3. <span class="zhushi1-9">懌:高興。不懌，指不高興。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">4. <span class="zhushi1-9">徒:遷移，指調座位。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">5. <span class="zhushi1-9">杜:杜絕。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">6. <span class="zhushi1-9">擾:騷擾。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">7. <span class="zhushi1-9">陳生:姓陳的同學，指陳道謙。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">8. <span class="zhushi1-9">顧:回頭看。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">9. <span class="zhushi1-9">詰問:追問，質問。（詰音:kit3 竭）</span></h3>
         <h3 style="font-weight: normal; line-height: 25px;">10. 版:黑板。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">11. 刻:此處指一分鐘。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">12. 竟:完成。</h3>
@@ -312,7 +95,7 @@
         <h3 style="font-weight: normal; line-height: 25px;">17. 陳生:姓陳的同學，指陳正晞。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">18. 自矜:自己誇耀。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">19. 誨:教導。</h3>
-        <h3 style="font-weight: normal; line-height: 25px;">25. 緘口:保持沉默，不說話。（緘音:gaam1 尷）</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">20. 緘口:保持沉默，不說話。（緘音:gaam1 尷）</h3>
         <h3 style="font-weight: normal; line-height: 25px;">21. 謬:不實、荒唐，沒有道理的話。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">22. 囁嚅:有話想說又不敢說，吞吞吐吐的樣子。（音:zip3 jyu4 接如）</h3>
         <h3 style="font-weight: normal; line-height: 25px;">23. 焉用:何必用。</h3>
@@ -346,295 +129,334 @@
         <h3 style="font-weight: normal; line-height: 25px;">51. 懈:懈怠。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">52. 厲:憤怒。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">53. 畢:完畢，這裏指完成。</h3>
-        <h3 style="font-weight: normal; line-height: 25px;">54. 陳生:姓陳的同學，指陳煥祈。（詳情請見<a href="chengsheng.html"><span style="color: blue;">陳生</span></a>第5段）</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">54. 陳生:姓陳的同學，指陳煥祈。（詳情請見<a href="chensheng.html"><span style="color: blue;">陳生</span></a>第5段）</h3>
         <h3 style="font-weight: normal; line-height: 25px;">55. 囁嚅:有話想說又不敢說，吞吞吐吐的樣子。（音:zip3 jyu4 接如）</h3>
         <h3 style="font-weight: normal; line-height: 25px;">56. 齧:啃、咬，形容咬牙切齒的憤怒表情。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">57. 目若熾炭:眼睛像被點燃的木炭一樣，形容極端憤怒，眼睛如着了火一般。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">58. 錚然:清晰可聞。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">59. 以薪投燄:將木柴（此處比喻陳生自己）丟進火焰中，比喻自取滅亡。（燄音:jim6 驗）</h3>
-        <h3 style="font-weight: normal; line-height: 25px;">60. 曩:從前。
-        <h3 style="font-weight: normal; line-height: 25px;">61. 顙:額頭、腦門兒；引申指臉。
-        <h3 style="font-weight: normal; line-height: 25px;">62. 拊:重擊。
-        <h3 style="font-weight: normal; line-height: 25px;">63. 色夷:神色平和。
-    </div>
-    </div>
-
-    <!-- 人物介紹 -->
-    <div style="position: relative; top: 70px; line-height: 30px;">
-        <h2 style="font-size: 25px;">四、人物介紹<a><span id="hiderw" style="position: relative; left: 2%; color: blue;" onclick="hiderenwu()">隱藏</span></a></h2>
-        <div id="renwu">
-            <h3 style="font-weight: normal; line-height: 25px;">鄧嘉豪（？—），浸信會呂明才中學物理科、數學科教師。在校內備受尊敬，但有時行動亦受爭議。</h3>
-        </div>
+        <h3 style="font-weight: normal; line-height: 25px;">60. 曩:從前。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">61. 顙:額頭、腦門兒；引申指臉。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">62. 拊:重擊。</h3>
+        <h3 style="font-weight: normal; line-height: 25px;">63. 色夷:神色平和。</h3>
     </div>
 
-    <!-- 文章背景 -->
-    <div style="position: relative; top: 90px; line-height: 30px;">
-    <h2 style="font-size: 25px;">五、文章背景<a><span id="hidebj" style="position: relative; left: 2%; color: blue;" onclick="hidebeijing()">隱藏</span></a></h2>
-    <h3 style="font-weight: normal; line-height: 25px; left: -0.003%;" id="beijing">《鄧子》為語錄體，以語錄和對話的形式寫成，記載了鄧嘉豪老師及其任教的四五六乙班學生的言行。</h3>
+    <h2>四、人物介紹 <button class="section-btn" id="hiderw" onclick="hiderenwu()">隱藏</button></h2>
+    <div id="renwu">
+        <h3 style="font-weight: normal; line-height: 25px;">鄧嘉豪（？—），浸信會呂明才中學物理科、數學科教師。在校內備受尊敬，但有時行動亦受爭議。</h3>
     </div>
 
-    <!-- 賞析 -->
-    <div style="position: relative; top: 110px; line-height: 30px;">
-        <h2 style="font-size: 25px;">六、賞析重點<a><span id="hidess" style="position: relative; left: 2%; color: blue;" onclick="hideshangshi()">隱藏</span></a></h2>
-        <div id="shangshi">
-        <h3 style="font-weight: normal; line-height: 25px;">
-            <u><b>一、文本形式與語言特色</b><br></u>
-            <u>文體選擇與形式特徵<br></u>
-            古典語錄體的現代應用:文章刻意採用《論語》、《世說新語》等古典語錄體的形式，以簡潔的短章記載人物言行。這種形式本身自帶莊重感與歷史感，與所記載的現代課堂瑣事形成強烈反差，從而產生一種荒誕的喜劇效果和深刻的批判距離。<br>
-            「曰字結構」:通篇以「鄧子曰」、「梁生曰」、「陳生囁嚅曰」等經典對話引導詞結構全文，強調了言論本身的行為性和衝突性，再現了課堂上話語權的流動與爭奪。<br>
-            <u>語言風格<br></u>
-            文白夾雜，雅俗並陳:主體為簡練文言，但摻雜「未習課業」、「訂正不修」等現代校園口語詞彙。鄧子的語言時而古雅（「爾知吾徙汝之故乎？」），時而暴烈（「咒汝」、「可緘口乎？」），體現其性格的複雜與矛盾。學生的私語則更接近白話，靈活真實。<br>
-            誇張與比喻的運用:大量使用極具張力的比喻和誇張，如「決堤之勢」、「目若熾炭」、「咬牙切齒喀喀作響」、「虎狼之心」、「亂絲」等，將課堂日常衝突戲劇化、激烈化，增強了文本的表現力和諷刺效果。<br>
-            用詞精準，富於動作性:動詞運用出彩，如「齒齧唇顫」的「齧」與「顫」，「怫然」、「勃然作色」等神情描寫，將人物的情緒狀態刻畫得淋漓盡致，畫面感極強。
+    <h2>五、文章背景 <button class="section-btn" id="hidebj" onclick="hidebeijing()">隱藏</button></h2>
+    <div id="beijing">
+        <h3 style="font-weight: normal; line-height: 25px;">《鄧子》為語錄體，以語錄和對話的形式寫成，記載了鄧嘉豪老師及其任教的四五六乙班學生的言行。</h3>
+    </div>
+
+    <h2>六、賞析重點 <button class="section-btn" id="hidess" onclick="hideshangshi()">隱藏</button></h2>
+    <div id="shangshi">
+                <h3 style="font-weight: normal; line-height: 25px;">
+            本文是一篇以文言筆法記當代校園生活的筆記體作品，妙處正在「以古筆寫今事」：將物理課堂的提問、拖堂、拍桌、訂正、小數與分數之爭，寫成近乎《世說新語》式的人物逸事。它既是班級記憶的遊戲之作，也有相當鮮明的文學自覺。<br><br>
             
+            <u><b>一、文體與結構：微型人物志</b></u><br>
+            全文以十二則獨立條目連綴，每則多為一兩個場景、數句對話，短峭有力，近似《世說新語》的「德行」「忿狷」「排調」諸門。各則表面散落，實則圍繞鄧子嘉豪多側面展開：調位、詛咒式提問、算題限時、拖堂、斥責陳生、偏愛日譯、拘儀態、通傳紙召見、檢查自習、小數分數之規、怒火拍案。讀完之後，鄧子不是單一的「惡師」形象，而是嚴厲、敏捷、好諷、認真、情緒化、偶有自相矛盾的多面人物。這種「以事見人」的寫法，比直接評價更有效。<br>
+            每則末尾常有學生評語，如「鄧子之咒，可畏如斯」「鄧子無仁，虎狼之心昭然」「師之不誠，狐疑至此」，形成一個班級輿論場。它像「太史公曰」的校園版，卻又保留學生私語的口吻，使敘事既有現場感，也有傳奇化色彩。<br><br>
         </h3>
-        <h3 style="font-weight: normal; line-height: 25px;">
-            <u><b>二、人物形象與敘事結構</b></u><br>
-            鄧子乃文中核心之權威符碼，其形象凝結了傳統師道威儀與現代教育異化之深刻矛盾。<br>
-            一方面，他嚴守秩序、追求效率:徙座以「杜中流之擾」、限時答題以警怠惰，甚至延課加時以求授業之完備，展現其對教學目標的執著；<br>
-            另一方面，其手段卻盡顯權力之粗暴與自我矛盾:以「咒詛」施加心理威壓、以「檄文」式公文實施精神訓斥，更於盛怒時「齒齧唇顫，目若熾炭」，將教育現場異化為情緒戰場。<br>
-            尤具諷刺者，其立規「毋用分數」卻自違其道，贊東瀛譯名而輕本土情感，重儀態形式而輕學問實質，暴露其權威本質下的理念混亂與文化焦慮。<br>
-            鄧子之形象，遂成當代教育困境之縮影——一個浸染法家術勢、雜糅功利主義，卻失落教育本心與仁愛精神的矛盾綜合體。<br>
-            其所有作為，無論是「杜擾」反成「決堤」，抑或是「詛咒」終招「私譏」，皆指向同一悲劇性悖論:欲以強權鑄造秩序，反以失控告終；欲以威嚴樹立師道，反顯自身之虛妄。<br>
-        </h3>
-        <h3 style="font-weight: normal; line-height: 25px;">
-            <u><b>三、主旨與現實關照</b></u><br>
-            <u>對異化教育的深刻批判<br></u>
-            文章核心在於揭示一種異化的教育關係。教育本應是啟迪智慧、關懷成長，但在文中卻異化為:文章核心在於揭示一種異化的教育關係。教育本應是啟迪智慧、關懷成長，但在文中卻異化為:<br>
-            <em><span style="position: relative; left: 16px;">
-                時間的壓迫（拖堂、限時）；<br>
-                權力的展示（詛咒、呵斥、檄文召見）；<br>
-                形式的苛求（重儀態輕學問）；<br>
-                規訓的實施（徙座、公開羞辱）。<br></span></em>
-            鄧子成為這種異化系統的執行者與化身。<br>
 
-            <u>對師生權力關係的反思<br></u>
-            文本深刻揭示了課堂中不平等的權力結構。教師擁有絕對的話語權和懲戒權（哪怕是以「詛咒」這種隱形方式），學生的主體性被壓制，只能以消極懈怠或背後議論的方式進行微弱反抗。
-
-        </h3>
         <h3 style="font-weight: normal; line-height: 25px;">
-            <u><b>四、藝術手法與象徵隱喻</b></u><br>
-            <u>戲劇化與誇張<br></u>
-            作者將課堂矛盾高度戲劇化，如將批評作業比作下「檄文」，將憤怒形容為「目若熾炭」、「咬牙切齒」，這種藝術加工強化了衝突，突出了人物性格，也加深了批判力度。<br>
-            <em><span style="position: relative; left: 16px;">「咒雖無形」的恐嚇被具象化為「連番詰問」，將抽象威權轉化為具體的精神壓迫。<br></span></em>
-            <u>對比手法<br></u>
-            <em><span style="position: relative; left: 16px;">言行對比:鄧子「毋用分數」的要求與自己「未嘗避分數」的行為形成對比，凸顯其虛偽與專斷。<br></span></em>
-            <em><span style="position: relative; left: 16px;">前後對比:陳生前期的「自矜」與後期的「囁嚅」對比，展現權威的殺傷力。<br></span></em>
-            <em><span style="position: relative; left: 16px;">師生視角對比:鄧子的官方視角與學生的私人視角對比，揭示了事實的多面性。<br></span></em>
-            <u>象徵與隱喻<br></u>
-            <em><span style="position: relative; left: 16px;">「咒」:象徵著無形的精神威壓與控制，一種超越規定懲罰的心理懲戒，極具創意和諷刺意味。<br></span></em>
-            <em><span style="position: relative; left: 16px;">「決堤之勢」 vs 「杜中流之擾」:象徵著壓制性管理最終導致的更大範圍的失控，隱喻高壓政策必然失敗。<br></span></em>
-            <em><span style="position: relative; left: 16px;">「火上澆油」:不僅是成語活用，更成為課堂權力衝突瞬間升級的完美隱喻。<br></span></em>
-            <em><span style="position: relative; left: 16px;">「鄰庠數子」與「爾班惟數子」:隱喻了教育中常見的「內卷」與比較文化，以及由此帶來的集體懲罰。<br></span></em>
+            <u><b>二、人物刻畫：師生張力中的群像</b></u><br>
+            鄧子是全文核心。他並非扁平化的嚴師：他會因學生未做完題而愤怒，也會在課後檢查自習、講解題目；他要求學生用小數，自己卻不避分數；他斥陳生「緘口」，自己又說「吾當詳解於堂」。這些矛盾正是人物生動之處，也讓學生的譏評顯得不全然是怨言，而帶有觀察與調侃。<br>
+            學生群像亦各有聲口：梁生常作冷眼評點，是班級的「史官」與諷刺者；陳生多次成為喜劇犧牲，從「未習課業」到「未攜」作業，可謂「火上澆油」的典型；歐生支頤欲眠，引出「捨本逐末」之問；區生、楊生則分別從儀態與規則一致性提出質疑。注釋中同姓陳生分指陳道謙、陳正晞、陳煥祈，這種「同姓互見」的處理，反增紀實感，也像古籍人物注的戲仿。<br><br>
+        </h3>
+
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>三、語言藝術：文白雜糅的陌生化幽默</b></u><br>
+            本文最醒目的語言特色，是文言詞彙與現代校園語彙的碰撞。「怫然」「詰問」「囁嚅」「晡時」「檄文」「晷漏」「齧唇」「拊案」「色夷」等古語，與「物理」「黑板」「通傳紙」「小數」「分數」「駐波」「定常波」並置，產生一種一本正經的荒誕感。例如「鄧子書算式於版，令諸生計之。三刻未竟，怫然曰：吾授物理也，非授算術也！」古文句法寫限時計算，既簡潔又好笑。<br>
+            比喻與誇張亦見經營：「目若熾炭」「聲若雷霆，勢類山崩」「虎嘯鷹揚」「以薪投燄」，把課堂衝突寫成史傳中的雷霆之怒；「詛咒」「檄文」「雷霆」等詞又將日常管教儀式化、傳奇化。擬聲詞「喀喀作響」「錚然有聲」更強化了第11則的現場壓迫感。第12則拍桌一段，從「徐近其案」到「遽拊案震之」，動作節奏由緩轉急，是全文高潮。<br><br>
+        </h3>
+
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>四、敘事視角與註譯體例</b></u><br>
+            全文採學生集體視角，常以「後諸生聞之，皆曰」「同窗憶之」收束，帶有回憶錄與口述史的味道。譯文與注釋不是多餘附件，而是文本的一部分：譯文把文言還原為校園白話，注釋則考證人名、粵音、校情，戲仿古籍注疏。這種「原文—譯文—注釋—人物介紹」的完整結構，使一篇課堂戲作具備了「文獻整理」的趣味，也方便不同讀者進入。<br><br>
+        </h3>
+
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>五、思想意蘊：規訓、權威與青春記憶</b></u><br>
+            表面看，本文寫的是「嚴師與頑生」的喜劇；深一層，它觸及課堂中的權威、規訓與體恤問題。鄧子重視效率、紀律與成績，卻有時忽略學生感受；學生渴望被理解，卻也常以戲謔誇大老師的缺點。文中「不察學問而拘儀態，豈非捨本逐末」「立規以繩人，而己弗循」等評語，其實是頗有分量的教育反思。但本文可貴處在於沒有把鄧子寫成漫畫式反派：他的認真、拖堂補課、檢查自習，都讓「虎狼之心」的學生評語顯得偏激而可愛。這種留白，正是校園文學的分寸。<br><br>
+            
+            總體而言，本文以《世說新語》式短章、文白雜糅的語言、註譯俱全的戲仿體例，成功保存了一組鮮活的課堂人物與師生張力。它有諷刺而不刻薄，有誇張而見真情，是一篇頗有巧思的校園筆記體佳作。
         </h3>
     </div>
-    </div>
-    
 
-    <!-- 總結 -->
-    <div style="position: relative; top: 130px; line-height: 40px;">
-        <h2 style="font-size: 30px;"><u>總結<span id="hidezj" style="position: relative; left: 2%; color: blue; font-size: 25px;" onclick="hidezongjie()"><u>隱藏</u></span></u></h2><p></p>
-        <h3 style="font-weight: normal; line-height: 25px;" id="zongjie">《鄧子》一文絕非簡單的趣聞記錄，以古筆寫今事，精心構築的一部微型教育批判劇。它通過極富特色的語言、鮮明的人物、巧妙的結構和多重的藝術手法，成功塑造了「鄧子」這一典型形象，並透過他，對現代教育中的權力異化、形式主義和師生關係等問題進行了尖銳而深刻的剖析，展現了文言語錄體在當代強大的生命力和表現力。</h3><p></p>
+    <h2>總結 <button class="section-btn" id="hidezj" onclick="hidezongjie()">隱藏</button></h2>
+    <div id="zongjie">
+        <h3 style="font-weight: normal; line-height: 25px;">《鄧子》一文絕非簡單的趣聞記錄，以古筆寫今事，精心構築的一部微型教育批判劇。它通過極富特色的語言、鮮明的人物、巧妙的結構和多重的藝術手法，成功塑造了「鄧子」這一典型形象，並透過他，對現代教育中的權力異化、形式主義和師生關係等問題進行了尖銳而深刻的剖析，展現了文言語錄體在當代強大的生命力和表現力。</h3>
     </div>
 
-    <div id="copyright" style="position: relative; top: 150px; text-align: center;">
-        <h6 style="position: relative; left: 10px; font-size: 10px; font-family: Arial, Helvetica, sans-serif;"><u>Design and Edit by Ou Ze Hao & Leung Tin Hang</u></h6><p></p>
-        <h6 style="position: relative; left: 10px; font-size: 10px; top: -10px; font-family: Arial, Helvetica, sans-serif;" id="version"><u>Loading</u></h6><p></p>
-        <h6 style="position: relative; left: 10px; font-size: 10px; top: -20px; font-family: Arial, Helvetica, sans-serif;">© 2025-2026 Ou Ze Hao Leung Tin Hang</h6>
-        <!-- <h6 style="position: relative; left: 10px; font-size: 10px; top: -30px;">考試加油</h6><p></p> -->
+    <div id="copyright" style="margin-top: 50px; text-align: center;">
+        <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;"><u>Design and Edit by Ou Ze Hao & Leung Tin Hang</u></h6>
+        <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;" id="version"><u>Loading</u></h6>
+        <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;">© 2025-2026 Ou Ze Hao Leung Tin Hang</h6>
     </div>
 </div>
-    <script>
-        var yuanwen_shown=true;
-        var yiwen_shown=true;
-        var zhushi_shown=true;
-        var renwu_shown=true;
-        var beijing_shown=true;
-        var shangshi_shown=true;
-        var zongjie_shown=true;
-        var all_shown=true;
 
-        function hideyuanwen(){
-            if(yuanwen_shown){
-                document.getElementById("yuanwen").style.display='none';
-                document.getElementById("hideyw").textContent='展開';
-                yuanwen_shown=false;
+<button id="back-to-top" title="返回頂部">↑</button>
+
+<script>
+    var yuanwen_shown=true, yiwen_shown=true, zhushi_shown=true, renwu_shown=true;
+    var beijing_shown=true, shangshi_shown=true, zongjie_shown=true, all_shown=true;
+
+    function toggleElement(id, btnId, stateVar) {
+    var el = document.getElementById(id);
+    var btn = document.getElementById(btnId);
+    if (!el || !btn) return stateVar;
+
+    if (el.timer) clearTimeout(el.timer);
+
+    if (stateVar) {
+        el.style.height = el.scrollHeight + 'px';
+        el.offsetHeight;
+        el.style.height = '0';
+        el.style.opacity = '0';
+        
+        el.timer = setTimeout(() => { 
+            el.style.display = 'none'; 
+            el.style.height = ''; 
+        }, 300);
+        
+        btn.textContent = '展開';
+        stateVar = false;
+    } else {
+        el.style.display = 'block';
+        el.style.height = '0';
+        el.style.opacity = '0';
+        el.offsetHeight;
+        
+        el.style.height = el.scrollHeight + 'px';
+        el.style.opacity = '1';
+        
+        el.timer = setTimeout(() => { 
+            el.style.height = 'auto'; 
+        }, 300);
+        
+        btn.textContent = '隱藏';
+        stateVar = true;
+    }
+    all();
+    return stateVar;
+}
+
+    function hideyuanwen(){ yuanwen_shown = toggleElement("yuanwen", "hideyw", yuanwen_shown); }
+    function hideyiwen(){ yiwen_shown = toggleElement("yiwen", "hideyy", yiwen_shown); }
+    function hidezhushi(){ zhushi_shown = toggleElement("zhushi", "hidezs", zhushi_shown); }
+    function hiderenwu(){ renwu_shown = toggleElement("renwu", "hiderw", renwu_shown); }
+    function hidebeijing(){ beijing_shown = toggleElement("beijing", "hidebj", beijing_shown); }
+    function hideshangshi(){ shangshi_shown = toggleElement("shangshi", "hidess", shangshi_shown); }
+    function hidezongjie(){ zongjie_shown = toggleElement("zongjie", "hidezj", zongjie_shown); }
+
+    function hideall(){
+    if (yuanwen_shown || yiwen_shown || zhushi_shown || renwu_shown || beijing_shown || shangshi_shown || zongjie_shown) {
+        if (yuanwen_shown){hideyuanwen();}
+        if (yiwen_shown){hideyiwen();}
+        if (zhushi_shown){hidezhushi();}
+        if (renwu_shown){hiderenwu();}
+        if (beijing_shown){hidebeijing();}
+        if (shangshi_shown){hideshangshi();}
+        if (zongjie_shown){hidezongjie();}
+    } else {
+        if (!yuanwen_shown){hideyuanwen();}
+        if (!yiwen_shown){hideyiwen();}
+        if (!zhushi_shown){hidezhushi();}
+        if (!renwu_shown){hiderenwu();}
+        if (!beijing_shown){hidebeijing();}
+        if (!shangshi_shown){hideshangshi();}
+        if (!zongjie_shown){hidezongjie();}
+    }
+    }
+
+    function all(){
+        var isAllHidden = !yuanwen_shown && !yiwen_shown && !zhushi_shown && !renwu_shown && !beijing_shown && !shangshi_shown && !zongjie_shown;
+        if (isAllHidden) {
+            document.getElementById("hide").textContent = "全部隱藏";
+        } else {
+            document.getElementById("hide").textContent = "全部隱藏";
+        }
+    }
+
+    async function fetchVersion() {
+        try {
+            const response = await fetch('https://benson-ozh.github.io/ziyue/');
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const htmlText = await response.text();
+            const doc = new DOMParser().parseFromString(htmlText, 'text/html');
+            let versionElement = doc.getElementById('version');
+            if (!versionElement) {
+                const copyrightDiv = doc.getElementById('copyright');
+                if (copyrightDiv) versionElement = copyrightDiv.querySelector('#version');
             }
-            else{
-                document.getElementById("yuanwen").style.display='';
-                document.getElementById("hideyw").textContent='隱藏';
-                yuanwen_shown=true;
+            if (versionElement) {
+                document.getElementById('version').textContent = versionElement.textContent || versionElement.innerHTML;
+            } else {
+                document.getElementById('version').textContent = 'Version element not found';
             }
-            all();
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('version').textContent = 'Error: ' + error.message;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', fetchVersion);
+
+    const topbar = document.querySelector('.topbar');
+    if (topbar) {
+        const updateScrollMargin = () => {
+            const height = topbar.offsetHeight;
+            document.documentElement.style.setProperty('--scroll-offset', `${height + 20}px`);
+        };
+        updateScrollMargin();
+        window.addEventListener('resize', updateScrollMargin);
+    }
+
+    const notes = {};
+    const zhushiDiv = document.getElementById('zhushi');
+    if (zhushiDiv) {
+        const h3s = zhushiDiv.querySelectorAll('h3');
+        h3s.forEach(h3 => {
+            const text = h3.textContent.trim();
+            const match = text.match(/^(\d+)\.(.*)/);
+            if (match) {
+                const num = match[1];
+                const content = match[2].trim();
+                notes[num] = content;
+            }
+        });
+    }
+
+    const supMap = {'⁰':'0', '¹':'1', '²':'2', '³':'3', '⁴':'4', '⁵':'5', '⁶':'6', '⁷':'7', '⁸':'8', '⁹':'9'};
+    function parseSup(str) {
+        return str.split('').map(c => supMap[c] !== undefined ? supMap[c] : c).join('');
+    }
+
+    let activeRef = null;
+
+    const tooltip = document.createElement('div');
+    tooltip.id = 'dynamic-tooltip';
+    document.body.appendChild(tooltip);
+
+    function showTooltip(target) {
+        const text = target.getAttribute('data-tip');
+        if (!text) return;
+        
+        activeRef = target;
+        tooltip.textContent = text;
+        tooltip.style.display = 'block';
+        
+        const rect = target.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+        
+        let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+        let top = rect.top - tooltipRect.height - 10;
+        
+        const margin = 10;
+        if (left < margin) {
+            left = margin;
+        } else if (left + tooltipRect.width > window.innerWidth - margin) {
+            left = window.innerWidth - tooltipRect.width - margin;
+        }
+        
+        if (top < margin) {
+            top = rect.bottom + 10;
+        }
+        
+        tooltip.style.left = `${left}px`;
+        tooltip.style.top = `${top}px`;
+    }
+
+    function hideTooltip() {
+        tooltip.style.display = 'none';
+        activeRef = null;
+    }
+
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.classList.contains('ref')) {
+            showTooltip(e.target);
+        }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+        if (e.target.classList.contains('ref') && !('ontouchstart' in window)) {
+            hideTooltip();
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('ref')) {
+            if (activeRef === e.target && tooltip.style.display === 'block') {
+                hideTooltip();
+            } else {
+                showTooltip(e.target);
+            }
+            e.stopPropagation();
+        } else {
+            hideTooltip();
+        }
+    });
+
+    const yuanwenDiv = document.getElementById('yuanwen');
+    if (yuanwenDiv) {
+        const walker = document.createTreeWalker(yuanwenDiv, NodeFilter.SHOW_TEXT, null, false);
+        let node;
+        const nodesToReplace = [];
+        while (node = walker.nextNode()) {
+            if (/[⁰¹²³⁴⁵⁶⁷⁸⁹]/.test(node.nodeValue)) {
+                nodesToReplace.push(node);
+            }
         }
 
-        function hideyiwen(){
-            if(yiwen_shown){
-                document.getElementById("yiwen").style.display='none';
-                document.getElementById("hideyy").textContent='展開';
-                yiwen_shown=false;
-            }
-            else{
-                document.getElementById("yiwen").style.display='';
-                document.getElementById("hideyy").textContent='隱藏';
-                yiwen_shown=true;
-            }
-            all();
-        }
-
-        function hidezhushi(){
-            if(zhushi_shown){
-                document.getElementById("zhushi").style.display='none';
-                document.getElementById("hidezs").textContent='展開';
-                zhushi_shown=false;
-            }
-            else{
-                document.getElementById("zhushi").style.display='';
-                document.getElementById("hidezs").textContent='隱藏';
-                zhushi_shown=true;
-            }
-            all();
-        }
-
-        function hiderenwu(){
-            if(renwu_shown){
-                document.getElementById("renwu").style.display='none';
-                document.getElementById("hiderw").textContent='展開';
-                renwu_shown=false;
-            }
-            else{
-                document.getElementById("renwu").style.display='';
-                document.getElementById("hiderw").textContent='隱藏';
-                renwu_shown=true;
-            }
-            all();
-        }
-
-        function hidebeijing(){
-            if(beijing_shown){
-                document.getElementById("beijing").style.display='none';
-                document.getElementById("hidebj").textContent='展開';
-                beijing_shown=false;
-            }
-            else{
-                document.getElementById("beijing").style.display='';
-                document.getElementById("hidebj").textContent='隱藏';
-                beijing_shown=true;
-            }
-            all();
-        }
-
-        function hideshangshi(){
-            if(shangshi_shown){
-                document.getElementById("shangshi").style.display='none';
-                document.getElementById("hidess").textContent='展開';
-                shangshi_shown=false;
-            }
-            else{
-                document.getElementById("shangshi").style.display='';
-                document.getElementById("hidess").textContent='隱藏';
-                shangshi_shown=true;
-            }
-            all();
-        }
-
-        function hidezongjie(){
-            if(zongjie_shown){
-                document.getElementById("zongjie").style.display='none';
-                document.getElementById("hidezj").textContent='展開';
-                zongjie_shown=false;
-            }
-            else{
-                document.getElementById("zongjie").style.display='';
-                document.getElementById("hidezj").textContent='隱藏';
-                zongjie_shown=true;
-            }
-            all();
-        }
-
-        function hideall(){
-            
-            if(all_shown){
-                document.getElementById("hide").textContent="全部展開";
-                all_shown=false;
-                if (yuanwen_shown){hideyuanwen();}
-                if (yiwen_shown){hideyiwen();}
-                if (zhushi_shown){hidezhushi();}
-                if (renwu_shown){hiderenwu();}
-                if (beijing_shown){hidebeijing();}
-                if (shangshi_shown){hideshangshi();}
-                if (zongjie_shown){hidezongjie();}
-            }
-            else{
-                document.getElementById("hide").textContent="全部隱藏";
-                all_shown=true;
-                if (!yuanwen_shown){hideyuanwen();}
-                if (!yiwen_shown){hideyiwen();}
-                if (!zhushi_shown){hidezhushi();}
-                if (!renwu_shown){hiderenwu();}
-                if (!beijing_shown){hidebeijing();}
-                if (!shangshi_shown){hideshangshi();}
-                if (!zongjie_shown){hidezongjie();}
-            }
-        }
-
-        function closeModal() {
-            document.getElementById('modal-overlay').style.display = 'none';
-        }
-
-        function all(){
-            if(!yuanwen_shown && !yiwen_shown && !zhushi_shown && !renwu_shown && !beijing_shown && !shangshi_shown && !zongjie_shown){
-                document.getElementById("hide").textContent="全部展開";
-                all_shown=false;
-            }
-            else if(yuanwen_shown && yiwen_shown && zhushi_shown && renwu_shown && beijing_shown && shangshi_shown && zongjie_shown){
-                document.getElementById("hide").textContent="全部隱藏";
-                all_shown=true;
-            }
-        }
-
-        async function fetchVersion() {
-            try {
-                const response = await fetch('https://benson-ozh.github.io/ziyue/');
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+        nodesToReplace.forEach(node => {
+            const span = document.createElement('span');
+            span.innerHTML = node.nodeValue.replace(/([⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g, (match) => {
+                const normalNum = parseSup(match);
+                if (notes[normalNum]) {
+                    const safeTip = notes[normalNum].replace(/"/g, '&quot;');
+                    return `<span class="ref" data-tip="${safeTip}">${match}</span>`;
                 }
-                
-                const htmlText = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(htmlText, 'text/html');
-                
-                // Try different approaches to find the version
-                let versionElement = doc.getElementById('version');
-                
-                if (!versionElement) {
-                    // If not found directly, look for copyright div first
-                    const copyrightDiv = doc.getElementById('copyright');
-                    if (copyrightDiv) {
-                        versionElement = copyrightDiv.querySelector('#version');
-                    }
-                }
-                
-                if (versionElement) {
-                    document.getElementById('version').textContent = 
-                        versionElement.textContent || versionElement.innerHTML;
-                } else {
-                    document.getElementById('version').textContent = 
-                        'Version element not found';
-                }
-                
-            } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('version').textContent = 
-                    'Error: ' + error.message;
+                return match;
+            });
+            node.parentNode.replaceChild(span, node);
+        });
+    }
+
+    const sections = document.querySelectorAll('.content div[id]');
+    const navLinks = document.querySelectorAll('.article-nav a');
+
+    window.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = (scrollTop / scrollHeight) * 100;
+    
+    const progressBar = document.getElementById('progress-bar');
+    if (progressBar) {
+        progressBar.style.width = progress + '%';
+    }
+
+    let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (scrollTop >= sectionTop - 120) {
+                current = section.getAttribute('id');
             }
-        }
+        });
 
-        document.addEventListener('DOMContentLoaded', fetchVersion);
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
 
-    </script>
-
+    document.getElementById('back-to-top')?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
 </body>
-
 </html>
