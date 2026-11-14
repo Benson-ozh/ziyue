@@ -1,0 +1,361 @@
+.content {
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem 1rem;
+    min-height: 100vh;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.04);
+    background-image: url('https://fanti.dugushici.com/assets/rightbg.gif');
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+header.topbar {
+    gap: .75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    background-attachment: fixed;
+}
+
+.infobox {
+    float: right;
+    width: 25%;
+    margin: 0 0 1.2rem 2rem;
+    padding: 1rem;
+    font-size: 0.98em;
+    background-color: #f8f9fa;
+    background-image: url('https://fanti.dugushici.com/assets/rightbg.gif');
+    background-repeat: repeat;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.infobox img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1em;
+    background: #e4e7eb;
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-bottom: 0.3em;
+    font-size: 1.4em;
+    color: #222;
+    border-bottom: 1px solid #ddd;
+}
+
+#zhushi h3 {
+    display: flex;
+    align-items: baseline;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    line-height: 1.8 !important; 
+    margin-bottom: 8px;
+    padding: 0;
+    text-indent: 0;
+}
+
+.zhushi1-9{
+    position: relative;
+    left: 0.45%;
+}
+
+h5 { position: relative; left: 15px; }
+
+@media (max-width: 1000px) {
+    .infobox {
+        float: none;
+        width: 100%;
+        margin: 0 0 1.2rem 0;
+    }
+}
+
+.section-btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    margin-bottom: 4px;
+    padding: 4px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1f2937;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.05), 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4),
+        inset 0 2px 4px rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.section-btn:hover {
+    color: #000000;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.15) 100%);
+    transform: scale(1.1);
+    box-shadow: 
+        0 6px 16px rgba(0, 0, 0, 0.08), 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6),
+        inset 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.toggle-all-btn {
+    display: inline-block;
+    margin: 10px 10px 20px 10px;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #1f2937;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.06), 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+        inset 0 3px 6px rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.toggle-all-btn:hover {
+    color: #000000;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 100%);
+    transform: scale(1.05);
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.1), 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.7),
+        inset 0 3px 6px rgba(255, 255, 255, 0.9);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2vw;
+    background-color: #ffffff;
+    background-image: url('https://fanti.dugushici.com/assets/rightbg.gif');
+    background-repeat: repeat;
+    border-bottom: 1px solid #aaa;
+}
+
+#progress-bar {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    background-color: #4b5563;
+    width: 0%;
+    transition: width 0.1s;
+    z-index: 101;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav.article-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    font-size: 1rem;
+}
+
+nav.article-nav a {
+    color: #4b5563;
+    text-decoration: none;
+    padding: 4px 0;
+    position: relative;
+    transition: color 0.2s;
+}
+
+nav.article-nav a:hover {
+    color: #111827;
+    text-decoration: none;
+}
+
+nav.article-nav a:hover::after {
+    width: 100%;
+}
+
+nav.article-nav a.active {
+    color: #111827;
+    font-weight: bold;
+}
+
+nav.article-nav a.active::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header.topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    nav.article-nav {
+        gap: 10px;
+    }
+}
+
+.back-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.05), 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4),
+        inset 0 2px 4px rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+}
+
+.back-arrow:hover {
+    color: #000000;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.15) 100%);
+    transform: translateX(-4px) scale(1.1);
+    text-decoration: none;
+    box-shadow: 
+        0 6px 16px rgba(0, 0, 0, 0.08), 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6),
+        inset 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+[id] {
+    scroll-margin-top: var(--scroll-offset, 90px);
+}
+
+.ref {
+    position: relative;
+    cursor: help;
+    color: #0747a6;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 2px;
+    touch-action: manipulation; 
+}
+
+#dynamic-tooltip {
+    position: fixed;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%);
+    backdrop-filter: blur(16px) saturate(130%);
+    -webkit-backdrop-filter: blur(16px) saturate(130%);
+    color: #1f2937;
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 
+        0 10px 32px rgba(0, 0, 0, 0.1), 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+        inset 0 2px 8px rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    max-width: 300px;
+    width: max-content;
+    z-index: 9999;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+    font-family: 'SupFix', 'Noto Serif TC', serif;
+    display: none;
+    pointer-events: none;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .ref::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 44px;
+        height: 44px;
+        z-index: 1;
+    }
+}
+
+.infobox h6 {
+    display: block;
+    width: 100%;
+    margin: 8px 0 0 0;
+    padding: 0;
+    text-align: left;
+    font-size: 11px;
+    font-weight: bold;
+    color: #333;
+}
+
+.infobox h6 u {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #1f2937;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    z-index: 999;
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.06), 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+        inset 0 3px 6px rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+#back-to-top:hover {
+    color: #000000;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.15) 100%);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.1), 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.7),
+        inset 0 3px 6px rgba(255, 255, 255, 0.8);
+}
+
+.content > div[id] {
+    transition: height 0.3s ease, opacity 0.3s ease;
+}
