@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>《雜記》</title>
+    <title>《江子》</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="article.css">
 </head>
@@ -12,11 +12,16 @@
 <header class="topbar">
     <div class="title-row">
         <a href="index.html" class="back-arrow">&lt;</a>
-        <h1>《雜記》</h1>
+        <h1>《江子》</h1>
     </div>
     <nav class="article-nav">
-        <a href="#yuanwen">文章</a>
+        <a href="#yuanwen">原文</a>
+        <a href="#yiwen">譯文</a>
         <a href="#zhushi">注釋</a>
+        <a href="#renwu">人物</a>
+        <a href="#beijing">背景</a>
+        <a href="#shangshi">賞析</a>
+        <a href="#zongjie">總結</a>
     </nav>
     <div id="progress-bar"></div>
 </header>
@@ -27,36 +32,96 @@
         <span class="sep">/</span>
         <span>文章</span>
         <span class="sep">/</span>
-        <span>雜記</span>
+        <span>江子</span>
     </nav>
+
+    <aside class="infobox">
+        <img src="kongo.jpg" alt="kongo">
+        <h6 style="text-align: center;"><u>Shot by 丁老頭丁煒晴VickyDing(Kongo翹臀頭號黑粉)</u></h6>
+    </aside>
 
     <button class="toggle-all-btn" id="hide" onclick="hideall()">全部隱藏</button>
 
-    <h2>一、文章 <button class="section-btn" id="hideyw" onclick="hideyuanwen()">隱藏</button></h2>
-    <div id="yuanwen">
-        <h3><u>姚乙己¹</u></h3>
-        <h3 style="font-weight: normal; line-height: 25px;">姚焯豐一到台上，所有同學便都看着他笑，有的叫道：『姚焯豐，你頸上又添上新草莓印了！』他不回答，對閣員說：『Cadentia, Spark the Euphoria! 』便做出內閣手勢。他們又故意的高聲嚷道：『你一定又和男生嘴嘴了！』姚焯豐睜大眼睛說：『你怎麽這樣憑空污人清白​……』『什麼清白？我那天親眼看見你在圓州角和師兄嘴嘴，拍了照。』姚焯豐便漲紅了臉，額上的青筋條條綻出，爭辯道：『這不能算嘴嘴……親吻！……讀書人的事，能算做嘴嘴麽？』接連便是難懂的話，什麽『LQBTQ』，什麽『尊重個人性向』之類，引得衆人都鬨笑起來；操場內外充滿了快活的空氣。</h3>
+    <h2>一、原文 <button class="section-btn" id="hideyw" onclick="hideyuanwen()">隱藏</button></h2>
+    <div id="yuanwen">    
+        <h3 style="font-weight: normal; line-height: 25px;">1. 江子好用四字之語。嘗見諸生作業疏略，乃曰：「是謂『見微知著¹』也。」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">2. 江子講難解疑時，嘗謂弟子曰：「攻堅克難，惟習以達巧——是謂『熟能生巧』也。」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">3. 江子評文憑試舊題。問曰：「是題非盡人能耶？」眾對曰：「然。」江子哂²曰：「昔者五成中鵠³，而吾輩不及半——是謂『跑輸大市⁴』也。」後每有錯答者，眾生輒⁵相語曰：「噫！吾輩殆⁶將『跑輸大市』矣！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">4. 嘗試畢，眾績未佳，江子方為講析。楊生方弄奇異果於掌中。江子不懌，冷然曰：「楊生，汝盡通乎？所為者何？」自後同窗有稍懈或矜其能⁷者，眾輒呼曰：「汝盡通乎？」</h3>
     </div>
 
-    <h2>二、注釋 <button class="section-btn" id="hidezs" onclick="hidezhushi()">隱藏</button></h2>
+    <h2>二、譯文 <button class="section-btn" id="hideyy" onclick="hideyiwen()">隱藏</button></h2>
+    <div id="yiwen">
+        <h3 style="font-weight: normal; line-height: 25px;">1. 江子說話，喜歡用四字詞語。一天，他看見各個同學的作業都做得粗疏簡略，於是說：「這就是『見微知著』了。」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">2. 江子講解難題時，曾經對學生說：「要擊破困難，惟有多加練習，才能達到快而準的靈巧境界——這就是『熟能生巧』了。」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">3. 江子在講評文憑試的舊題目。他問：「這些題，大家不是都會做嗎？」大家回答：「是。」江子笑着說：「以往的考生中，有五成可以答對；而來自我們學校的考生，連一半也不能達到——這就是『跑輸大市』了。」後來每次有人答錯問題，各個同學都會向着對方說：「噢！我們恐怕也要『跑輸大市』了！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">4. 一次測驗，大家表現均不佳，江老師正在講解。可正在此時，一位姓楊的學生正在（以手）玩弄手中的奇異果。江老師（感到）不悅，冷冷地說：「楊樂天你全會了是吧？你正在幹甚麼啊？」後來每逢有同學鬆懈或是（為）自己的成績（感到）驕傲，其他同學便會喊叫道：「你全會了是吧？」</h3>
+    </div>
+
     <div id="zhushi" class="zhushi">
-        <h3 style="font-weight: normal; line-height: 25px;">1.<span class="zhushi1-9">姚乙己：由梁濤以孔乙己改編而成</span></h3>
+        <h2>三、注釋 <button class="section-btn" id="hidezs" onclick="hidezhushi()">隱藏</button></h2>
+        <h3 style="font-weight: normal; line-height: 25px;">1.<span class="zhushi1-9">見微知著：從細微的徵兆或跡象中，就能預見或推斷事物發展的趨勢和本質。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">2.<span class="zhushi1-9">哂：微笑，一指嘲笑。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">3.<span class="zhushi1-9">中鵠：射中靶心，引申指回答正確。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">4.<span class="zhushi1-9">跑輸大市：金融術語，指分析師預測某證券在未來6至12個月內股價表現將弱於基準指數10%以上的投資評級。此指浸信會呂明才中學的化學科考生表現弱於香港考生平均水平，即為落後於「大市」。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">5.<span class="zhushi1-9">輒：就，便。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">6.<span class="zhushi1-9">殆：恐怕。</span></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">7.<span class="zhushi1-9">矜其能：矜，誇耀、驕傲；能，能力，此指成績；矜其能：為自己的成績而感到驕傲。</span></h3>
+    </div>
+
+    <h2>四、人物介紹 <button class="section-btn" id="hiderw" onclick="hiderenwu()">隱藏</button></h2>
+    <div id="renwu">
+        <h3 style="font-weight: normal; line-height: 25px;">江國洪（？—），浸信會呂明才中學化學科、聖經科教師。在校內備受尊敬。所說的笑話有點冷，不經意透露出的「金句」反而更有趣。</h3>
+    </div>
+
+    <h2>五、文章背景 <button class="section-btn" id="hidebj" onclick="hidebeijing()">隱藏</button></h2>
+    <div id="beijing">
+        <h3 style="font-weight: normal; line-height: 25px;">《江子》為語錄體，包括語錄和對話，記載江國洪老師任教四五六乙丙丁戊化學班時的金句和特別的教學風格。</h3>
+    </div>
+
+    <h2>六、賞析重點 <button class="section-btn" id="hidess" onclick="hideshangshi()">隱藏</button></h2>
+    <div id="shangshi">
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>一、文本形式與語言特色<br></b></u>
+            以簡練文言寫就，仿傳統語錄體（如《論語》），每則獨立成章。最大特色為大量化用與改造成語（如「見微知著」、「熟能生巧」）及金融術語（「跑輸大市」），將古典智慧與現代世俗概念並置，形成獨特的幽默與諷刺風格。<br>
+        </h3>
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>二、人物形象與敘事結構<br></b></u>
+            江子形象鮮明：一位善用格言警句、以數據量化學習成果的務實教師。其語言習慣（好四字語）與思維方式（用市場比喻教育）構成了其核心特徵。敘事結構為「言行+影響」模式：先記江子之言，再述其言論在學生中產生的流行與戲仿效果，展現其話語的滲透力。<br>
+        </h3>
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>三、主旨與現實關照<br></b></u>
+            揭示了當代教育中的績效主義與焦慮。江子將學業成績比作「跑輸大市」，反映了教育已被市場化、數據化的現實——學生被視為投資產品，學習成效需與大市（整體考生）比較KPI。此語在學生間的流傳，既是自嘲，也是對這種壓力的集體無意識認同。<br>
+        </h3>
+        <h3 style="font-weight: normal; line-height: 25px;">
+            <u><b>四、藝術手法與象徵隱喻<br></b></u>
+            核心手法是「舊詞新用」與「語境轉換」：<br>
+            <em><span style="position: relative; left: 16px;">
+                「見微知著」：從哲學洞察降格為對作業粗疏的批評，大詞小用產生反差幽默。<br>
+                「跑輸大市」：將金融市場的競爭與焦慮隱喻至教育領域，極精準地刻畫了以排名和合格率為導向的功利教育生態，成為全文點睛之筆。<br>
+            </span></em>
+        </h3>
+    </div>
+
+    <h2>總結 <button class="section-btn" id="hidezj" onclick="hidezongjie()">隱藏</button></h2>
+    <div id="zongjie">
+        <h3 style="font-weight: normal; line-height: 25px;">全文雖簡短，卻成功利用文白夾雜、舊詞新用的手法，完成了對一種教育現狀的精準捕捉與溫和諷刺。江子之言之所以能被學生迅速模仿傳播（「眾生輒相語曰」），正因其話語精準地道出了集體潛意識中的競爭恐懼與自嘲心態，從而讓這篇語錄超越了個人軼事，成為一個時代教育心態的微型鏡像。</h3>
     </div>
 
     <div id="copyright" style="margin-top: 50px; text-align: center;">
         <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;"><u>Design and Edit by Ou Ze Hao & Leung Tin Hang</u></h6>
         <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;" id="version"><u>Loading...</u></h6>
-        <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;">©2025-2026 Ou Ze Hao Leung Tin Hang</h6>
+        <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;">© 2025-2026 Ou Ze Hao Leung Tin Hang</h6>
     </div>
 </div>
 
 <button id="back-to-top" title="返回頂部">↑</button>
 
 <script>
-    var yuanwen_shown=true, zhushi_shown=true;
-    var yiwen_shown=true, renwu_shown=true, beijing_shown=true, shangshi_shown=true, zongjie_shown=true, all_shown=true;
+    var yuanwen_shown=true, yiwen_shown=true, zhushi_shown=true, renwu_shown=true;
+    var beijing_shown=true, shangshi_shown=true, zongjie_shown=true, all_shown=true;
 
-    function toggleElement(id, btnId, stateVar) {
+        function toggleElement(id, btnId, stateVar) {
             var el = document.getElementById(id);
             var btn = document.getElementById(btnId);
             if (!el || !btn) return stateVar;
@@ -97,26 +162,35 @@
         }
 
     function hideyuanwen(){ yuanwen_shown = toggleElement("yuanwen", "hideyw", yuanwen_shown); }
+    function hideyiwen(){ yiwen_shown = toggleElement("yiwen", "hideyy", yiwen_shown); }
     function hidezhushi(){ zhushi_shown = toggleElement("zhushi", "hidezs", zhushi_shown); }
+    function hiderenwu(){ renwu_shown = toggleElement("renwu", "hiderw", renwu_shown); }
+    function hidebeijing(){ beijing_shown = toggleElement("beijing", "hidebj", beijing_shown); }
+    function hideshangshi(){ shangshi_shown = toggleElement("shangshi", "hidess", shangshi_shown); }
+    function hidezongjie(){ zongjie_shown = toggleElement("zongjie", "hidezj", zongjie_shown); }
 
-        function hideall(){
-        if (yuanwen_shown || zhushi_shown) {
+    function hideall(){
+        if (yuanwen_shown || yiwen_shown || zhushi_shown || renwu_shown || beijing_shown || shangshi_shown || zongjie_shown) {
             document.getElementById("hide").textContent="全部隱藏";
-            if (yuanwen_shown){hideyuanwen();} 
-            if (zhushi_shown){hidezhushi();}
+            if (yuanwen_shown){hideyuanwen();} if (yiwen_shown){hideyiwen();}
+            if (zhushi_shown){hidezhushi();} if (renwu_shown){hiderenwu();}
+            if (beijing_shown){hidebeijing();} if (shangshi_shown){hideshangshi();}
+            if (zongjie_shown){hidezongjie();}
         } else {
             document.getElementById("hide").textContent="全部隱藏";
-            if (!yuanwen_shown){hideyuanwen();} 
-            if (!zhushi_shown){hidezhushi();}
+            if (!yuanwen_shown){hideyuanwen();} if (!yiwen_shown){hideyiwen();}
+            if (!zhushi_shown){hidezhushi();} if (!renwu_shown){hiderenwu();}
+            if (!beijing_shown){hidebeijing();} if (!shangshi_shown){hideshangshi();}
+            if (!zongjie_shown){hidezongjie();}
         }
     }
 
-    function all(){
-        var isAllHidden = !yuanwen_shown && !zhushi_shown;
+   function all(){
+        var isAllHidden = !yuanwen_shown && !yiwen_shown && !zhushi_shown && !renwu_shown && !beijing_shown && !shangshi_shown && !zongjie_shown;
         if (isAllHidden) {
-            document.getElementById("hide").textContent="全部隱藏";
+            document.getElementById("hide").textContent = "全部隱藏";
         } else {
-            document.getElementById("hide").textContent="全部隱藏";
+            document.getElementById("hide").textContent = "全部隱藏";
         }
     }
 
@@ -124,7 +198,8 @@
         try {
             const response = await fetch('https://benson-ozh.github.io/ziyue/');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const htmlText = await response.text(); const doc = new DOMParser().parseFromString(htmlText, 'text/html');
+            const htmlText = await response.text();
+            const doc = new DOMParser().parseFromString(htmlText, 'text/html');
             let versionElement = doc.getElementById('version');
             if (versionElement) document.getElementById('version').textContent = versionElement.textContent || versionElement.innerHTML;
         } catch (error) { console.error('Error:', error); }
@@ -167,21 +242,26 @@
 
         const tooltip = document.createElement('div'); tooltip.id = 'dynamic-tooltip'; document.body.appendChild(tooltip);
         let activeRef = null;
+
         function showTooltip(target) {
             const text = target.getAttribute('data-tip'); if (!text) return;
             activeRef = target; tooltip.textContent = text; tooltip.style.display = 'block';
             const rect = target.getBoundingClientRect(); const tooltipRect = tooltip.getBoundingClientRect();
             let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2); let top = rect.top - tooltipRect.height - 10; const margin = 10;
-            if (left < margin) left = margin; else if (left + tooltipRect.width > window.innerWidth - margin) left = window.innerWidth - tooltipRect.width - margin;
+            if (left < margin) left = margin;
+            else if (left + tooltipRect.width > window.innerWidth - margin) left = window.innerWidth - tooltipRect.width - margin;
             if (top < margin) top = rect.bottom + 10;
             tooltip.style.left = `${left}px`; tooltip.style.top = `${top}px`;
         }
+
         function hideTooltip() { tooltip.style.display = 'none'; activeRef = null; }
+
         document.addEventListener('mouseover', (e) => { if (e.target.classList.contains('ref')) showTooltip(e.target); });
         document.addEventListener('mouseout', (e) => { if (e.target.classList.contains('ref') && !('ontouchstart' in window)) hideTooltip(); });
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('ref')) {
-                if (activeRef === e.target && tooltip.style.display === 'block') hideTooltip(); else showTooltip(e.target);
+                if (activeRef === e.target && tooltip.style.display === 'block') hideTooltip();
+                else showTooltip(e.target);
                 e.stopPropagation();
             } else hideTooltip();
         });
@@ -196,7 +276,10 @@
 
             let current = '';
             sections.forEach(section => { if (scrollTop >= section.offsetTop - 120) current = section.getAttribute('id'); });
-            navLinks.forEach(link => { link.classList.remove('active'); if (link.getAttribute('href') === `#${current}`) link.classList.add('active'); });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
+            });
         });
 
         document.getElementById('back-to-top')?.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
