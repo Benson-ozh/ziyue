@@ -1,0 +1,203 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+header.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2vw;
+    background-color: #ffffff;
+    background-image: url('https://fanti.dugushici.com/assets/rightbg.gif');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    border-bottom: 1px solid #aaa;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    bottom: 0;
+    padding: 1rem 0.5rem;
+    background-color: #f6f6f6;
+    background-image: url('https://fanti.dugushici.com/assets/rightbg.gif');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    border-right: 1px solid #aaa;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 90;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 1rem 0;
+    padding-left: 10px;
+    word-wrap: break-word;
+}
+
+nav li a {
+    display: block;
+    color: #0747a6;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+    padding: 4px 0;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+nav li a.active {
+    color: #111827;
+    font-weight: bold;
+    border-left: 3px solid #4b5563;
+    padding-left: 6px;
+    margin-left: -9px;
+}
+
+main {
+    margin-left: 250px;
+    padding: 2rem 5vw 2rem 2vw;
+    background-color: #fff;
+    background-image: url('https://fanti.dugushici.com/assets/rightbg.gif');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    min-height: calc(100vh - 73px);
+}
+
+section { 
+    margin-bottom: 2.5rem; 
+    word-wrap: break-word;
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-bottom: 0.3em;
+    font-size: 1.4em;
+    color: #222;
+    border-bottom: 1px solid #aaa;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+[id] {
+    scroll-margin-top: 90px;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #1f2937;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    z-index: 999;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+#back-to-top:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.15) 100%);
+    transform: translateY(-3px) scale(1.1);
+}
+
+@media (max-width: 800px) {
+    nav {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #aaa;
+    }
+    main {
+        margin-left: 0;
+        padding: 1.5rem 2vw 1rem 2vw;
+    }
+}
+
+/* 版本更新日誌 */
+.changelog-box {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #aaa;
+}
+
+.changelog-box details {
+    cursor: pointer;
+}
+
+.changelog-box summary {
+    font-weight: bold;
+    color: #0747a6;
+    outline: none;
+    user-select: none;
+}
+
+.changelog-box summary:hover {
+    text-decoration: underline;
+}
+
+.log-list {
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin-top: 10px;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.log-list p {
+    margin: 0 0 12px 0;
+}
+
+.log-list p:last-child {
+    margin-bottom: 0;
+}
