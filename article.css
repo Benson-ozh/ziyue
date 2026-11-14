@@ -105,6 +105,10 @@ h5 { position: relative; left: 15px; }
         inset 0 2px 4px rgba(255, 255, 255, 0.8);
 }
 
+.section-btn:active {
+    transform: scale(0.92);
+}
+
 .toggle-all-btn {
     display: inline-block;
     margin: 10px 10px 20px 10px;
@@ -133,6 +137,10 @@ h5 { position: relative; left: 15px; }
         0 8px 24px rgba(0, 0, 0, 0.1), 
         inset 0 0 0 1px rgba(255, 255, 255, 0.7),
         inset 0 3px 6px rgba(255, 255, 255, 0.9);
+}
+
+.toggle-all-btn:active {
+    transform: scale(0.92);
 }
 
 html {
