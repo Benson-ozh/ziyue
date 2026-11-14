@@ -1,179 +1,34 @@
-<!-- 陳生 -->
 <!DOCTYPE html>
 <html>
-<link href="https://fonts.googleapis.com" rel="stylesheet">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>《陳生》</title>
-    <style>
-        @font-face {
-        font-family: 'SupFix';
-        src: local('Times New Roman'),
-            local('Times'),
-            local('Arial Unicode MS'),
-            local('Segoe UI'),
-            local('Cambria');
-        unicode-range: U+00B9, U+00B2, U+00B3, U+2070, U+2074-2079;
-        }
-        body {
-            font-family: 'SupFix', 'Noto Serif TC', 'serif';
-            margin: 0;
-            background: #f8f9fa;
-            color: #222;
-            background-image: 
-                url('https://fanti.dugushici.com/assets/rightbg.gif');
-            background-repeat: repeat;
-        }
-        h2 {
-            position: relative;
-            left: 10px;
-        }
-        h3 {
-            position: relative;
-            left: 15px;
-        }
-        u{
-        text-underline-offset: 3px;
-        width: 95%;
-        }
-        body {
-            margin: 0;
-            height: 100vh;
-            background-color: #f8f9fa;
-            background-repeat: repeat;
-        }
-        .zhushi{
-            font-size: 12px;
-        }
-        .zhushi1-9{
-            position: relative;
-            left: 0.5%;
-        }
-        button{
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 10px;
-            transition: all 0.2s ease-in-out;
-        }
-        button:hover{
-            color: rgb(50, 35, 35);
-            box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
-            border-radius: 12px;
-            transform: scale(1.05);
-        }
-        .infobox {
-            float: right;
-            width: 20%;
-            margin: 0 0 1.2rem 2rem;
-            background: #f8f9fa;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            font-size: 0.98em;
-            padding: 1rem;
-            z-index: 2;
-            background-image: 
-                url('https://fanti.dugushici.com/assets/rightbg.gif');
-            background-repeat: repeat;
-            }
-            .infobox img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1em;
-            background: #e4e7eb;
-            aspect-ratio: 3/5;
-            object-fit: cover;
-        }
-        .content {
-            margin: 0 auto;
-            padding: 2rem 1rem 3rem 1rem;
-            background: var(--card);
-            min-height: 100vh;
-            box-shadow: 0 0 14px 0 rgba(0,0,0,0.04);
-            z-index: 1;
-            background-image: 
-                url('https://fanti.dugushici.com/assets/rightbg.gif');
-            background-repeat: repeat;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            padding: 1rem 2vw;
-            background: #ffffff;
-            border-bottom: 1px solid #aaa;
-            background-image: 
-                url('https://fanti.dugushici.com/assets/rightbg.gif');
-            background-repeat: repeat;
-        }
-        header.topbar{
-            display:flex;
-            align-items:center;
-            gap:.75rem;
-            margin-bottom:1rem;
-            flex-wrap:wrap;
-        }
-        h1 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin: 0;
-            letter-spacing: 0.01em;
-            line-height:1.2;
-        }
-        section h2 {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 0.3em;
-            margin-top: 0;
-            margin-bottom: 1em;
-            font-size: 1.4em;
-            color: #222;
-        }
-        main {
-            flex: 1;
-            padding: 2rem 5vw 2rem 2vw;
-            background: #fff;
-            min-width: 0;
-        }
-        .chip{
-            display:inline-block;
-            font-size:.76rem;
-            color:#065f46;
-            background:#ecfdf5;
-            border:1px solid #d1fae5;
-            padding:.15rem .45rem;
-            border-radius:999px;
-            margin-left:.4rem;
-            vertical-align:middle;
-        }
-        nav.breadcrumb{
-            font-size:.92rem;
-            color:var(--muted);
-            margin:.25rem 0 1rem 0;
-        }
-        nav.breadcrumb a{ color:#374151; text-decoration:none; }
-        nav.breadcrumb a:hover{ text-decoration:underline; }
-        nav.breadcrumb span.sep{ color:#9ca3af; margin:0 .35rem; }
-        p { margin-top: 0; margin-bottom: 1.1em; line-height: 1.75; }
-        h2 { font-size: 1.25rem; border-bottom: 1px solid #aaa; margin-top: 2rem; margin-bottom: .8rem; font-weight: 700; color: #111827; padding-bottom:.3rem; }
-        ul { margin-top: 0.4em; padding-left: 1.2em; line-height:1.7; }
-        a{ color:var(--link); text-decoration:none; }
-        a:hover{ text-decoration:underline; }
-        @media (max-width: 1000px) {
-            .infobox { float: none; width: 100%; margin: 0 0 1.2rem 0; }
-        }
-        .warn_button{animation: warning_ani 0.5s infinite alternate;}
-        @keyframes warning_ani {
-            0% { background-color: #fd0000; color: rgb(0, 0, 0); }
-            100% { background-color: #ffc0c0; color: rgb(0, 0, 0); }
-        }
-    </style>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="article.css">
 </head>
 
 <body>
-<header class="topbar"><h1>《陳生》</h1></header>
+<header class="topbar">
+    <div class="title-row">
+        <a href="index.html" class="back-arrow">&lt;</a>
+        <h1>《陳生》</h1>
+    </div>
+    <nav class="article-nav">
+        <a href="#yuanwen">原文</a>
+        <a href="#yiwen">譯文</a>
+        <a href="#zhushi">注釋</a>
+        <a href="#renwu">人物</a>
+        <a href="#beijing">背景</a>
+        <a href="#shangshi">賞析</a>
+        <a href="#zongjie">總結</a>
+    </nav>
+    <div id="progress-bar"></div>
+</header>
+
 <div class="content">
-    <nav style="position: relative; left: 0.5%;">
-        <a href="index.html"><u>子曰</u></a>
+    <nav style="margin-bottom: 20px;">
+        子曰
         <span class="sep">/</span>
         <span>文章</span>
         <span class="sep">/</span>
@@ -181,84 +36,42 @@
     </nav>
 
     <aside class="infobox" style="z-index: 3; position: relative;">
-        <button onclick="open_close_photo()" style="background-color: rgb(255, 67, 67);" id="show_photo">顯示圖片（慎開）</button>
-        <img src="kiwi.jpg" alt="kiwi" style="display: none;" id="kiwi"></img>
+        <button onclick="open_close_photo()" class="section-btn" style="width: 100%; margin: 0 0 10px 0; display: block;" id="show_photo">顯示圖片（慎開）</button>
+        <img src="kiwi.jpg" alt="kiwi" style="display: none;" id="kiwi">
     </aside>
 
-    <!-- 警告  -->
-    <div id="warning" style="
-      position: fixed;
-      z-index: 9999;
-      left: 0; top: 0; width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.6);
-      display: flex; align-items: center; justify-content: center; display: none;">
-      <div style="background: #ebebeb; padding: 50px 60px; border-radius: 20px; text-align: center; max-width: 80vw;">
-        <h1>警告！</h1>
-        <h3 style="color: red; position: relative; left:0px;">此圖可能會引起不適</h3><br>
-        <h3 style="color: red; position: relative; left:0px">請確定是否開啓！</h3>
-        <button onclick="give_up()" style="margin-top: 0px; padding: 8px 32px; font-size: 18px; background-color: rgba(0, 255, 0, 0.8); position: relative; right:10px"><b>算了</b></button>
-        <button onclick="show_kiwi()" style="margin-top: 0px; padding: 8px 32px; font-size: 18px; background-color: rgba(255, 0, 0, 0.8); position: relative; left:10px" class="warn_button"><b>確認</b></button>
-      </div>
-    </div>
-
-    <a><h3 style="position: relative; font-size: 25px; left: 10px; color: blue;" onclick="hideall()" id="hide">全部隱藏</h3></a>
-
-    <!-- 原文 -->
-    <div  style="line-height: 30px; position: relative; top: 10px;">
-        <h2 style="font-size: 25px;">一、原文<a><span id="hideyw" style="position: relative; left: 2%; color: blue;" onclick="hideyuanwen()">隱藏</span></a></h2>
-        <div id="yuanwen">
-        <h3 style="font-weight: normal; line-height: 25px;">1. 
-           陳生有微恙¹，幸神智清明²。然每修業³于堂，常發奇言異行。一日忽問曰：「簡子⁴，吾有惑焉！今香港無民主，亦無自由，當合⁵西方諸國，以制中國……」後諸生皆以此言戲⁶之。<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">2. 
-           張子授文⁷，解曰：「作者謂：『方悟身長之緩而成太速⁸。』此中深意……」陳生遽起曰：「張子，吾有惑焉！師之謂體大心小，猶速疾與加速一正一負米每秒方與米每二次秒方豈非相悖再者今香港無民主⁹……」梁生怒而擊案：「此等瑣問，豈不可待課後乎！」<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">3. 
-           昔日，陳生修體育課時，遭人足蹴而飛。乃大慟¹⁰曰：「嗚呼——痛哉！何人襲吾——」泣不絕聲。其後三旬¹¹不復入庠序¹²。<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">4. 
-           陳子習文時，素箋¹³為風所揚。驟然騰躍，淩空三攫¹⁴，終復得之。徐歸座，淡然曰：「無礙。」神色如常。<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">5. 
-           陳子修業無恒軌¹⁵。聽講時，常默¹⁶奪同窗筆札¹⁷觀之，逢堂測¹⁸必竊視鄰案¹⁹。鄧子抽查習作之日，竟空手而對，徐曰：「未攜。」²⁰神色自若。<p></p>
-        </h3>
+    <div id="warning" style="position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; display: none;">
+        <div style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); padding: 50px 60px; border-radius: 20px; text-align: center; max-width: 80vw; border: 1px solid rgba(255,255,255,1); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <h1>警告！</h1>
+            <h3 style="color: red;">此圖可能會引起不適</h3><br>
+            <h3 style="color: red;">請確定是否開啓！</h3>
+            <button onclick="give_up()" class="toggle-all-btn" style="background-color: rgba(0, 255, 0, 0.6); color: white; position: relative; right:10px;"><b>算了</b></button>
+            <button onclick="show_kiwi()" class="toggle-all-btn" style="background-color: rgba(255, 0, 0, 0.6); color: white; position: relative; left:10px;"><b>確認</b></button>
         </div>
     </div>
 
-    <!-- 語譯 -->
-    <div style="position: relative; top: 30px; line-height: 30px;">
-        <h2 style="font-size: 25px;">二、譯文<a><span id="hideyy" style="position: relative; left: 2%; color: blue;" onclick="hideyiwen()">隱藏</span></a></h2>
-        <div id="yiwen">
-        <h3 style="font-weight: normal; line-height: 25px;">1. 
-            陳煥祈（陳生），是一個健康有缺陷的同學，幸而智力健全，只是上課時往往會說怪話，做怪事。有一次，他忽然說：「簡老師，我有問題！如今的香港沒有民主，又沒有自由，我們應該聯合西方國家去制裁中國……」後來，這些話就被拿來取笑陳生。<p></p>
-        </h3>
+    <button class="toggle-all-btn" id="hide" onclick="hideall()">全部隱藏</button>
 
-        <h3 style="font-weight: normal; line-height: 25px;">2. 
-            有一次，張老師為我們教授中文，他講解道：「作者說：『我長得太慢而且太大。』這其中有著很深的含義……」陳生打斷：「張老師，我有問題！這個文章說作者長得太慢且太大，這就相當於速度和加速度一個是正一個是負米每秒和米每平方秒這不是很矛盾嗎第二件事就是如今的香港沒有民主……」一位姓梁的同學氣憤地拍桌，說：「這種問題下課再問行不行！」<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">3. 
-            陳生以前有一次上體育課時，被人踢了一腳，踢飛了起來。他大聲哭號：「啊──好痛啊！誰踢我啊……」後來一直哭。之後，他整整三周沒有上學。<p></p>
-        </h3>
-
-        <h3 style="font-weight: normal; line-height: 25px;">4. 
-            有一次，陳生上中文課，他的其中一張筆記被風扇吹走。他於是猛地起身，追趕著他的那張筆記，在空中連著抓了三下，抓住了那張筆記紙。然後他裝作若無其事地回位，軟綿綿地說：「沒事。」神色如常。<p></p>
-        </h3>      
-        
-        <h3 style="font-weight: normal; line-height: 25px;">5. 
-            陳生的學習習慣很不好。上課時，經常一言不發地搶去別人的筆記來看，一有老師讓當眾做題，就偷看同桌的答案抄上去。一天，鄧老師抽查同學的練習題，他沒做，卻也不認錯，只輕飄飄地說「沒帶。」神色自若。<p></p>
-        </h3>    
-        </div>
+    <h2>一、原文 <button class="section-btn" id="hideyw" onclick="hideyuanwen()">隱藏</button></h2>
+    <div id="yuanwen">
+        <h3 style="font-weight: normal; line-height: 25px;">1. 陳生有微恙¹，幸神智清明²。然每修業³于堂，常發奇言異行。一日忽問曰：「簡子⁴，吾有惑焉！今香港無民主，亦無自由，當合⁵西方諸國，以制中國……」後諸生皆以此言戲⁶之。<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">2. 張子授文⁷，解曰：「作者謂：『方悟身長之緩而成太速⁸。』此中深意……」陳生遽起曰：「張子，吾有惑焉！師之謂體大心小，猶速疾與加速一正一負米每秒方與米每二次秒方豈非相悖再者今香港無民主⁹……」梁生怒而擊案：「此等瑣問，豈不可待課後乎！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">3. 昔日，陳生修體育課時，遭人足蹴而飛。乃大慟¹⁰曰：「嗚呼——痛哉！何人襲吾——」泣不絕聲。其後三旬¹¹不復入庠序¹²。<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">4. 陳子習文時，素箋¹³為風所揚。驟然騰躍，淩空三攫¹⁴，終復得之。徐歸座，淡然曰：「無礙。」神色如常。<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">5. 陳子修業無恒軌¹⁵。聽講時，常默¹⁶奪同窗筆札¹⁷觀之，逢堂測¹⁸必竊視鄰案¹⁹。鄧子抽查習作之日，竟空手而對，徐曰：「未攜。」²⁰神色自若。<p></p></h3>
     </div>
 
-    <!-- 注釋 -->
-    <div style="position: relative; top: 50px; line-height: 30px;" class="zhushi">
-        <h2 style="font-size: 25px;">三、注釋<a><span id="hidezs" style="position: relative; left: 2%; color: blue;" onclick="hidezhushi()">隱藏</span></a></h2>
-        <div id="zhushi">
+    <h2>二、譯文 <button class="section-btn" id="hideyy" onclick="hideyiwen()">隱藏</button></h2>
+    <div id="yiwen">
+        <h3 style="font-weight: normal; line-height: 25px;">1. 陳煥祈（陳生），是一個健康有缺陷的同學，幸而智力健全，只是上課時往往會說怪話，做怪事。有一次，他忽然說：「簡老師，我有問題！如今的香港沒有民主，又沒有自由，我們應該聯合西方國家去制裁中國……」後來，這些話就被拿來取笑陳生。<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">2. 有一次，張老師為我們教授中文，他講解道：「作者說：『我長得太慢而且太大。』這其中有著很深的含義……」陳生打斷：「張老師，我有問題！這個文章說作者長得太慢且太大，這就相當於速度和加速度一個是正一個是負米每秒和米每平方秒這不是很矛盾嗎第二件事就是如今的香港沒有民主……」一位姓梁的同學氣憤地拍桌，說：「這種問題下課再問行不行！」<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">3. 陳生以前有一次上體育課時，被人踢了一腳，踢飛了起來。他大聲哭號：「啊──好痛啊！誰踢我啊……」後來一直哭。之後，他整整三周沒有上學。<p></p></h3>
+        <h3 style="font-weight: normal; line-height: 25px;">4. 有一次，陳生上中文課，他的其中一張筆記被風扇吹走。他於是猛地起身，追趕著他的那張筆記，在空中連著抓了三下，抓住了那張筆記紙。然後他裝作若無其事地回位，軟綿綿地說：「沒事。」神色如常。<p></p></h3>      
+        <h3 style="font-weight: normal; line-height: 25px;">5. 陳生的學習習慣很不好。上課時，經常一言不發地搶去別人的筆記來看，一有老師讓當眾做題，就偷看同桌的答案抄上去。一天，鄧老師抽查同學的練習題，他沒做，卻也不認錯，只輕飄飄地說「沒帶。」神色自若。<p></p></h3>    
+    </div>
+
+    <div id="zhushi" class="zhushi">
+        <h2>三、注釋 <button class="section-btn" id="hidezs" onclick="hidezhushi()">隱藏</button></h2>
         <h3 style="font-weight: normal; line-height: 25px;">1.<span class="zhushi1-9">微恙：輕微的疾病。 </span></h3>
         <h3 style="font-weight: normal; line-height: 25px;">2.<span class="zhushi1-9">清明：清醒而明達。</span></h3>
         <h3 style="font-weight: normal; line-height: 25px;">3.<span class="zhushi1-9">修業：學習課業。</span></h3>
@@ -279,27 +92,20 @@
         <h3 style="font-weight: normal; line-height: 25px;">18. 堂測：老師讓同學當眾做題。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">19. 鄰案：旁邊同學的桌子，借代鄰桌的答案。</h3>
         <h3 style="font-weight: normal; line-height: 25px;">20. 未攜：詳情請見<a href="dengzi.html"><span style="color: blue;">鄧子</span></a>第11段</h3>
-        </div>
     </div>
 
-    <!-- 人物介紹 -->
-    <div style="position: relative; top: 70px; line-height: 30px;">
-        <h2 style="font-size: 25px;">四、人物介紹<a><span id="hiderw" style="position: relative; left: 2%; color: blue;" onclick="hiderenwu()">隱藏</span></a></h2>
-        <div id="renwu">
+    <h2>四、人物介紹 <button class="section-btn" id="hiderw" onclick="hiderenwu()">隱藏</button></h2>
+    <div id="renwu">
         <h3 style="font-weight: normal; line-height: 25px;">陳煥祈（陳生）（２００９—），有精神缺陷，但智力健全。</h3>
-        </div>
     </div>
 
-    <!-- 文章背景 -->
-    <div style="position: relative; top: 90px; line-height: 30px;">
-    <h2 style="font-size: 25px;">五、文章背景<a><span id="hidebj" style="position: relative; left: 2%; color: blue;" onclick="hidebeijing()">隱藏</span></a></h2>
-    <h3 style="font-weight: normal; line-height: 25px; left: -0.003%;" id="beijing">《陳生》為語錄體，記載了四五六乙陳煥祈同學在浸信會呂明才中學的經歷與行動，突顯其作為特殊教育需要學生的特質（不論優劣）。</h3>
+    <h2>五、文章背景 <button class="section-btn" id="hidebj" onclick="hidebeijing()">隱藏</button></h2>
+    <div id="beijing">
+        <h3 style="font-weight: normal; line-height: 25px;">《陳生》為語錄體，記載了四五六乙陳煥祈同學在浸信會呂明才中學的經歷與行動，突顯其作為特殊教育需要學生的特質（不論優劣）。</h3>
     </div>
 
-    <!-- 賞析 -->
-    <div style="position: relative; top: 110px; line-height: 30px;">
-        <h2 style="font-size: 25px;">六、賞析重點<a><span id="hidess" style="position: relative; left: 2%; color: blue;" onclick="hideshangshi()">隱藏</span></a></h2>
-        <div id="shangshi">
+    <h2>六、賞析重點 <button class="section-btn" id="hidess" onclick="hideshangshi()">隱藏</button></h2>
+    <div id="shangshi">
         <h3 style="font-weight: normal; line-height: 25px;">
             <u><b>一、敘事藝術與文學手法<br></b></u>
             <u>反差與荒誕的審美效果：<br></u>
@@ -315,156 +121,97 @@
                 於群體相處，當戒除以自我為中心、擾亂秩序、無視他人感受。<br>
             </span></em>
         </h3>
-        </div>
     </div>
 
-    <!-- 總結 -->
-    <div style="position: relative; top: 130px; line-height: 40px;">
-        <h2 style="font-size: 30px;"><u>總結<span id="hidezj" style="position: relative; left: 2%; color: blue; font-size: 25px;" onclick="hidezongjie()"><u>隱藏</u></span></u></h2><p></p>
-        <h3 style="font-weight: normal; line-height: 25px;" id="zongjie">此文並非意在進行社會批判或反諷，而是採用古典語錄體的形式，為現實教育場景中的一類問題學生立傳。它通過高度凝練的筆法，客觀呈現其種種負面言行，旨在讓讀者（尤其是學生群體）引以為戒，明辨是非，知所行止。陳生之形象，猶如一面負面的鏡子，映照出在集體生活中應有的規矩、責任與誠信之可貴。</h3><p></p>
+    <h2>總結 <button class="section-btn" id="hidezj" onclick="hidezongjie()">隱藏</button></h2>
+    <div id="zongjie">
+        <h3 style="font-weight: normal; line-height: 25px;">此文並非意在進行社會批判或反諷，而是採用古典語錄體的形式，為現實教育場景中的一類問題學生立傳。它通過高度凝練的筆法，客觀呈現其種種負面言行，旨在讓讀者（尤其是學生群體）引以為戒，明辨是非，知所行止。陳生之形象，猶如一面負面的鏡子，映照出在集體生活中應有的規矩、責任與誠信之可貴。</h3>
     </div>
 
-    <div id="copyright" style="position: relative; top: 150px; text-align: center;">
-        <h6 style="position: relative; left: 10px; font-size: 10px; font-family: Arial, Helvetica, sans-serif;"><u>Design and Edit by Ou Ze Hao & Leung Tin Hang</u></h6><p></p>
-        <h6 style="position: relative; left: 10px; font-size: 10px; top: -10px; font-family: Arial, Helvetica, sans-serif;" id="version"><u>Loading...</u></h6><p></p>
-        <h6 style="position: relative; left: 10px; font-size: 10px; top: -20px; font-family: Arial, Helvetica, sans-serif;">© 2025-2026 Ou Ze Hao Leung Tin Hang</h6>
-        <!-- <h6 style="position: relative; left: 10px; font-size: 10px; top: -30px;">考試加油</h6><p></p> -->
+    <div id="copyright" style="margin-top: 50px; text-align: center;">
+        <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;"><u>Design and Edit by Ou Ze Hao & Leung Tin Hang</u></h6>
+        <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;" id="version"><u>Loading...</u></h6>
+        <h6 style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;">© 2025-2026 Ou Ze Hao Leung Tin Hang</h6>
     </div>
 </div>
-</body>
+
+<button id="back-to-top" title="返回頂部">↑</button>
 
 <script>
-    var yuanwen_shown=true;
-    var yiwen_shown=true;
-    var zhushi_shown=true;
-    var renwu_shown=true;
-    var beijing_shown=true;
-    var shangshi_shown=true;
-    var zongjie_shown=true;
-    var all_shown=true;
-    var kiwi_show=false
+    var yuanwen_shown=true, yiwen_shown=true, zhushi_shown=true, renwu_shown=true;
+    var beijing_shown=true, shangshi_shown=true, zongjie_shown=true, all_shown=true;
+    var kiwi_show = false;
 
-    function hideyuanwen(){
-        if(yuanwen_shown){
-            document.getElementById("yuanwen").style.display='none';
-            document.getElementById("hideyw").textContent='展開';
-            yuanwen_shown=false;
-        }
-        else{
-            document.getElementById("yuanwen").style.display='';
-            document.getElementById("hideyw").textContent='隱藏';
-            yuanwen_shown=true;
-        }
-        all();
-    }
+    function toggleElement(id, btnId, stateVar) {
+            var el = document.getElementById(id);
+            var btn = document.getElementById(btnId);
+            if (!el || !btn) return stateVar;
 
-    function hideyiwen(){
-        if(yiwen_shown){
-            document.getElementById("yiwen").style.display='none';
-            document.getElementById("hideyy").textContent='展開';
-            yiwen_shown=false;
-        }
-        else{
-            document.getElementById("yiwen").style.display='';
-            document.getElementById("hideyy").textContent='隱藏';
-            yiwen_shown=true;
-        }
-        all();
-    }
+            if (el.timer) clearTimeout(el.timer);
 
-    function hidezhushi(){
-        if(zhushi_shown){
-            document.getElementById("zhushi").style.display='none';
-            document.getElementById("hidezs").textContent='展開';
-            zhushi_shown=false;
+            if (stateVar) {
+                el.style.height = el.scrollHeight + 'px';
+                el.offsetHeight;
+                el.style.height = '0';
+                el.style.opacity = '0';
+                
+                el.timer = setTimeout(() => { 
+                    el.style.display = 'none'; 
+                    el.style.height = ''; 
+                }, 300);
+                
+                btn.textContent = '展開';
+                stateVar = false;
+            } else {
+                el.style.display = 'block';
+                el.style.height = '0';
+                el.style.opacity = '0';
+                el.offsetHeight;
+                
+                el.style.height = el.scrollHeight + 'px';
+                el.style.opacity = '1';
+                
+                el.timer = setTimeout(() => { 
+                    el.style.height = 'auto'; 
+                }, 300);
+                
+                btn.textContent = '隱藏';
+                stateVar = true;
+            }
+            all();
+            return stateVar;
         }
-        else{
-            document.getElementById("zhushi").style.display='';
-            document.getElementById("hidezs").textContent='隱藏';
-            zhushi_shown=true;
-        }
-        all();
-    }
 
-    function hiderenwu(){
-        if(renwu_shown){
-            document.getElementById("renwu").style.display='none';
-            document.getElementById("hiderw").textContent='展開';
-            renwu_shown=false;
-        }
-        else{
-            document.getElementById("renwu").style.display='';
-            document.getElementById("hiderw").textContent='隱藏';
-            renwu_shown=true;
-        }
-        all();
-    }
-
-    function hidebeijing(){
-        if(beijing_shown){
-            document.getElementById("beijing").style.display='none';
-            document.getElementById("hidebj").textContent='展開';
-            beijing_shown=false;
-        }
-        else{
-            document.getElementById("beijing").style.display='';
-            document.getElementById("hidebj").textContent='隱藏';
-            beijing_shown=true;
-        }
-        all();
-    }
-
-    function hideshangshi(){
-        if(shangshi_shown){
-            document.getElementById("shangshi").style.display='none';
-            document.getElementById("hidess").textContent='展開';
-            shangshi_shown=false;
-        }
-        else{
-            document.getElementById("shangshi").style.display='';
-            document.getElementById("hidess").textContent='隱藏';
-            shangshi_shown=true;
-        }
-        all();
-    }
-
-    function hidezongjie(){
-        if(zongjie_shown){
-            document.getElementById("zongjie").style.display='none';
-            document.getElementById("hidezj").textContent='展開';
-            zongjie_shown=false;
-        }
-        else{
-            document.getElementById("zongjie").style.display='';
-            document.getElementById("hidezj").textContent='隱藏';
-            zongjie_shown=true;
-        }
-        all();
-    }
+    function hideyuanwen(){ yuanwen_shown = toggleElement("yuanwen", "hideyw", yuanwen_shown); }
+    function hideyiwen(){ yiwen_shown = toggleElement("yiwen", "hideyy", yiwen_shown); }
+    function hidezhushi(){ zhushi_shown = toggleElement("zhushi", "hidezs", zhushi_shown); }
+    function hiderenwu(){ renwu_shown = toggleElement("renwu", "hiderw", renwu_shown); }
+    function hidebeijing(){ beijing_shown = toggleElement("beijing", "hidebj", beijing_shown); }
+    function hideshangshi(){ shangshi_shown = toggleElement("shangshi", "hidess", shangshi_shown); }
+    function hidezongjie(){ zongjie_shown = toggleElement("zongjie", "hidezj", zongjie_shown); }
 
     function hideall(){
-        
-        if(all_shown){
-            document.getElementById("hide").textContent="全部展開";
-            all_shown=false;
-            if (yuanwen_shown){hideyuanwen();}
-            if (yiwen_shown){hideyiwen();}
-            if (zhushi_shown){hidezhushi();}
-            if (renwu_shown){hiderenwu();}
-            if (beijing_shown){hidebeijing();}
-            if (shangshi_shown){hideshangshi();}
-            if (zongjie_shown){hidezongjie();}
-        }
-        else{
+        if (yuanwen_shown || yiwen_shown || zhushi_shown || renwu_shown || beijing_shown || shangshi_shown || zongjie_shown) {
             document.getElementById("hide").textContent="全部隱藏";
-            all_shown=true;
-            if (!yuanwen_shown){hideyuanwen();}
-            if (!yiwen_shown){hideyiwen();}
-            if (!zhushi_shown){hidezhushi();}
-            if (!renwu_shown){hiderenwu();}
-            if (!beijing_shown){hidebeijing();}
-            if (!shangshi_shown){hideshangshi();}
+            if (yuanwen_shown){hideyuanwen();} if (yiwen_shown){hideyiwen();}
+            if (zhushi_shown){hidezhushi();} if (renwu_shown){hiderenwu();}
+            if (beijing_shown){hidebeijing();} if (shangshi_shown){hideshangshi();}
+            if (zongjie_shown){hidezongjie();}
+        } else {
+            document.getElementById("hide").textContent="全部隱藏";
+            if (!yuanwen_shown){hideyuanwen();} if (!yiwen_shown){hideyiwen();}
+            if (!zhushi_shown){hidezhushi();} if (!renwu_shown){hiderenwu();}
+            if (!beijing_shown){hidebeijing();} if (!shangshi_shown){hideshangshi();}
             if (!zongjie_shown){hidezongjie();}
+        }
+    }
+
+    function all(){
+        var isAllHidden = !yuanwen_shown && !yiwen_shown && !zhushi_shown && !renwu_shown && !beijing_shown && !shangshi_shown && !zongjie_shown;
+        if (isAllHidden) {
+            document.getElementById("hide").textContent="全部隱藏";
+        } else {
+            document.getElementById("hide").textContent="全部隱藏";
         }
     }
 
@@ -472,79 +219,122 @@
         if(kiwi_show){
             document.getElementById("kiwi").style.display = 'none';
             document.getElementById("show_photo").textContent = "顯示圖片（慎開）";
-            kiwi_show=false
-        }
-        else{
+            kiwi_show=false;
+        } else {
             document.getElementById("warning").style.display='flex';
         }
-        
     }
 
     function show_kiwi(){
-        document.getElementById("kiwi").style.display = '';
+        document.getElementById("kiwi").style.display = 'block';
         document.getElementById('warning').style.display = 'none';
         document.getElementById("show_photo").textContent = "隱藏圖片";
-        kiwi_show=true
+        kiwi_show=true;
     }
 
     function give_up(){
         document.getElementById('warning').style.display = 'none';
     }
 
-    function closeModal() {
-        document.getElementById('modal-overlay').style.display = 'none';
-    }
-
-    function all(){
-        if(!yuanwen_shown && !yiwen_shown && !zhushi_shown && !renwu_shown && !beijing_shown && !shangshi_shown && !zongjie_shown){
-            document.getElementById("hide").textContent="全部展開";
-            all_shown=false;
-        }
-        else if(yuanwen_shown && yiwen_shown && zhushi_shown && renwu_shown && beijing_shown && shangshi_shown && zongjie_shown){
-            document.getElementById("hide").textContent="全部隱藏";
-            all_shown=true;
-        }
-    }
-
     async function fetchVersion() {
-            try {
-                const response = await fetch('https://benson-ozh.github.io/ziyue/');
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
-                const htmlText = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(htmlText, 'text/html');
-                
-                // Try different approaches to find the version
-                let versionElement = doc.getElementById('version');
-                
-                if (!versionElement) {
-                    // If not found directly, look for copyright div first
-                    const copyrightDiv = doc.getElementById('copyright');
-                    if (copyrightDiv) {
-                        versionElement = copyrightDiv.querySelector('#version');
-                    }
-                }
-                
-                if (versionElement) {
-                    document.getElementById('version').textContent = 
-                        versionElement.textContent || versionElement.innerHTML;
-                } else {
-                    document.getElementById('version').textContent = 
-                        'Version element not found';
-                }
-                
-            } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('version').textContent = 
-                    'Error: ' + error.message;
+        try {
+            const response = await fetch('https://benson-ozh.github.io/ziyue/');
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const htmlText = await response.text();
+            const doc = new DOMParser().parseFromString(htmlText, 'text/html');
+            let versionElement = doc.getElementById('version');
+            if (versionElement) {
+                document.getElementById('version').textContent = versionElement.textContent || versionElement.innerHTML;
             }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchVersion();
+        const topbar = document.querySelector('.topbar');
+        if (topbar) {
+            const updateScrollMargin = () => { document.documentElement.style.setProperty('--scroll-offset', `${topbar.offsetHeight + 20}px`); };
+            updateScrollMargin();
+            window.addEventListener('resize', updateScrollMargin);
         }
 
-        document.addEventListener('DOMContentLoaded', fetchVersion);
-</script>
+        const notes = {};
+        const zhushiDiv = document.getElementById('zhushi');
+        if (zhushiDiv) {
+            zhushiDiv.querySelectorAll('h3').forEach(h3 => {
+                const match = h3.textContent.trim().match(/^(\d+)\.(.*)/);
+                if (match) notes[match[1]] = match[2].trim();
+            });
+        }
 
+        const supMap = {'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9'};
+        function parseSup(str) { return str.split('').map(c => supMap[c] !== undefined ? supMap[c] : c).join(''); }
+
+        const yuanwenDiv = document.getElementById('yuanwen');
+        if (yuanwenDiv) {
+            const walker = document.createTreeWalker(yuanwenDiv, NodeFilter.SHOW_TEXT, null, false);
+            let node; const nodesToReplace = [];
+            while (node = walker.nextNode()) { if (/[⁰¹²³⁴⁵⁶⁷⁸⁹]/.test(node.nodeValue)) nodesToReplace.push(node); }
+            nodesToReplace.forEach(node => {
+                const span = document.createElement('span');
+                span.innerHTML = node.nodeValue.replace(/([⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g, (match) => {
+                    const normalNum = parseSup(match);
+                    return notes[normalNum] ? `<span class="ref" data-tip="${notes[normalNum].replace(/"/g, '&quot;')}">${match}</span>` : match;
+                });
+                node.parentNode.replaceChild(span, node);
+            });
+        }
+
+        const tooltip = document.createElement('div');
+        tooltip.id = 'dynamic-tooltip';
+        document.body.appendChild(tooltip);
+        let activeRef = null;
+
+        function showTooltip(target) {
+            const text = target.getAttribute('data-tip'); if (!text) return;
+            activeRef = target; tooltip.textContent = text; tooltip.style.display = 'block';
+            const rect = target.getBoundingClientRect(); const tooltipRect = tooltip.getBoundingClientRect();
+            let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+            let top = rect.top - tooltipRect.height - 10; const margin = 10;
+            if (left < margin) left = margin;
+            else if (left + tooltipRect.width > window.innerWidth - margin) left = window.innerWidth - tooltipRect.width - margin;
+            if (top < margin) top = rect.bottom + 10;
+            tooltip.style.left = `${left}px`; tooltip.style.top = `${top}px`;
+        }
+
+        function hideTooltip() { tooltip.style.display = 'none'; activeRef = null; }
+
+        document.addEventListener('mouseover', (e) => { if (e.target.classList.contains('ref')) showTooltip(e.target); });
+        document.addEventListener('mouseout', (e) => { if (e.target.classList.contains('ref') && !('ontouchstart' in window)) hideTooltip(); });
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('ref')) {
+                if (activeRef === e.target && tooltip.style.display === 'block') hideTooltip();
+                else showTooltip(e.target);
+                e.stopPropagation();
+            } else hideTooltip();
+        });
+
+        const sections = document.querySelectorAll('.content div[id]');
+        const navLinks = document.querySelectorAll('.article-nav a');
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            const pBar = document.getElementById('progress-bar');
+            if (pBar) pBar.style.width = progress + '%';
+
+            let current = '';
+            sections.forEach(section => { if (scrollTop >= section.offsetTop - 120) current = section.getAttribute('id'); });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
+            });
+        });
+
+        document.getElementById('back-to-top')?.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    });
+</script>
+</body>
 </html>
