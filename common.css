@@ -1,0 +1,81 @@
+:root {
+    --link:   #0747a6;
+    --border: #ddd;
+    --muted:  #6b7280;
+}
+
+@font-face {
+    font-family: 'SupFix';
+    src: local('Times New Roman'),
+         local('Times'),
+         local('Arial Unicode MS'),
+         local('Segoe UI'),
+         local('Cambria');
+    unicode-range: U+00B9, U+00B2, U+00B3, U+2070, U+2074-2079;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'SupFix', 'Noto Serif TC', 'serif';
+    background-color: #f8f9fa;
+    background-image: url('https://fanti.dugushici.com/assets/rightbg.gif');
+    background-repeat: repeat;
+    color: #222;
+}
+
+p  { margin-top: 0; margin-bottom: 1.1em; line-height: 1.75; }
+ul { margin-top: 0.4em; padding-left: 1.2em; line-height: 1.7; }
+a       { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+}
+h2 {
+    margin-top: 2rem;
+    margin-bottom: .8rem;
+    padding-bottom: .3rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    border-bottom: 1px solid #aaa;
+}
+
+h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+ul { 
+    margin-top: 0.4em; 
+    padding-left: 20px; 
+    line-height: 1.7; 
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2vw;
+    background-color: #ffffff;
+    background-image: url('https://fanti.dugushici.com/assets/rightbg.gif');
+    background-repeat: repeat;
+    border-bottom: 1px solid #aaa;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    color: rgb(50, 35, 35);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    transform: scale(1.05);
+}
