@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css');
+
 :root {
     --link:   #0747a6;
     --border: #ddd;
@@ -17,7 +19,7 @@
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: 'SupFix', 'BiauKai', 'DFKai-SB', 'Kaiti', 'KaiTi', '標楷體', 'Noto Serif TC', serif;
+    font-family: 'SupFix', 'BiauKai', 'DFKai-SB', 'Kaiti', 'LXGW WenKai', '標楷體', 'Noto Serif TC', serif;
     font-size: 20px;
     background-color: #f8f9fa;
     background-image: url('https://fanti.dugushici.com/assets/rightbg.gif');
