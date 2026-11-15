@@ -21,6 +21,7 @@ header.topbar {
     margin: 0 0 1.2rem 2rem;
     padding: 1rem;
     font-size: 0.98em;
+    font-family: 'Noto Serif TC';
     background-color: #f8f9fa;
     background-image: url('https://fanti.dugushici.com/assets/rightbg.gif');
     background-repeat: repeat;
@@ -50,7 +51,7 @@ section h2 {
 #zhushi h3 {
     display: flex;
     align-items: baseline;
-    font-size: 12px !important;
+    font-size: 0.7em !important;
     font-weight: normal !important;
     line-height: 1.8 !important; 
     margin-bottom: 8px;
@@ -79,7 +80,7 @@ h5 { position: relative; left: 15px; }
     margin-left: 15px;
     margin-bottom: 4px;
     padding: 4px 12px;
-    font-size: 14px;
+    font-size: 0.65em;
     font-weight: bold;
     color: #1f2937;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.05) 100%);
@@ -113,7 +114,7 @@ h5 { position: relative; left: 15px; }
     display: inline-block;
     margin: 10px 10px 20px 10px;
     padding: 8px 16px;
-    font-size: 15px;
+    font-size: 1em;
     font-weight: bold;
     color: #1f2937;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%);
@@ -184,7 +185,7 @@ nav.article-nav {
     flex-wrap: wrap;
     align-items: center;
     gap: 15px;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 nav.article-nav a {
@@ -198,7 +199,7 @@ nav.article-nav a {
 nav.article-nav a:hover {
     color: #111827;
     text-decoration: none;
-    transform: scale(1.15);
+    transform: scale(1.2);
 }
 
 nav.article-nav a:hover::after {
